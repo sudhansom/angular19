@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { EachTaskComponent } from './each-task/each-task.component';
+import { DataServiceService } from '../../services/data-service.service';
+import { type Task } from './tasks.model';
 
 @Component({
   selector: 'app-tasks',
@@ -8,5 +10,9 @@ import { EachTaskComponent } from './each-task/each-task.component';
   styleUrl: './tasks.component.scss'
 })
 export class TasksComponent {
-
+dataService = inject(DataServiceService)
+tasks: Task[] = [];
+constructor(){
+  this.tasks = this.dataService.getTasks();
+}
 }

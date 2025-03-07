@@ -1,1 +1,3 @@
-<app-each-task></app-each-task>
+@for(task of tasks; track task.id){
+  <app-each-task [id]="task.id" [title]="task.title" [description]="task.description" [date]="task.date"></app-each-task>
+}
