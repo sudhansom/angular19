@@ -34,6 +34,11 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  div {
+    background-color: #949ba2;
+    min-height: 100vh;
+  }
+
   h1 {
     font-size: 3.125rem;
     color: var(--bright-blue);
