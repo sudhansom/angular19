@@ -38,6 +38,11 @@
     background-color: #949ba2;
     min-height: 100vh;
   }
+  .body-part {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
 
   h1 {
     font-size: 3.125rem;
