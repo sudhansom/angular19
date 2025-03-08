@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { EachTaskComponent } from './each-task/each-task.component';
 import { DataServiceService } from '../../services/data-service.service';
 import { type Task } from './tasks.model';
@@ -9,10 +9,10 @@ import { type Task } from './tasks.model';
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.scss'
 })
-export class TasksComponent {
+export class TasksComponent implements OnInit {
 dataService = inject(DataServiceService)
 tasks: Task[] = [];
-constructor(){
+ngOnInit(){
   this.tasks = this.dataService.getTasks();
 }
 }

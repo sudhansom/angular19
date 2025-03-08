@@ -1,6 +1,5 @@
 .each-user {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 24px;
   background-color: #123456;
@@ -19,4 +18,5 @@ img {
 }
 h5 {
   margin: 0;
+  padding-right: 12px;
 }
