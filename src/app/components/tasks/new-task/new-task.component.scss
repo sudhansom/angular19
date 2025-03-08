@@ -1,4 +1,14 @@
-form {
-  padding: 12px;
+:host {
+  background-color: rgba(120, 115, 115, 0.95);
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
   border-radius: 12px;
+
+  form {
+    padding: 12px;
+    border-radius: 12px;
+  }
 }
