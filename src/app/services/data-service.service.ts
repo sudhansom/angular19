@@ -4,6 +4,28 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataServiceService {
+  private users = [
+    {
+      id: 'u1',
+      name: 'Bhuwan Poudel',
+      image: 'my-pic.png'
+    },
+    {
+      id: 'u2',
+      name: 'Sudhan Poudel',
+      image: 'profile-pic.png'
+    },
+    {
+      id: 'u3',
+      name: 'Khageswor Poudel',
+      image: 'poudel.jpeg'
+    },
+    {
+      id: 'u4',
+      name: 'Krishna Som',
+      image: 'post1.png'
+    }
+  ]
   private tasks = [
     {
       id: 't1',
@@ -33,5 +55,8 @@ export class DataServiceService {
 
   getTasks(){
     return this.tasks;
+  }
+  getUsers(){
+    return this.users;
   }
 }
