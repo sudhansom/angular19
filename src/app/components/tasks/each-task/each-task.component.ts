@@ -1,9 +1,10 @@
 import { Component, Input, input } from '@angular/core';
 import { ContainerComponent } from '../../container/container.component';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-each-task',
-  imports: [ContainerComponent],
+  imports: [ContainerComponent, DatePipe],
   templateUrl: './each-task.component.html',
   styleUrl: './each-task.component.scss'
 })

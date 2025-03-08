@@ -1,4 +1,3 @@
 @for(task of userTasks; track task.id){
-  <p>{{ userId }}</p>
   <app-each-task [id]="task.id" [title]="task.title" [description]="task.description" [date]="task.date"></app-each-task>
 }
