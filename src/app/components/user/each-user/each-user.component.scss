@@ -1,0 +1,18 @@
+.each-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  background-color: #123456;
+  padding: 0 12px;
+  margin-bottom: 6px;
+  color: #fff;
+  border-radius: 12px;
+  padding: 6px;
+}
+img {
+  border-radius: 50%;
+}
+h5 {
+  margin: 0;
+}

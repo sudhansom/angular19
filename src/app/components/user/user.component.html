@@ -1,2 +1,4 @@
 
-<app-each-user></app-each-user>
+@for(user of users; track user.id){
+  <app-each-user [id]="user.id" [name]="user.name" [image]="user.image"></app-each-user>
+}
