@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ContainerComponent } from './components/container/container.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,4 +13,10 @@ import { TasksComponent } from './components/tasks/tasks.component';
 })
 export class AppComponent {
   title = 'task-management';
+  id = signal('u1');
+
+
+  onClickUser(id: string){
+    this.id.set(id);
+  }
 }

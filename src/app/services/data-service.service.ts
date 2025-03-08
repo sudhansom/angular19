@@ -31,25 +31,29 @@ export class DataServiceService {
       id: 't1',
       title: 'task1',
       description: 'do something1',
-      date: '1741329475645'
+      date: '1741329475645',
+      user: 'u1'
     },
     {
       id: 't2',
       title: 'task2',
       description: 'do something2',
-      date: '1741329475645'
+      date: '1741329475645',
+      user: 'u2'
     },
     {
       id: 't3',
       title: 'task3',
       description: 'do something3',
-      date: '1741329475645'
+      date: '1741329475645',
+      user: 'u3'
     },
     {
       id: 't4',
       title: 'task4',
       description: 'do something4',
-      date: '1741329475645'
+      date: '1741329475645',
+      user: 'u4'
     },
   ]
 

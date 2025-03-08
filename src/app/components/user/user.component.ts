@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, output } from '@angular/core';
 import { EachUserComponent } from './each-user/each-user.component';
 import { DataServiceService } from '../../services/data-service.service';
 import { type User } from './user.model';
@@ -10,10 +10,15 @@ import { type User } from './user.model';
   styleUrl: './user.component.scss'
 })
 export class UserComponent {
+  clickUser = output<string>()
 users: User[] = [];
 dataService = inject(DataServiceService);
 
 constructor(){
   this.users = this.dataService.getUsers();
+}
+
+onClickUser(id: string){
+  this.clickUser.emit(id)
 }
 }
