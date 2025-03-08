@@ -1,6 +1,13 @@
-<div>
+<div class="whole-body">
+  @if(showAddTask()){
+    <app-new-task></app-new-task>
+  }
   <app-container>
     <app-header></app-header>
+    <div class="tasks">
+      <h2>All the tasks.</h2>
+      <button (click)="toogleAddTask()">Add New Task</button>
+    </div>
     <div class="body-part">
       <app-user (clickUser)="onClickUser($event)"></app-user>
       <app-tasks [id]="id()"></app-tasks>

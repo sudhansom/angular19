@@ -34,7 +34,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  div {
+  .whole-body {
     background-color: #949ba2;
     min-height: 100vh;
   }
@@ -42,6 +42,27 @@
     width: 100%;
     display: flex;
     gap: 24px;
+  }
+  .tasks {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px auto;
+    border: 1px solid gray;
+    border-radius: 12px;
+    padding: 12px;
+    button {
+      background-color: rgb(5, 107, 10);
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(156, 173, 157);
+        color: green;
+      }
+    }
+    h2 {
+      margin: 0;
+    }
   }
 
   h1 {
