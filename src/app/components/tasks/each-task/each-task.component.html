@@ -1,5 +1,12 @@
-<app-container>
-  <h2>{{ title() }}</h2>
-  <p>{{ date() | date }}</p>
-  <p>{{ description() }}</p>
-</app-container>
+<app-card>
+  <app-container>
+    <h2>{{ title() }}</h2>
+    <p class="date">{{ date() | date }}</p>
+    <p class="desc">{{ description() }}</p>
+    <div class="btn">
+      <button>
+        Complete
+      </button>
+    </div>
+  </app-container>
+</app-card>
