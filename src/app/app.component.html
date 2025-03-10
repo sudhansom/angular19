@@ -3,7 +3,7 @@
     <app-header></app-header>
     <div class="tasks">
       <h2>All the tasks.</h2>
-      <button (click)="toogleAddTask()">Add New Task</button>
+      <button (click)="toogleAddTask()">{{ showAddTask()? 'Cancel':'Add New Task' }}</button>
     </div>
 
     <div class="body-part">
