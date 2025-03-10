@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { type Task } from '../components/tasks/tasks.model';
 
 @Injectable({
   providedIn: 'root'
@@ -62,5 +63,9 @@ export class DataServiceService {
   }
   getUsers(){
     return this.users;
+  }
+
+  addTask(task: Task){
+    this.tasks.push(task);
   }
 }

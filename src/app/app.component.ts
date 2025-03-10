@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { UserComponent } from './components/user/user.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { NewTaskComponent } from './components/tasks/new-task/new-task.component';
+import { type Task } from './components/tasks/tasks.model';
 
 @Component({
   selector: 'app-root',
@@ -24,5 +25,9 @@ export class AppComponent {
 
   toogleAddTask(){
     this.showAddTask.set(!this.showAddTask());
+  }
+
+  onAddTask(task: Task){
+    alert(task.title);
   }
 }

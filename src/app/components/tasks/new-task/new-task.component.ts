@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, output } from '@angular/core';
 import { CardComponent } from '../../shared/card/card.component';
 import { ContainerComponent } from '../../container/container.component';
 import { FormsModule } from '@angular/forms';
+import { type Task } from '../tasks.model';
+import { DataServiceService } from '../../../services/data-service.service';
 
 @Component({
   selector: 'app-new-task',
@@ -14,8 +16,21 @@ id = '';
 title = '';
 desc = '';
 user = '';
+hideForm = output();
 
-addTask(){
-  console.log(this.id, this.title, this.desc, this.user);
+
+dataService = inject(DataServiceService)
+
+
+onSubmit(){
+  const newTask = {
+    id: this.id,
+    title: this.title,
+    description: this.desc,
+    date: new Date().getTime().toString(),
+    user: this.user
+  }
+  this.dataService.addTask(newTask);
+  this.hideForm.emit();
 }
 }
