@@ -23,6 +23,10 @@ dataService = inject(DataServiceService)
 
 
 onSubmit(){
+  if(!this.id || !this.title || !this.desc || !this.user){
+    alert('all the fields need to be fill up')
+    return
+  }
   const newTask = {
     id: this.id,
     title: this.title,
