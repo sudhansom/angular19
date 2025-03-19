@@ -26,8 +26,4 @@ export class AppComponent {
   toogleAddTask(){
     this.showAddTask.set(!this.showAddTask());
   }
-
-  onAddTask(task: Task){
-    alert(task.title);
-  }
 }
