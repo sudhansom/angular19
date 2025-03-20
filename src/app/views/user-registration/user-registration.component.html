@@ -1,3 +1,44 @@
 <app-container>
-  <p>user-registration works!</p>
+  <div class="form">
+    <h2 id="registration">User Registration</h2>
+    <form (ngSubmit)="formSubmit(form)" #form="ngForm">
+      <label>First Name:
+        <input class="full-width" type="text" name="firstName" ngModel placeholder="Your first name...">
+      </label>
+
+      <label>Last Name:
+        <input class="full-width" type="text" name="lastName" ngModel placeholder="Your last name...">
+      </label>
+
+      <label>Email Name:
+        <input class="full-width" type="text" name="email" ngModel placeholder="Your email...">
+      </label>
+
+      <label>Select country:
+        <select class="full-width" ngModel name="country" >
+          <option value="">Nepal</option>
+          <option value="">Denmark</option>
+          <option value="">Canada</option>
+          <option value="">USA</option>
+          <option value="">Norway</option>
+          <option value="">England</option>
+        </select>
+      </label>
+      <label> Gender:
+        <div class="gender">
+          <input type="radio" name="gender" ngModel><label>male</label>
+          <input type="radio" name="gender" ngModel><label>female</label>
+          <input type="radio" name="gender" ngModel><label>others</label>
+          </div>
+      </label>
+      <label> Hobbies:
+        <div class="hobbies">
+          <input type="checkbox" name="hobbies" ngModel><label>sports</label>
+          <input type="checkbox" name="hobbies" ngModel><label>travel</label>
+          <input type="checkbox" name="hobbies" ngModel><label>singing</label>
+        </div>
+      </label>
+      <input type="submit" class="full-width btn" value="Submit">
+    </form>
+  </div>
 </app-container>
