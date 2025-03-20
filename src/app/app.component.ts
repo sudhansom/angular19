@@ -5,11 +5,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { UserComponent } from './components/user/user.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { NewTaskComponent } from './components/tasks/new-task/new-task.component';
-import { type Task } from './components/tasks/tasks.model';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ContainerComponent, HeaderComponent, UserComponent, TasksComponent, NewTaskComponent],
+  imports: [RouterOutlet, ContainerComponent, HeaderComponent, UserComponent, TasksComponent, NewTaskComponent, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
