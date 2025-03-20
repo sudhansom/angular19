@@ -1,18 +1,4 @@
 <div class="whole-body">
   <app-navbar></app-navbar>
-  <app-container>
-    <app-header></app-header>
-    <div class="tasks">
-      <h2>All the tasks.</h2>
-      <button (click)="toogleAddTask()">{{ showAddTask()? 'Cancel':'Add New Task' }}</button>
-    </div>
-
-    <div class="body-part">
-      @if(showAddTask()){
-        <app-new-task (hideForm)="toogleAddTask()"></app-new-task>
-      }
-      <app-user (clickUser)="onClickUser($event)"></app-user>
-      <app-tasks [id]="id()"></app-tasks>
-    </div>
-  </app-container>
+  <router-outlet></router-outlet>
 </div>
