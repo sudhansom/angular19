@@ -8,6 +8,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './user-registration.component.scss'
 })
 export class UserRegistrationComponent {
+  selectedGender: string = 'male';
 formSubmit(form: NgForm){
   console.log(form);
 }
