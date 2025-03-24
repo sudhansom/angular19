@@ -3,7 +3,7 @@
     <h2 id="registration">User Registration</h2>
     <form (ngSubmit)="formSubmit(form)" #form="ngForm">
       <label>First Name:
-        <input class="full-width" type="text" name="firstName" ngModel placeholder="Your first name...">
+        <input required class="full-width" type="text" name="firstName" ngModel placeholder="Your first name...">
       </label>
 
       <label>Last Name:
@@ -38,7 +38,7 @@
           <input type="checkbox" name="hobbies" value ="singing" ngModel><label>singing</label>
         </div>
       </label>
-      <input type="submit" class="full-width btn" value="Submit">
+      <input [disabled]="!form.valid" type="submit" class="full-width btn" value="Submit">
     </form>
   </div>
 </app-container>
