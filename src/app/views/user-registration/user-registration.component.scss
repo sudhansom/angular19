@@ -5,6 +5,10 @@
     padding: 12px;
     overflow: hidden;
     margin: 12px;
+
+    input.ng-touched.ng-invalid {
+      border: 1px solid red;
+  }
   }
 
   h2 {
