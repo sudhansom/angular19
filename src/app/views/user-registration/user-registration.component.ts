@@ -9,6 +9,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class UserRegistrationComponent {
   selectedGender: string = 'male';
+  country: string = 'Nepal';
 formSubmit(form: NgForm){
   console.log(form);
 }
