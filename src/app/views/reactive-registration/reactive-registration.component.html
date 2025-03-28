@@ -1,17 +1,17 @@
 <app-container>
   <div class="form">
     <h2 id="registration">User Registration</h2>
-    <form>
+    <form (ngSubmit)="submitForm()">
       <label>First Name:
-        <input required class="full-width meee" type="text" name="firstName" ngModel placeholder="Your first name...">
+        <input required class="full-width meee" type="text" name="firstName" placeholder="Your first name...">
       </label>
 
       <label>Last Name:
-        <input class="full-width" type="text" name="lastName" ngModel placeholder="Your last name...">
+        <input class="full-width" type="text" name="lastName"  placeholder="Your last name...">
       </label>
 
       <label>Email Name:
-        <input class="full-width" type="text" name="email" ngModel placeholder="Your email...">
+        <input class="full-width" type="text" name="email"  placeholder="Your email...">
       </label>
 
       <label>Select country:
@@ -26,16 +26,16 @@
       </label>
       <label> Gender:
         <div class="gender">
-          <input type="radio" name="gender" value="male" ngModel><label>male</label>
-          <input type="radio" name="gender" value="female" ngModel><label>female</label>
-          <input type="radio" name="gender" value="others" ngModel><label>others</label>
+          <input type="radio" name="gender" value="male"><label>male</label>
+          <input type="radio" name="gender" value="female"><label>female</label>
+          <input type="radio" name="gender" value="others"><label>others</label>
           </div>
       </label>
       <label> Hobbies:
         <div class="hobbies">
-          <input type="checkbox" name="hobbies" value ="sports" ngModel><label>sports</label>
-          <input type="checkbox" name="hobbies" value ="travel" ngModel><label>travel</label>
-          <input type="checkbox" name="hobbies" value ="singing" ngModel><label>singing</label>
+          <input type="checkbox" name="hobbies" value ="sports"><label>sports</label>
+          <input type="checkbox" name="hobbies" value ="travel"><label>travel</label>
+          <input type="checkbox" name="hobbies" value ="singing"><label>singing</label>
         </div>
       </label>
       <input type="submit" class="full-width btn" value="Submit">
