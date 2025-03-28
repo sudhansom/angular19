@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators, FormsModule } from '@angular/forms';
 
@@ -8,10 +8,14 @@ import { ReactiveFormsModule, FormGroup, FormControl, Validators, FormsModule } 
   templateUrl: './reactive-registration.component.html',
   styleUrl: './reactive-registration.component.scss'
 })
-export class ReactiveRegistrationComponent {
-reactiveForm = new FormGroup({
-  firstName: new FormControl('', Validators.required),
-})
+export class ReactiveRegistrationComponent implements OnInit {
+  reactiveForm: FormGroup;
+
+  ngOnInit(): void {
+    this.reactiveForm = new FormGroup({
+      firstName: new FormControl('', Validators.required),
+    })
+  }
 
 submitForm(){
   console.log(this.reactiveForm);
