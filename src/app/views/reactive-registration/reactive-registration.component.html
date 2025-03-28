@@ -1,7 +1,7 @@
 <app-container>
   <div class="form">
     <h2 id="registration">User Registration</h2>
-    <form (ngSubmit)="submitForm()">
+    <form (ngSubmit)="submitForm()" [formGroup]="reactiveForm">
       <label>First Name:
         <input required class="full-width meee" type="text" name="firstName" placeholder="Your first name...">
       </label>
