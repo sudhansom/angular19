@@ -14,7 +14,7 @@ export class ReactiveRegistrationComponent implements OnInit {
   ngOnInit(): void {
     this.reactiveForm = new FormGroup({
       firstName: new FormControl('', Validators.required),
-      lastName: new FormControl(null),
+      lastName: new FormControl(null, Validators.required),
 
     })
   }
