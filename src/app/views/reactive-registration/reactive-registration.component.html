@@ -3,19 +3,19 @@
     <h2 id="registration">User Registration</h2>
     <form (ngSubmit)="submitForm()" [formGroup]="reactiveForm">
       <label>First Name:
-        <input class="full-width meee" type="text" name="firstName" placeholder="Your first name...">
+        <input class="full-width meee" type="text" name="firstName" formControlName="firstName" placeholder="Your first name...">
       </label>
 
       <label>Last Name:
-        <input class="full-width" type="text" name="lastName"  placeholder="Your last name...">
+        <input class="full-width" type="text" name="lastName" formControlName="lastName"  placeholder="Your last name...">
       </label>
 
       <label>Email Name:
-        <input class="full-width" type="text" name="email"  placeholder="Your email...">
+        <input class="full-width" type="text" name="email" formControlName="email"  placeholder="Your email...">
       </label>
 
       <label>Select country:
-        <select class="full-width" name="country" >
+        <select class="full-width" name="country" formControlName="country" >
           <option value="Nepal">Nepal</option>
           <option value="Denmark">Denmark</option>
           <option value="Canada">Canada</option>
@@ -26,9 +26,9 @@
       </label>
       <label> Gender:
         <div class="gender">
-          <input type="radio" name="gender" value="male"><label>male</label>
-          <input type="radio" name="gender" value="female"><label>female</label>
-          <input type="radio" name="gender" value="others"><label>others</label>
+          <input type="radio" name="gender" formControlName="gender"value="male"><label>male</label>
+          <input type="radio" name="gender" formControlName="gender" value="female"><label>female</label>
+          <input type="radio" name="gender" formControlName="gender" value="others"><label>others</label>
           </div>
       </label>
       <label> Hobbies:
