@@ -15,7 +15,9 @@ export class ReactiveRegistrationComponent implements OnInit {
     this.reactiveForm = new FormGroup({
       firstName: new FormControl('', Validators.required),
       lastName: new FormControl(null, Validators.required),
-
+      email: new FormControl(null, Validators.required),
+      country: new FormControl(null, Validators.required),
+      gender: new FormControl(null, Validators.required)
     })
   }
 
