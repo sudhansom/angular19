@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
-import { ReactiveFormsModule, FormGroup, FormControl, Validators, FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormControl, Validators, FormsModule, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-registration',
@@ -17,7 +17,11 @@ export class ReactiveRegistrationComponent implements OnInit {
       lastName: new FormControl(null, Validators.required),
       email: new FormControl(null, Validators.required),
       country: new FormControl(null, Validators.required),
-      gender: new FormControl(null, Validators.required)
+      gender: new FormControl(null, Validators.required),
+      hobbies: new FormArray([
+        new FormControl(null, Validators.required)
+      ]
+      )
     })
   }
 
