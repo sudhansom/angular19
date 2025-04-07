@@ -16,9 +16,16 @@ export class ReactiveRegistrationComponent implements OnInit {
       firstName: new FormControl('', Validators.required),
       lastName: new FormControl(null, Validators.required),
       email: new FormControl(null, Validators.required),
-      country: new FormControl(null, Validators.required),
       gender: new FormControl(null, Validators.required),
+      address: new FormGroup({
+        country: new FormControl(null),
+        street: new FormControl(null),
+        city: new FormControl(null),
+        region: new FormControl(null),
+        postal: new FormControl(null)
+      }),
       hobbies: new FormArray([
+        new FormControl(null, Validators.required),
         new FormControl(null, Validators.required)
       ]
       )
