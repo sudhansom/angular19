@@ -46,4 +46,13 @@
       letter-spacing: 1px;
     }
   }
+  .address {
+    display: flex;
+    justify-content: space-between;
+    gap: 3px;
+
+    input {
+      width: 100px;
+    }
+  }
 }
