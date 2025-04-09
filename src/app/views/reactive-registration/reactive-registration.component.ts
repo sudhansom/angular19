@@ -27,8 +27,6 @@ export class ReactiveRegistrationComponent implements OnInit {
       }),
       skills: new FormArray([
         new FormControl(null, Validators.required),
-        new FormControl(null, Validators.required),
-        new FormControl(null, Validators.required)
       ]
       )
     })
@@ -37,5 +35,11 @@ export class ReactiveRegistrationComponent implements OnInit {
 submitForm(){
   console.log('form submitted')
   console.log(this.reactiveForm);
+}
+addSkill(){
+  (<FormArray>this.reactiveForm.get('skills')).push(new FormControl(null, Validators.required))
+}
+deleteSkill(index){
+  (<FormArray>this.reactiveForm.get('skills'))
 }
 }

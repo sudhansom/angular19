@@ -49,19 +49,24 @@
           </div>
       </label>
       <div class="skills" formArrayName="skills">
-        <input type="text"
-        *ngFor="let control of reactiveForm.get('skills')['controls']; let i=index"
-        placeholder="add skill..."
-        [formControlName]="i"
+        <label>Add Skills:</label>
+        <div class="each-skill" *ngFor="let control of reactiveForm.get('skills')['controls']; let i=index">
+          <input type="text"
+          placeholder="add skill..."
+          [formControlName]="i"
         >
+        <button type="button" (click)="deleteSkill(i)">del</button>
+        </div>
       </div>
-      <label> Hobbies:
+      <input type="button" value="Add Skill" (click)="addSkill()">
+
+      <!-- <label> Hobbies:
         <div class="hobbies">
           <input type="checkbox" name="hobbies" value ="sports"><label>sports</label>
           <input type="checkbox" name="hobbies" value ="travel"><label>travel</label>
           <input type="checkbox" name="hobbies" value ="singing"><label>singing</label>
         </div>
-      </label>
+      </label> -->
       <input [disabled]="reactiveForm.invalid" type="submit" class="full-width btn" value="Submit">
     </form>
   </div>
