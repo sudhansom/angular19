@@ -25,11 +25,11 @@ export class ReactiveRegistrationComponent implements OnInit {
         region: new FormControl(null),
         postal: new FormControl(null)
       }),
-      hobbies: new FormArray([
-        new FormControl(null, Validators.required),
-        new FormControl(null, Validators.required)
-      ]
-      )
+      // hobbies: new FormArray([
+      //   new FormControl(null, Validators.required),
+      //   new FormControl(null, Validators.required)
+      // ]
+      // )
     })
   }
 
