@@ -51,7 +51,7 @@
           <input type="checkbox" name="hobbies" value ="singing"><label>singing</label>
         </div>
       </label>
-      <input type="submit" class="full-width btn" value="Submit">
+      <input [disabled]="reactiveForm.invalid" type="submit" class="full-width btn" value="Submit">
     </form>
   </div>
 </app-container>

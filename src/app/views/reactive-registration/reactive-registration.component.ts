@@ -34,6 +34,7 @@ export class ReactiveRegistrationComponent implements OnInit {
   }
 
 submitForm(){
+  console.log('form submitted')
   console.log(this.reactiveForm);
 }
 }
