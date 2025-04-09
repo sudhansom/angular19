@@ -5,6 +5,7 @@
     <form (ngSubmit)="submitForm()" [formGroup]="reactiveForm">
       <label>First Name:
         <input class="full-width meee" type="text" name="firstName" formControlName="firstName" placeholder="Your first name...">
+        <small>*First Name is a required field</small>
       </label>
 
       <label>Last Name:
