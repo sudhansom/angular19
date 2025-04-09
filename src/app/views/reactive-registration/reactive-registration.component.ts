@@ -40,6 +40,7 @@ addSkill(){
   (<FormArray>this.reactiveForm.get('skills')).push(new FormControl(null, Validators.required))
 }
 deleteSkill(index){
-  (<FormArray>this.reactiveForm.get('skills'))
+  const controls = <FormArray>this.reactiveForm.get('skills');
+  controls.removeAt(index);
 }
 }
