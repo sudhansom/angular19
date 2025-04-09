@@ -48,6 +48,13 @@
           <input type="radio" name="gender" formControlName="gender" value="others"><label>others</label>
           </div>
       </label>
+      <div class="skills" formArrayName="skills">
+        <input type="text"
+        *ngFor="let control of reactiveForm.get('skills')['controls']; let i=index"
+        placeholder="add skill..."
+        [formControlName]="i"
+        >
+      </div>
       <label> Hobbies:
         <div class="hobbies">
           <input type="checkbox" name="hobbies" value ="sports"><label>sports</label>
