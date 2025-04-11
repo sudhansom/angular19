@@ -67,28 +67,30 @@
           <input type="checkbox" name="hobbies" value ="singing"><label>singing</label>
         </div>
       </label> -->
-      <div class="experience"
-       formGroupName="experience"
-       *ngFor="let i of reactiveForm.get('experiences')['controls']; let a = index"
-       >
-       <p>Experience {{a + 1 }}</p>
+      <div formArrayName="experiences">
+        <div class="experience"
+          *ngFor="let exp of reactiveForm.get('experiences')['controls']; let i = index" [formGroupName]="i"
+        >
+       <p>Experience {{ i + 1 }}</p>
         <label>Company Name:
-          <input class="full-width" type="text"   placeholder="Company Name...">
+          <input class="full-width" type="text" formControlName="company"   placeholder="Company Name..." />
         </label>
         <label>Position:
-          <input class="full-width" type="text"  placeholder="Position">
+          <input class="full-width" type="text" formControlName="position"  placeholder="Position" />
         </label>
         <div class="date">
           <label>Start Date:
-            <input class="full-width" type="date">
+            <input class="full-width" formControlName="startDate" type="date" />
           </label>
           <label>End Date:
-            <input class="full-width" type="date">
+            <input class="full-width" formControlName="endDate" type="date" />
           </label>
         </div>
-        <button type="button" (click)="deleteExperience(a)">Delete</button>
+        <button type="button" (click)="deleteExperience(i)">Delete</button>
 
       </div>
+      </div>
+
       <button type="button" (click)="addExperience()">Add Experience</button>
       <input [disabled]="reactiveForm.invalid" type="submit" class="full-width btn" value="Submit">
     </form>
