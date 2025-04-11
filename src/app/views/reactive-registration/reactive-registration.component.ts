@@ -30,12 +30,6 @@ export class ReactiveRegistrationComponent implements OnInit {
       ]
       ),
       experience: new FormArray([
-        new FormGroup({
-          company: new FormControl(null),
-          position: new FormControl(null),
-          startDate: new FormControl(null),
-          endDate: new FormControl(null)
-        })
       ]),
     })
   }
@@ -51,5 +45,15 @@ addSkill(){
 deleteSkill(index: number){
   const controls = <FormArray>this.reactiveForm.get('skills');
   controls.removeAt(index);
+}
+addExperience(){
+  const exp = new FormGroup({
+    company: new FormControl(null),
+    position: new FormControl(null),
+    startDate: new FormControl(null),
+    endDate: new FormControl(null)
+  })
+  const controls = <FormArray>this.reactiveForm.get('experience');
+  controls.push(exp);
 }
 }
