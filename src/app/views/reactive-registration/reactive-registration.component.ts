@@ -29,7 +29,7 @@ export class ReactiveRegistrationComponent implements OnInit {
         new FormControl(null, Validators.required),
       ]
       ),
-      experience: new FormArray([
+      experiences: new FormArray([
       ]),
     })
   }
@@ -53,7 +53,11 @@ addExperience(){
     startDate: new FormControl(null),
     endDate: new FormControl(null)
   })
-  const controls = <FormArray>this.reactiveForm.get('experience');
+  const controls = <FormArray>this.reactiveForm.get('experiences');
   controls.push(exp);
+}
+deleteExperience(index: number){
+  const controls = <FormArray>this.reactiveForm.get('experiences');
+  controls.removeAt(index);
 }
 }

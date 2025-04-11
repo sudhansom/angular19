@@ -69,9 +69,9 @@
       </label> -->
       <div class="experience"
        formGroupName="experience"
-       *ngFor="let i of reactiveForm.get('experience')['controls']"
+       *ngFor="let i of reactiveForm.get('experiences')['controls']; let a = index"
        >
-       <p>Experience</p>
+       <p>Experience {{a + 1 }}</p>
         <label>Company Name:
           <input class="full-width" type="text"   placeholder="Company Name...">
         </label>
@@ -86,6 +86,7 @@
             <input class="full-width" type="date">
           </label>
         </div>
+        <button type="button" (click)="deleteExperience(a)">Delete</button>
 
       </div>
       <button type="button" (click)="addExperience()">Add Experience</button>
