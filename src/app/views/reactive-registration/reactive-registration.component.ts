@@ -28,7 +28,15 @@ export class ReactiveRegistrationComponent implements OnInit {
       skills: new FormArray([
         new FormControl(null, Validators.required),
       ]
-      )
+      ),
+      experience: new FormArray([
+        new FormGroup({
+          company: new FormControl(null),
+          position: new FormControl(null),
+          startDate: new FormControl(null),
+          endDate: new FormControl(null)
+        })
+      ]),
     })
   }
 

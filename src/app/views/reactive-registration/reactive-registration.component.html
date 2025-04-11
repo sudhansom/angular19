@@ -67,6 +67,27 @@
           <input type="checkbox" name="hobbies" value ="singing"><label>singing</label>
         </div>
       </label> -->
+      <div class="experience"
+       formGroupName="experience"
+       *ngFor="let i of reactiveForm.get('experience')['controls']"
+       >
+       <p>Experience</p>
+        <label>Company Name:
+          <input class="full-width" type="text"   placeholder="Company Name...">
+        </label>
+        <label>Position:
+          <input class="full-width" type="text"  placeholder="Position">
+        </label>
+        <div class="date">
+          <label>Start Date:
+            <input class="full-width" type="date">
+          </label>
+          <label>End Date:
+            <input class="full-width" type="date">
+          </label>
+        </div>
+
+      </div>
       <input [disabled]="reactiveForm.invalid" type="submit" class="full-width btn" value="Submit">
     </form>
   </div>
