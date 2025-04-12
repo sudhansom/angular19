@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators, FormsModule, FormArray } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { noSpaceAllowed } from '../../validators/noSpaceAllowed.validators';
 
 @Component({
   selector: 'app-reactive-registration',
@@ -14,7 +15,7 @@ export class ReactiveRegistrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.reactiveForm = new FormGroup({
-      firstName: new FormControl('', Validators.required),
+      firstName: new FormControl('',[ Validators.required, noSpaceAllowed]),
       lastName: new FormControl(null, Validators.required),
       email: new FormControl(null, Validators.required),
       gender: new FormControl(null, Validators.required),
