@@ -99,4 +99,15 @@
       }
     }
   }
+  .btn-style {
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(153, 151, 151);
+    color: white;
+    cursor: pointer;
+  }
+  .btn-style:hover {
+    background-color: rgb(157, 154, 154);
+  }
 }
