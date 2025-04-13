@@ -106,8 +106,10 @@
     background-color: rgb(153, 151, 151);
     color: white;
     cursor: pointer;
+    transition:all 1s ease-in-out;
   }
   .btn-style:hover {
-    background-color: rgb(157, 154, 154);
+    background-color: rgb(225, 222, 222);
+    color: black;
   }
 }
