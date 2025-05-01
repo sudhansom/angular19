@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, Output, Input, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-each-user',
   imports: [],
@@ -6,16 +6,18 @@ import { Component, input, output } from '@angular/core';
   styleUrl: './each-user.component.scss'
 })
 export class EachUserComponent {
-  id = input.required<string>();
-  name = input.required();
-  image = input.required();
-  clickUser = output<string>();
+  @Input({required: true}) id!: string;
+  @Input({required: true}) name!: string;
+  @Input({required: true}) image!: string;
+
+  @Output() clickUser = new EventEmitter();
+
 
   get imagePath(){
-    return "src/assets/images" + this.image();
+    return "src/assets/images" + this.image;
   }
 
   onClick(){
-    this.clickUser.emit(this.id());
+    this.clickUser.emit(this.id);
   }
 }
