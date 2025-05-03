@@ -1,3 +1,5 @@
-@for(task of userTasks; track task.id){
-  <app-each-task  [id]="task.id" [title]="task.title" [description]="task.description" [date]="task.date"></app-each-task>
-}
+<div class="tasks">
+  @for(task of userTasks; track task.id){
+    <app-each-task  [id]="task.id" [title]="task.title" [description]="task.description" [date]="task.date"></app-each-task>
+  }
+</div>
