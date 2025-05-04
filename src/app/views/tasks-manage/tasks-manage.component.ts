@@ -23,4 +23,7 @@ export class TasksManageComponent {
   toogleAddTask(){
     this.showAddTask.set(!this.showAddTask());
   }
+  onCompleteTask(id: string){
+    console.log('task completed::  '+id);
+  }
 }
