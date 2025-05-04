@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, input, output } from '@angular/core';
+import { Component, OnInit, inject, input, output, signal } from '@angular/core';
 import { EachTaskComponent } from './each-task/each-task.component';
 import { DataServiceService } from '../../services/data-service.service';
 import { type Task } from './tasks.model';
@@ -13,11 +13,11 @@ export class TasksComponent implements OnInit {
   id = input<string>();
   complete = output<string>()
   dataService = inject(DataServiceService)
-  tasks: Task[] = [];
+  tasks = signal<Task[]>([]);
 
 
   ngOnInit(){
-    this.tasks = this.dataService.getTasks();
+    this.tasks.set(this.dataService.getTasks());
   }
 
   get userId(){
@@ -25,10 +25,11 @@ export class TasksComponent implements OnInit {
   }
 
   get userTasks(){
-    return this.tasks.filter(t => t.user === this.userId)
+    return this.tasks().filter(t => t.user === this.userId)
   }
 
   onCompleteTask(id: string){
+    this.tasks.set(this.tasks().filter(t => t.id != id));
     this.complete.emit(id);
   }
 
