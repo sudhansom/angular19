@@ -4,7 +4,7 @@
     <p class="date">{{ date() | date }}</p>
     <p class="desc">{{ description() }}</p>
     <div class="btn">
-      <button>
+      <button (click)="onComplete()">
         Complete
       </button>
     </div>
