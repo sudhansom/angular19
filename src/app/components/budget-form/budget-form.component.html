@@ -1,15 +1,16 @@
 <div class="budget-form">
-  <label> Initial Investment
+  <label> <span>Initial Investment</span>
     <input type="number" [(ngModel)]="initialInvestment">
   </label>
-  <label> Initial Investment
+  <label> <span>Annual Investment</span>
     <input type="number" [(ngModel)]="annualInvestment">
   </label>
-  <label> Initial Investment
+  <label> <span>Aspected Return</span>
     <input type="number" [(ngModel)]="aspectedReturn">
   </label>
-  <label> Initial Investment
+  <label> <span>Duration</span>
     <input type="number" [(ngModel)]="duration">
   </label>
-    <button>Calculate</button>
 </div>
+<button (click)="doCalculations()">Calculate</button>
+

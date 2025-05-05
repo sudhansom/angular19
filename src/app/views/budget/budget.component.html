@@ -1,6 +1,6 @@
 <app-container>
   <div class="budget">
-    <app-budget-form></app-budget-form>
-    <app-results></app-results>
+    <app-budget-form (result)="calculateResult($event)"></app-budget-form>
+    <app-results [result]="result()"></app-results>
   </div>
 </app-container>
