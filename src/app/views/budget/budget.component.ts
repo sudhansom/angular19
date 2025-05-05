@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
+import { BudgetFormComponent } from '../../components/budget-form/budget-form.component';
+import { ResultsComponent } from '../../components/results/results.component';
 
 @Component({
   selector: 'app-budget',
-  imports: [ContainerComponent],
+  imports: [ContainerComponent, BudgetFormComponent, ResultsComponent],
   templateUrl: './budget.component.html',
   styleUrl: './budget.component.scss'
 })
