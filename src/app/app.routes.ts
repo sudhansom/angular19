@@ -3,11 +3,13 @@ import { TasksManageComponent } from './views/tasks-manage/tasks-manage.componen
 import { UserRegistrationComponent } from './views/user-registration/user-registration.component';
 import { ReactiveRegistrationComponent } from './views/reactive-registration/reactive-registration.component';
 import { BudgetComponent } from './views/budget/budget.component';
+import { SeparationComponent } from './views/separation/separation.component';
 
 export const routes: Routes = [
   {path: '', component: TasksManageComponent},
   {path: 't-register', component: UserRegistrationComponent},
   {path: 'r-register', component: ReactiveRegistrationComponent},
   {path: 'budget', component: BudgetComponent},
+  { path: 'separation', component: SeparationComponent },
 
 ];
