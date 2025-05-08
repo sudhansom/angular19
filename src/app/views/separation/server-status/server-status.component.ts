@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
 
-import { HeaderComponent } from './header/header.component';
-import { ServerStatusComponent } from './server-status/server-status.component';
-
 @Component({
-  selector: 'app-separation',
-  imports: [HeaderComponent, ServerStatusComponent],
-  templateUrl: './separation.component.html',
-  styleUrl: './separation.component.scss'
+  selector: 'app-server-status',
+  imports: [],
+  templateUrl: './server-status.component.html',
+  styleUrl: './server-status.component.scss'
 })
-export class SeparationComponent {
+export class ServerStatusComponent {
   dummyTrafficData = [
     {
       id: 'd1',
