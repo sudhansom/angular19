@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
 
-import { HeaderComponent } from './header/header.component';
-import { ServerStatusComponent } from './server-status/server-status.component';
-import { TrafficComponent } from './traffic/traffic.component';
-
 @Component({
-  selector: 'app-separation',
-  imports: [HeaderComponent, ServerStatusComponent, TrafficComponent],
-  templateUrl: './separation.component.html',
-  styleUrl: './separation.component.scss'
+  selector: 'app-traffic',
+  imports: [],
+  templateUrl: './traffic.component.html',
+  styleUrl: './traffic.component.scss'
 })
-export class SeparationComponent {
+export class TrafficComponent {
   dummyTrafficData = [
     {
       id: 'd1',
@@ -42,5 +38,4 @@ export class SeparationComponent {
     },
   ];
   maxTraffic = Math.max(...this.dummyTrafficData.map((data) => data.value));
-  currentStatus = 'online';
 }
