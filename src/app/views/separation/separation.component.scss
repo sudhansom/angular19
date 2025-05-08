@@ -18,6 +18,16 @@ main {
   margin: 3rem 10%;
 }
 
+header {
+  padding: 0.75rem 0.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
 #logo {
   width: 5.5rem;
   height: 5.5rem;
