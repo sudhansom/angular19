@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 
+import { HeaderComponent } from './header/header.component';
+
 @Component({
   selector: 'app-separation',
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './separation.component.html',
   styleUrl: './separation.component.scss'
 })
