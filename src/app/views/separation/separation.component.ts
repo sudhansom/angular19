@@ -4,10 +4,11 @@ import { HeaderComponent } from './header/header.component';
 import { ServerStatusComponent } from './server-status/server-status.component';
 import { TrafficComponent } from './traffic/traffic.component';
 import { TicketsComponent } from './tickets/tickets.component';
+import { DashbordItemComponent } from './dashbord-item/dashbord-item.component'
 
 @Component({
   selector: 'app-separation',
-  imports: [HeaderComponent, ServerStatusComponent, TrafficComponent, TicketsComponent],
+  imports: [HeaderComponent, ServerStatusComponent, TrafficComponent, TicketsComponent, DashbordItemComponent],
   templateUrl: './separation.component.html',
   styleUrl: './separation.component.scss'
 })
