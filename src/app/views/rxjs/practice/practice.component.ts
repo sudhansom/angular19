@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 
+import { ContainerComponent } from '../../../components/container/container.component';
+
 @Component({
   selector: 'app-practice',
-  imports: [],
+  imports: [ContainerComponent],
   templateUrl: './practice.component.html',
   styleUrl: './practice.component.scss'
 })
