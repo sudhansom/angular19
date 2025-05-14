@@ -1,0 +1,14 @@
+:host {
+  .counter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    p {
+      font-size: 24px;
+      color: green;
+      width: 32px;
+      margin: auto;
+    }
+  }
+}

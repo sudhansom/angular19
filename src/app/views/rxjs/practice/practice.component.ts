@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 import { ContainerComponent } from '../../../components/container/container.component';
 
@@ -9,5 +9,13 @@ import { ContainerComponent } from '../../../components/container/container.comp
   styleUrl: './practice.component.scss'
 })
 export class PracticeComponent {
+  counter = signal(0);
 
+  onIncrement(){
+    this.counter.update(preValue => preValue + 1);
+  }
+
+  onDecrement(){
+    this.counter.update(preValue => preValue - 1);
+  }
 }

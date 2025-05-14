@@ -1,3 +1,8 @@
 <app-container>
   <h1>Rxjs Practice</h1>
+  <div class="counter">
+    <button (click)="onIncrement()">Increase</button>
+    <p>{{ counter() }}</p>
+    <button (click)="onDecrement()">Decrease</button>
+  </div>
 </app-container>
