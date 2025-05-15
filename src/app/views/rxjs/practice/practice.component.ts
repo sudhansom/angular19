@@ -12,20 +12,24 @@ import { Observable, fromEvent, timer,map } from 'rxjs';
 })
 export class PracticeComponent implements OnInit {
   ngOnInit() {
-    const data$ = Observable.create(observer => {
-      fetch('http://localhost:3000/posts').then(response => {
-        return response.json();
-      }).then(data => {
-        observer.next(data);
-        observer.complete();
-      }).catch(err => {
-        observer.error(err);
-      })
-    })
+    const data$ = createHttpObservable('http://localhost:3000/posts');
 
     data$.pipe(map(d => d["payload"])).subscribe(data => {
       console.log(data);
     })
+
+    function createHttpObservable(url: string){
+      return Observable.create(observer => {
+        fetch(url).then(response => {
+          return response.json();
+        }).then(data => {
+          observer.next(data);
+          observer.complete();
+        }).catch(err => {
+          observer.error(err);
+        })
+      })
+    }
   }
 
 }
