@@ -12,11 +12,15 @@ import { fromEvent, timer } from 'rxjs';
 })
 export class PracticeComponent implements OnInit {
   ngOnInit() {
-      const interval$ = timer(5000, 1000);
+      const interval$ = timer(1000, 1000);
 
-      interval$.subscribe(val => {
+      const sub = interval$.subscribe(val => {
         console.log('Stream 1 => ' + val)
       })
+
+      setTimeout(()=>{
+        sub.unsubscribe();
+      }, 5000)
 
       const click$ = fromEvent(document, 'click');
 
