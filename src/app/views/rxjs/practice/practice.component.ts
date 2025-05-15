@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 
 import { ContainerComponent } from '../../../components/container/container.component';
-import { fromEvent, timer } from 'rxjs';
+import { Observable, fromEvent, timer,map } from 'rxjs';
 
 @Component({
   selector: 'app-practice',
@@ -12,21 +12,20 @@ import { fromEvent, timer } from 'rxjs';
 })
 export class PracticeComponent implements OnInit {
   ngOnInit() {
-      const interval$ = timer(1000, 1000);
-
-      const sub = interval$.subscribe(val => {
-        console.log('Stream 1 => ' + val)
+    const data$ = Observable.create(observer => {
+      fetch('http://localhost:3000/posts').then(response => {
+        return response.json();
+      }).then(data => {
+        observer.next(data);
+        observer.complete();
+      }).catch(err => {
+        observer.error(err);
       })
+    })
 
-      setTimeout(()=>{
-        sub.unsubscribe();
-      }, 5000)
-
-      const click$ = fromEvent(document, 'click');
-
-      click$.subscribe(event => {
-        console.log(event);
-
-      })
+    data$.pipe(map(d => d["payload"])).subscribe(data => {
+      console.log(data);
+    })
   }
+
 }
