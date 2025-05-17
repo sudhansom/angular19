@@ -12,7 +12,7 @@ import { Observable, fromEvent, timer,map } from 'rxjs';
 })
 export class PracticeComponent implements OnInit {
   ngOnInit() {
-    const http$ = createHttpObservable('http://localhost:3000/posts');
+    const http$ = createHttpObservable('http://localhost:3000/courses');
 
     const data$ = http$.pipe(map(d => d["payload"]));
 
