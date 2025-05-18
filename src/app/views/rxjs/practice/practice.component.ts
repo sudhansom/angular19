@@ -17,23 +17,27 @@ type Course = {
   styleUrl: './practice.component.scss'
 })
 export class PracticeComponent implements OnInit {
-  beginner$ = Observable<any>
-  data$ = Observable<Course[]>
+  beginner$: Observable<Course[]>;
+
   ngOnInit() {
     const http$ = createHttpObservable('http://localhost:3000/courses');
 
-    this.data$ = http$.pipe(map(d => Object.values(d["payload"])));
+    const data$: Observable<Course[]> = http$.pipe(map(d => Object.values(d["payload"])));
 
 
-    // this.beginner$ = data$.pipe(map(c => c.filter(b => b.level === 'beginner')));
+    this.beginner$ = data$.pipe(
+      map((courses: Course[]) =>
+        courses.filter(course => course.level === "beginner")
+      )
+    );
 
-    // data$.subscribe(data => {
-    //   console.log(data);
-    // },
-    // (error)=>{console.log(error);
-    // },
-    // ()=>{console.log('completed')}
-    // )
+    data$.subscribe(data => {
+      console.log(data);
+    },
+    (error)=>{console.log(error);
+    },
+    ()=>{console.log('completed')}
+    )
 
     function createHttpObservable(url: string){
       return Observable.create(observer => {
