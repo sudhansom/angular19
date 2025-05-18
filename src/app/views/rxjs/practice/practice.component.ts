@@ -18,6 +18,8 @@ type Course = {
 })
 export class PracticeComponent implements OnInit {
   beginner$: Observable<Course[]>;
+  advanced$: Observable<Course[]>;
+
 
   ngOnInit() {
     const http$ = createHttpObservable('http://localhost:3000/courses');
@@ -28,6 +30,11 @@ export class PracticeComponent implements OnInit {
     this.beginner$ = data$.pipe(
       map((courses: Course[]) =>
         courses.filter(course => course.level === "beginner")
+      )
+    );
+    this.advanced$ = data$.pipe(
+      map((courses: Course[]) =>
+        courses.filter(course => course.level === "Advanced")
       )
     );
 

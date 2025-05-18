@@ -1,9 +1,17 @@
 <app-container>
   <h1>Rxjs Practice</h1>
+ <div class="container">
   <ul>
     @for(course of  beginner$ | async; track course.id ){
       <li>{{ course.title }}</li>
     }
   </ul>
+
+  <ul>
+    @for(course of  advanced$ | async; track course.id ){
+      <li>{{ course.title }}</li>
+    }
+  </ul>
+ </div>
 
 </app-container>
