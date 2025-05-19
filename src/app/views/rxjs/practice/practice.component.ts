@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 
 import { ContainerComponent } from '../../../components/container/container.component';
-import { Observable, filter, timer,map, shareReplay, catchError, throwError } from 'rxjs';
+import { Observable, filter, timer,map, shareReplay, catchError, throwError, finalize } from 'rxjs';
 
 type Course = {
   id: number,
@@ -30,6 +30,9 @@ export class PracticeComponent implements OnInit {
       catchError(err => {
         console.log(err);
         return throwError(err);
+      }),
+      finalize(()=>{
+        console.log('completed the execution finally.')
       })
       );
 
