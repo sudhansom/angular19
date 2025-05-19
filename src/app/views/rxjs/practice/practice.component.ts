@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 
 import { ContainerComponent } from '../../../components/container/container.component';
-import { Observable, filter, timer,map, shareReplay } from 'rxjs';
+import { Observable, filter, timer,map, shareReplay, catchError, throwError } from 'rxjs';
 
 type Course = {
   id: number,
@@ -26,7 +26,11 @@ export class PracticeComponent implements OnInit {
 
     const data$: Observable<Course[]> = http$.pipe(
       map(d => Object.values(d["payload"])),
-      shareReplay()
+      shareReplay(),
+      catchError(err => {
+        console.log(err);
+        return throwError(err);
+      })
       );
 
 
