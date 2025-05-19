@@ -56,7 +56,11 @@ export class PracticeComponent implements OnInit {
     function createHttpObservable(url: string){
       return Observable.create(observer => {
         fetch(url).then(response => {
-          return response.json();
+          if(response.ok){
+            return response.json();
+          }else {
+            return throwError({"message":"Error with status code "+ response.status})
+          }
         }).then(data => {
           setTimeout(() => {
             observer.next(data);
