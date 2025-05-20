@@ -48,13 +48,13 @@ export class PracticeComponent implements OnInit {
       )
     );
 
-    data$.subscribe(data => {
-      console.log(data);
-    },
-    (error)=>{console.log(error);
-    },
-    ()=>{console.log('completed')}
-    )
+    // data$.subscribe(data => {
+    //   console.log(data);
+    // },
+    // (error)=>{console.log(error);
+    // },
+    // ()=>{console.log('completed')}
+    // )
 
     function createHttpObservable(url: string){
       return Observable.create(observer => {
