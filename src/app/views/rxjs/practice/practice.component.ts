@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 
 import { ContainerComponent } from '../../../components/container/container.component';
-import { Observable, filter, timer,map, shareReplay, catchError, throwError, finalize } from 'rxjs';
+import { Observable, map, shareReplay, catchError, throwError, finalize } from 'rxjs';
+import { createHttpObservable } from '../../../utils/utils';
 
 type Course = {
   id: number,
@@ -47,25 +48,6 @@ export class PracticeComponent implements OnInit {
         courses.filter(course => course.level === "Advanced")
       )
     );
-
-    function createHttpObservable(url: string){
-      return Observable.create(observer => {
-        fetch(url).then(response => {
-          if(response.ok){
-            return response.json();
-          }else {
-            return throwError({"message":"Error with status code "+ response.status})
-          }
-        }).then(data => {
-          setTimeout(() => {
-            observer.next(data);
-            observer.complete();
-          }, 1000);
-        }).catch(err => {
-          observer.error(err);
-        })
-      })
-    }
   }
 
 }
