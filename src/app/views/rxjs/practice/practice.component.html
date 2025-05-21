@@ -3,13 +3,13 @@
  <div class="container">
   <ul>
     @for(course of  beginner$ | async; track course.id ){
-      <li>{{ course.title }}</li>
+      <li class="box">{{ course.title }}</li>
     }
   </ul>
 
   <ul>
     @for(course of  advanced$ | async; track course.id ){
-      <li>{{ course.title }}</li>
+      <li class="box">{{ course.title }}</li>
     }
   </ul>
  </div>
