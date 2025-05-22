@@ -6,9 +6,16 @@
     padding: 12px;
     border-radius: 12px;
   }
+
   h2 {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 24px;
+
   }
 }

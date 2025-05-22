@@ -1,3 +1,8 @@
 <app-container>
   <h2>sitemule works!</h2>
+  <div class="container">
+    @for(feature of mylists(); track feature.title){
+      <app-feature [feature]="feature"></app-feature>
+    }
+  </div>
 </app-container>

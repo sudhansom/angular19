@@ -1,19 +1,20 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
+import { FeatureComponent } from '../../components/feature/feature.component';
 
-interface Features {
+interface Feature {
   title: string,
   description: string,
 }
 
 @Component({
   selector: 'app-sitemule',
-  imports: [ContainerComponent],
+  imports: [ContainerComponent, FeatureComponent],
   templateUrl: './sitemule.component.html',
   styleUrl: './sitemule.component.scss'
 })
 export class SitemuleComponent implements OnInit {
-  mylists = signal<Features[]>([]);
+  mylists = signal<Feature[]>([]);
 
   ngOnInit() {
       this.mylists.set([
