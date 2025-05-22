@@ -1,0 +1,14 @@
+:host {
+  app-container {
+    display: block;
+    border: 1px solid gray;
+    margin: 24px;
+    padding: 12px;
+    border-radius: 12px;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
