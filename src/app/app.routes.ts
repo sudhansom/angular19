@@ -5,6 +5,7 @@ import { ReactiveRegistrationComponent } from './views/reactive-registration/rea
 import { BudgetComponent } from './views/budget/budget.component';
 import { SeparationComponent } from './views/separation/separation.component';
 import { PracticeComponent } from './views/rxjs/practice/practice.component';
+import { SitemuleComponent } from './views/sitemule/sitemule.component';
 
 export const routes: Routes = [
   {path: '', component: TasksManageComponent},
@@ -13,5 +14,7 @@ export const routes: Routes = [
   {path: 'budget', component: BudgetComponent},
   { path: 'separation', component: SeparationComponent },
   { path: 'rxjs', component: PracticeComponent},
+  { path: 'sitemule', component: SitemuleComponent},
+
 
 ];
