@@ -8,7 +8,7 @@
   .container:hover::before {
       content: "";
       position: absolute;
-      inset: -12px;
+      inset: -24px;
       background-color: rgba(rgb(227, 223, 223), .7);
       border-radius: 12px;
   }
