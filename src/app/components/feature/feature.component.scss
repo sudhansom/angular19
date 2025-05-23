@@ -2,9 +2,15 @@
   .container {
     margin: 24px;
     cursor: pointer;
+    position: relative;
+    transition: all 1s ease-in-out;
   }
-  .container:hover {
-    background-color: gray;
+  .container:hover::before {
+      content: "";
+      position: absolute;
+      inset: -12px;
+      background-color: rgba(rgb(227, 223, 223), .7);
+      border-radius: 12px;
   }
 
   .circle {
