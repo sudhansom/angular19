@@ -4,14 +4,21 @@
     cursor: pointer;
     position: relative;
     transition: all 1s ease-in-out;
-  }
-  .container:hover::before {
+    :hover::before {
       content: "";
       position: absolute;
       inset: -24px;
       background-color: rgba(rgb(227, 223, 223), .7);
       border-radius: 12px;
+    }
   }
+  // .container:hover::before {
+  //     content: "";
+  //     position: absolute;
+  //     inset: -24px;
+  //     background-color: rgba(rgb(227, 223, 223), .7);
+  //     border-radius: 12px;
+  // }
 
   .circle {
     background-color: green;
