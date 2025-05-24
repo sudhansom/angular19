@@ -3,13 +3,19 @@
     margin: 24px;
     cursor: pointer;
     position: relative;
-    transition: all 1s ease-in-out;
-    :hover::before {
+
+    &::before {
       content: "";
       position: absolute;
       inset: -24px;
-      background-color: rgba(rgb(227, 223, 223), .7);
+      // background-color: rgba(244, 240, 240, 0);
       border-radius: 12px;
+      transition: all 1s ease-in-out;
+      // pointer-events: none; /* ensures hover works on container */
+    }
+
+    &:hover::before {
+      background-color: rgba(227, 223, 223, 0.7);
     }
   }
 
