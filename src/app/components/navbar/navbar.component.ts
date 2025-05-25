@@ -1,8 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { SafeLinkDirective } from '../../directives/safe-link.directives';
 import { MyPipe } from '../../pipes/my-pipe.pipe';
+
+interface Links {
+  name: string,
+  label: string
+}
 
 @Component({
   selector: 'app-navbar',
@@ -11,5 +16,5 @@ import { MyPipe } from '../../pipes/my-pipe.pipe';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
+  @Input() links : Links[];
 }

@@ -10,4 +10,34 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 })
 export class AppComponent {
   title = 'task-management';
+  lists = [
+    {
+      name: '/',
+      label: 'home'
+    },
+    {
+      name: '/t-register',
+      label: 't-form'
+    },
+    {
+      name: '/r-register',
+      label: 'r-form'
+    },
+    {
+      name: '/budget',
+      label: 'budget'
+    },
+    {
+      name: '/separation',
+      label: 'separation'
+    },
+    {
+      name: '/rxjs',
+      label: 'rxjs'
+    },
+    {
+      name: '/sitemule',
+      label: 'sitemule'
+    }
+]
 }
