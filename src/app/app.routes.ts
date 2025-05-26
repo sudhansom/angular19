@@ -14,7 +14,7 @@ export const routes: Routes = [
   {path: 'budget', component: BudgetComponent},
   { path: 'separation', component: SeparationComponent },
   { path: 'rxjs', component: PracticeComponent},
-  { path: 'sitemule', component: SitemuleComponent, canActivate: [() => false]},
+  { path: 'sitemule', component: SitemuleComponent, canActivate: [() => true]},
 
 
 ];
