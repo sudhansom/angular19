@@ -37,7 +37,7 @@ export class ReactiveRegistrationComponent implements OnInit {
 
 submitForm(){
   console.log('form submitted')
-  console.log(this.reactiveForm);
+  console.log('form value' + this.reactiveForm.value.firstName);
 }
 addSkill(){
   const controls = <FormArray>this.reactiveForm.get('skills');
@@ -60,5 +60,12 @@ addExperience(){
 deleteExperience(index: number){
   const controls = <FormArray>this.reactiveForm.get('experiences');
   controls.removeAt(index);
+}
+canExit(){
+  if(this.reactiveForm.value.firstName){
+    return confirm('Form is not Submitted. Are you sure you want to leave the page???');
+  }else {
+    return true;
+  }
 }
 }

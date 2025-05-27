@@ -10,7 +10,7 @@ import { SitemuleComponent } from './views/sitemule/sitemule.component';
 export const routes: Routes = [
   {path: '', component: TasksManageComponent},
   {path: 't-register', component: UserRegistrationComponent},
-  {path: 'r-register', component: ReactiveRegistrationComponent, canDeactivate: [()=>{return true;}]},
+  {path: 'r-register', component: ReactiveRegistrationComponent, canDeactivate: [(comp: ReactiveRegistrationComponent)=>{return comp.canExit();}]},
   {path: 'budget', component: BudgetComponent},
   { path: 'separation', component: SeparationComponent },
   { path: 'rxjs', component: PracticeComponent},
