@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 
 import { ContainerComponent } from '../../../components/container/container.component';
+import { LoaderComponent } from '../../../components/loader/loader.component';
 import { Observable, map, shareReplay, catchError, throwError, finalize } from 'rxjs';
 import { createHttpObservable } from '../../../utils/utils';
 
@@ -13,7 +14,7 @@ type Course = {
 
 @Component({
   selector: 'app-practice',
-  imports: [ContainerComponent, AsyncPipe],
+  imports: [ContainerComponent, AsyncPipe, LoaderComponent],
   templateUrl: './practice.component.html',
   styleUrl: './practice.component.scss'
 })

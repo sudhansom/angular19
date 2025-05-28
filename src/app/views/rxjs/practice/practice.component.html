@@ -1,19 +1,26 @@
 <app-container>
   <h1>Rxjs Practice</h1>
- <div class="container">
-  <ul>
-    <h4>Beginner Course</h4>
-    @for(course of  beginner$ | async; track course.id ){
-      <li class="box">{{ course.title }}</li>
-    }
-  </ul>
 
-  <ul>
-    <h4>Adbanced Course</h4>
-    @for(course of  advanced$ | async; track course.id ){
-      <li class="box">{{ course.title }}</li>
-    }
-  </ul>
- </div>
+ @if(beginner$ | async){
+  <div class="container">
+    <ul>
+      <h4>Beginner Course</h4>
+      @for(course of  beginner$ | async; track course.id ){
+        <li class="box">{{ course.title }}</li>
+      }
+    </ul>
+
+    <ul>
+      <h4>Adbanced Course</h4>
+      @for(course of  advanced$ | async; track course.id ){
+        <li class="box">{{ course.title }}</li>
+      }
+    </ul>
+   </div>
+ } @else {
+ <app-loader></app-loader>
+
+ }
+
 
 </app-container>
