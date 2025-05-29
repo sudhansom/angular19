@@ -10,9 +10,9 @@
       { "id": 2, "title": "Angular", "level": "beginner" },
       { "id": 3, "title": "Python", "level": "beginner" },
       { "id": 4, "title": "c-programming", "level": "beginner" },
-      { "id": 5, "title": "CI-CD", "level": "Advanced" },
-      { "id": 6, "title": "Docker", "level": "Advanced" },
-      { "id": 7, "title": "Backend", "level": "Advanced" }
+      { "id": 5, "title": "CI-CD", "level": "advanced" },
+      { "id": 6, "title": "Docker", "level": "advanced" },
+      { "id": 7, "title": "Backend", "level": "advanced" }
 
     ]
   },
