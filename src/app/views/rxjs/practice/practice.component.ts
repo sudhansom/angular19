@@ -46,7 +46,7 @@ export class PracticeComponent implements OnInit {
     );
     this.advanced$ = data$.pipe(
       map((courses: Course[]) =>
-        courses.filter(course => course.level === "Advanced")
+        courses.filter(course => course.level === "advanced")
       )
     );
   }

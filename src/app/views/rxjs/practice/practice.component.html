@@ -5,14 +5,14 @@
   @if(beginner$ | async){
 
     <ul>
-      <h4>Beginner Course</h4>
+      <h4>Beginner Courses</h4>
       @for(course of  beginner$ | async; track course.id ){
         <li class="box">{{ course.title }}</li>
       }
     </ul>
 
     <ul>
-      <h4>Adbanced Course</h4>
+      <h4>Advanced Courses</h4>
       @for(course of  advanced$ | async; track course.id ){
         <li class="box">{{ course.title }}</li>
       }
