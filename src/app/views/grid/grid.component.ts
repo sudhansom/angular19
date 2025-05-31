@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ContainerComponent } from '../../components/container/container.component';
 
 @Component({
   selector: 'app-grid',
-  imports: [],
+  imports: [ContainerComponent],
   templateUrl: './grid.component.html',
   styleUrl: './grid.component.scss'
 })
