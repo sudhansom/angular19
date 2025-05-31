@@ -6,6 +6,7 @@ import { BudgetComponent } from './views/budget/budget.component';
 import { SeparationComponent } from './views/separation/separation.component';
 import { PracticeComponent } from './views/rxjs/practice/practice.component';
 import { SitemuleComponent } from './views/sitemule/sitemule.component';
+import { GridComponent } from './views/grid/grid.component';
 
 export const routes: Routes = [
   {path: '', component: TasksManageComponent},
@@ -14,6 +15,7 @@ export const routes: Routes = [
   {path: 'budget', component: BudgetComponent},
   { path: 'separation', component: SeparationComponent },
   { path: 'rxjs', component: PracticeComponent},
+  { path: 'grid', component: GridComponent},
   { path: 'sitemule', component: SitemuleComponent, canActivate: [() => true]},
 
 
