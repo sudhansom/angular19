@@ -36,6 +36,10 @@ export class AppComponent {
       label: 'rxjs'
     },
     {
+      name: '/grid',
+      label: 'grid'
+    },
+    {
       name: '/sitemule',
       label: 'sitemule'
     }
