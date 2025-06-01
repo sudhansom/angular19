@@ -7,6 +7,7 @@ import { SeparationComponent } from './views/separation/separation.component';
 import { PracticeComponent } from './views/rxjs/practice/practice.component';
 import { SitemuleComponent } from './views/sitemule/sitemule.component';
 import { GridComponent } from './views/grid/grid.component';
+import { CssGridOnlyComponent } from './views/css-grid-only/css-grid-only.component';
 
 export const routes: Routes = [
   {path: '', component: TasksManageComponent},
@@ -16,6 +17,8 @@ export const routes: Routes = [
   { path: 'separation', component: SeparationComponent },
   { path: 'rxjs', component: PracticeComponent},
   { path: 'grid', component: GridComponent},
+  { path: 'grid-only', component: CssGridOnlyComponent},
+
   { path: 'sitemule', component: SitemuleComponent, canActivate: [() => true]},
 
 

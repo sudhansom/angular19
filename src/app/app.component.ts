@@ -40,6 +40,10 @@ export class AppComponent {
       label: 'grid'
     },
     {
+      name: '/grid-only',
+      label: 'grid-only'
+    },
+    {
       name: '/sitemule',
       label: 'sitemule'
     }
