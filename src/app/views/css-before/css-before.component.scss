@@ -1,0 +1,27 @@
+:host {
+  app-container {
+    width: 500px;
+    display: block;
+    margin: auto;
+  }
+  p {
+    width: max-content;
+    position: relative;
+  }
+  p::before {
+    content: open-quote;
+    font-size: 33px;
+    color: red;
+    left: -18px;
+    top: -12px;
+    position: absolute;
+  }
+  p::after {
+    content: close-quote;
+    font-size: 33px;
+    color: red;
+    right: -18px;
+    top: -12px;
+    position: absolute;
+  }
+}

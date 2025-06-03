@@ -40,6 +40,10 @@ export class AppComponent {
       label: 'grid'
     },
     {
+      name: '/css-before',
+      label: 'before'
+    },
+    {
       name: '/grid-only',
       label: 'grid-only'
     },
