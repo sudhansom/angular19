@@ -24,4 +24,31 @@
     top: -12px;
     position: absolute;
   }
+  ul {
+    counter-reset: my-list;
+    list-style-type: none;
+  }
+  li {
+    position: relative;
+    margin-bottom: 36px;
+    border: 1px solid gray;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  li::before {
+    counter-increment: my-list;
+    content: counter(my-list);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: -54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
 }
