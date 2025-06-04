@@ -7,12 +7,15 @@
   p {
     width: max-content;
     position: relative;
+    margin: 24px auto;
+    font-size: 24px;
+    font-weight: bold;
   }
   p::before {
     content: open-quote;
     font-size: 33px;
     color: red;
-    left: -18px;
+    left: -20px;
     top: -12px;
     position: absolute;
   }
@@ -20,7 +23,7 @@
     content: close-quote;
     font-size: 33px;
     color: red;
-    right: -18px;
+    right: -20px;
     top: -12px;
     position: absolute;
   }
@@ -31,11 +34,13 @@
   li {
     position: relative;
     margin-bottom: 36px;
+    padding: 6px;
     border: 1px solid gray;
     color: green;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 6px;
   }
   li::before {
     counter-increment: my-list;
