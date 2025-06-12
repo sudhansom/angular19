@@ -4,7 +4,7 @@
     <p>( Template driven form )</p>
     <form (ngSubmit)="formSubmit(form)" #form="ngForm">
       <label>First Name:
-        <input required class="full-width meee" type="text" name="firstName" ngModel placeholder="Your first name...">
+        <input required class="full-width meee" type="text" name="firstName" [ngModel]="'Sudhan'" placeholder="Your first name...">
       </label>
 
       <label>Last Name:
@@ -16,7 +16,7 @@
       </label>
 
       <label>Select country:
-        <select class="full-width" ngModel name="country" >
+        <select class="full-width" [ngModel]="'Nepal'" name="country" >
           <option value="Nepal">Nepal</option>
           <option value="Denmark">Denmark</option>
           <option value="Canada">Canada</option>
