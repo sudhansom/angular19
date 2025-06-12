@@ -27,9 +27,9 @@
       </label>
       <label> Gender:
         <div class="gender">
-          <input type="radio" name="gender" value="male" ngModel><label>male</label>
-          <input type="radio" name="gender" value="female" ngModel><label>female</label>
-          <input type="radio" name="gender" value="others" ngModel><label>others</label>
+          <input type="radio" name="gender" value="male" [ngModel]="'male'"><label>male</label>
+          <input type="radio" name="gender" value="female" [ngModel]="'male'"><label>female</label>
+          <input type="radio" name="gender" value="others" [ngModel]="'male'"><label>others</label>
           </div>
       </label>
       <label> Hobbies:
