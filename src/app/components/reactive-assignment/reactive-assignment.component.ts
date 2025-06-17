@@ -1,11 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-assignment',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './reactive-assignment.component.html',
   styleUrl: './reactive-assignment.component.scss'
 })
-export class ReactiveAssignmentComponent {
+export class ReactiveAssignmentComponent implements OnInit {
+  form: FormGroup;
+  ngOnInit() {
+    this.form = new FormGroup({
+      'username': new FormControl(null),
+      'email': new FormControl(null)
+    })
+  }
+
+  onFormSubmit(){
+    console.log(this.form);
+  }
 
 }
