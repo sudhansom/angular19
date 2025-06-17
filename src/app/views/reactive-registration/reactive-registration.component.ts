@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ContainerComponent } from '../../components/container/container.component';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators, FormsModule, FormArray } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { noSpaceAllowed } from '../../validators/noSpaceAllowed.validators';
 
+import { ContainerComponent } from '../../components/container/container.component';
+import { ReactiveAssignmentComponent } from '../../components/reactive-assignment/reactive-assignment.component';
+
 @Component({
   selector: 'app-reactive-registration',
-  imports: [ContainerComponent, CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [ContainerComponent, CommonModule, FormsModule, ReactiveFormsModule, ReactiveAssignmentComponent],
   templateUrl: './reactive-registration.component.html',
   styleUrl: './reactive-registration.component.scss'
 })
