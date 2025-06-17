@@ -5,7 +5,14 @@
     </label>
     <label>Email:
       <input type="text" formControlName="email">
+    <span *ngIf="form.get('email').errors['required']" class="errors">Email required.</span>
     </label>
     <button type="submit">Submit</button>
+    <div formArrayName="hobbies">
+      <button type="button" (click)="onAddHobbies()">Add hobby</button>
+      <div *ngFor="let hobby of form.get('hobbies')['controls']; let i = index">
+        <input  [formControlName]="i" type="text" >
+      </div>
+    </div>
   </form>
 </div>
