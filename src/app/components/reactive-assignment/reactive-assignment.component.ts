@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-assignment',
@@ -12,7 +12,7 @@ export class ReactiveAssignmentComponent implements OnInit {
   ngOnInit() {
     this.form = new FormGroup({
       'username': new FormControl(null),
-      'email': new FormControl(null)
+      'email': new FormControl(null, [Validators.email, Validators.required])
     })
   }
 
