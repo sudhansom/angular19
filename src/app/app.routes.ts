@@ -9,11 +9,18 @@ import { SitemuleComponent } from './views/sitemule/sitemule.component';
 import { GridComponent } from './views/grid/grid.component';
 import { CssGridOnlyComponent } from './views/css-grid-only/css-grid-only.component';
 import { CssBeforeComponent } from './views/css-before/css-before.component';
+import { ReactiveAssignmentComponent } from './components/reactive-assignment/reactive-assignment.component';
 
 export const routes: Routes = [
   {path: '', component: TasksManageComponent},
   {path: 't-register', component: UserRegistrationComponent},
-  {path: 'r-register', component: ReactiveRegistrationComponent, canDeactivate: [(comp: ReactiveRegistrationComponent)=>{return comp.canExit();}]},
+  {path: 'r-register', component: ReactiveRegistrationComponent,
+    children: [
+      {
+        path: 'example', component: ReactiveAssignmentComponent
+      }
+    ],
+    canDeactivate: [(comp: ReactiveRegistrationComponent)=>{return comp.canExit();}]},
   {path: 'budget', component: BudgetComponent},
   { path: 'separation', component: SeparationComponent },
   { path: 'rxjs', component: PracticeComponent},

@@ -1,7 +1,4 @@
 <app-container [style.--container-width]="'500px'">
-  <app-reactive-assignment></app-reactive-assignment>
-  <hr>
-
   <div class="form">
     <h2 id="registration">User Registration</h2>
     <p>( Reactive form )</p>
@@ -100,4 +97,8 @@
       <input class="btn-style btn"  type="submit" value="Submit">
     </form>
   </div>
+  <hr>
+  <a [routerLink]="'example'">Show another example</a>
+  <hr>
+  <router-outlet></router-outlet>
 </app-container>
