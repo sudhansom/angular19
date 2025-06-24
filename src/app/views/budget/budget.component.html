@@ -1,4 +1,4 @@
-<app-container>
+<app-container [style.--container-width]="'500px'">
   <div class="budget">
     <app-budget-form (result)="calculateResult($event)"></app-budget-form>
     <app-results [result]="result()"></app-results>
