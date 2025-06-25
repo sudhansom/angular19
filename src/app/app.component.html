@@ -1,4 +1,6 @@
 <div class="whole-body">
-  <app-navbar [links]="lists"></app-navbar>
+  <app-navbar [links]="lists.slice(0,10)"></app-navbar>
+  <hr *ngIf="lists.length > 10" [style]="{margin:0}">
+  <app-navbar *ngIf="lists.length > 10" [links]="lists.slice(10,lists.length)"></app-navbar>
   <router-outlet></router-outlet>
 </div>
