@@ -15,6 +15,11 @@ interface Feature {
 })
 export class SitemuleComponent implements OnInit {
   mylists = signal<Feature[]>([]);
+  myColor = ['green', 'red', 'yellow', 'purple', 'lightblue', 'pink', 'turquoise', 'darksalmon', 'darkSlateGray', 'chocolate']
+
+  get getColor() {
+    return this.myColor[Math.floor(Math.random() * this.myColor.length)]
+  }
 
   ngOnInit() {
       this.mylists.set([

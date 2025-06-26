@@ -17,6 +17,10 @@
       position: relative;
       z-index: 10;
     }
+    .title {
+      font-size: 15px;
+      font-weight: bold;
+    }
 
     &:hover::before {
       background-color: rgba(98, 96, 96, 0.1);
@@ -24,7 +28,7 @@
   }
 
   .circle {
-    background-color: green;
+    background-color: var(--random-color);
     height: 20px;
     width: 20px;
     border-radius: 50%;
