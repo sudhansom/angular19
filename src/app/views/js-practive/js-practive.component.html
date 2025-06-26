@@ -1,3 +1,14 @@
 <app-container class="container" [style.--container-width]="'500px'">
   <h4 class="title">Practice JS advanced Concepts:</h4>
+  <p>Original Array: {{ myArray }}</p>
+  <hr>
+ <div class="my-box">
+  <button (click)="sliceArray(4, 9)">Slice Array(4,9)</button>
+  <p>Sliced Array: {{ slicedArray }}</p>
+ </div>
+  <hr>
+  <div class="my-box">
+    <button (click)="spreadArray()">Spread Array</button>
+    <p>Spread Array: {{ sArray }}</p>
+   </div>
 </app-container>

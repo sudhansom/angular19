@@ -3,4 +3,9 @@
     font-size: 24px;
     font-weight: bold;
   }
+  .my-box {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
 }
