@@ -9,6 +9,7 @@ import { ContainerComponent } from '../../components/container/container.compone
 })
 export class JsPractiveComponent {
   myArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  randomItem: number = null;
 
   slicedArray = [];
   sArray = [];
@@ -19,5 +20,9 @@ export class JsPractiveComponent {
 
   spreadArray() {
     this.sArray = [ ...this.myArray ];
+  }
+
+  findRandomItem() {
+    this.randomItem = this.myArray[Math.floor(Math.random()*this.myArray.length)];
   }
 }
