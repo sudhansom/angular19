@@ -51,6 +51,10 @@ export class AppComponent {
     {
       name: '/sitemule',
       label: 'sitemule'
+    },
+    {
+      name: '/js-practice',
+      label: 'js-practice'
     }
 ]
 }
