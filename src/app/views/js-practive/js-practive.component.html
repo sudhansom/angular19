@@ -15,7 +15,11 @@
    <div class="my-box">
     <button (click)="findRandomItem()">Find Random</button>
     <p>Random Item: {{ randomItem }}</p>
-  </div>
+    </div>
+    <div class="my-box">
+      <button (click)="myClosure(1)">closure</button>
+      <p>the inner function has the parent function's scope even when the parent function is closed.</p>
+    </div>
   <hr>
 
 </app-container>

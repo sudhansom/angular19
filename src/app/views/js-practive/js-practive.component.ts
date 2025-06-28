@@ -25,4 +25,11 @@ export class JsPractiveComponent {
   findRandomItem() {
     this.randomItem = this.myArray[Math.floor(Math.random()*this.myArray.length)];
   }
+  closure(){
+    const x = 1;
+    return (y) => {
+      console.log(y + x )
+    }
+  }
+  myClosure = this.closure();
 }
