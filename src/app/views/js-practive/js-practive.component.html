@@ -16,9 +16,11 @@
     <button (click)="findRandomItem()">Find Random</button>
     <p>Random Item: {{ randomItem }}</p>
     </div>
+    <hr>
     <div class="my-box">
-      <button (click)="myClosure(1)">closure</button>
+      <button (click)="closureResult= myClosure(1)">closure</button>
       <p>the inner function has the parent function's scope even when the parent function is closed.</p>
+      <p *ngIf="closureResult"> {{ closureResult }} </p>
     </div>
   <hr>
 

@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-js-practive',
-  imports: [ContainerComponent],
+  imports: [ContainerComponent, NgIf],
   templateUrl: './js-practive.component.html',
   styleUrl: './js-practive.component.scss'
 })
 export class JsPractiveComponent {
   myArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   randomItem: number = null;
+  closureResult = null;
 
   slicedArray = [];
   sArray = [];
@@ -26,9 +28,10 @@ export class JsPractiveComponent {
     this.randomItem = this.myArray[Math.floor(Math.random()*this.myArray.length)];
   }
   closure(){
-    const x = 1;
-    return (y) => {
-      console.log(y + x )
+    let x = 0;
+    return (y: number) => {
+      x += 1;
+      return x + y;
     }
   }
   myClosure = this.closure();
