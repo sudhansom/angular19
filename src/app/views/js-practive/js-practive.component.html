@@ -19,7 +19,7 @@
     <hr>
     <div class="my-box">
       <button (click)="closureResult= myClosure(1)">closure</button>
-      <p>the inner function has the parent function's scope even when the parent function is closed.</p>
+      <p>A Closure is a function having scope of its parent even after the parent function is closed.</p>
       <p *ngIf="closureResult"> {{ closureResult }} </p>
     </div>
   <hr>
