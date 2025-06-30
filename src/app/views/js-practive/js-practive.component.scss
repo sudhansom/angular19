@@ -7,6 +7,9 @@
     display: flex;
     gap: 24px;
     align-items: center;
+    p {
+      margin: 0;
+    }
   }
   button {
     background-color: #123456;
