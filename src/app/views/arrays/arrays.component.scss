@@ -1,0 +1,21 @@
+:host {
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .my-box {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    p {
+      margin: 0;
+    }
+  }
+  button {
+    background-color: #123456;
+  }
+  button:hover {
+    background-color: #224d79;
+
+  }
+}

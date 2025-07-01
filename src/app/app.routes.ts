@@ -11,6 +11,7 @@ import { CssGridOnlyComponent } from './views/css-grid-only/css-grid-only.compon
 import { CssBeforeComponent } from './views/css-before/css-before.component';
 import { ReactiveAssignmentComponent } from './components/reactive-assignment/reactive-assignment.component';
 import { JsPractiveComponent } from './views/js-practive/js-practive.component';
+import { ArraysComponent } from './views/arrays/arrays.component';
 
 export const routes: Routes = [
   {path: '', component: TasksManageComponent},
@@ -30,5 +31,9 @@ export const routes: Routes = [
   { path: 'css-before', component: CssBeforeComponent},
 
   { path: 'sitemule', component: SitemuleComponent, canActivate: [() => true]},
-  { path: 'js-practice', component: JsPractiveComponent},
+  { path: 'js-practice', component: JsPractiveComponent,
+    children: [
+      { path: 'arrays', component: ArraysComponent}
+    ]
+  },
 ];

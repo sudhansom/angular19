@@ -1,27 +1,6 @@
+
 <app-container class="container" [style.--container-width]="'500px'">
   <h4 class="title">Practice JS advanced Concepts:</h4>
-  <p>Original Array: {{ myArray }}</p>
-  <hr>
- <div class="my-box">
-  <button (click)="sliceArray(4, 9)">Slice Array(4,9)</button>
-  <p>Sliced Array: {{ slicedArray }}</p>
- </div>
-  <hr>
-  <div class="my-box">
-    <button (click)="spreadArray()">Spread Array</button>
-    <p>Spread Array: {{ sArray }}</p>
-  </div>
-  <hr>
-   <div class="my-box">
-    <button (click)="findRandomItem()">Find Random</button>
-    <p>Random Item: {{ randomItem }}</p>
-    </div>
-    <hr>
-    <div class="my-box">
-      <button (click)="closureResult= myClosure(1)">closure</button>
-      <p>A Closure is a function having scope of its parent even after the parent function is closed.</p>
-      <p *ngIf="closureResult"> {{ closureResult }} </p>
-    </div>
-  <hr>
-
+  <a [routerLink]="['arrays']">Arrays</a>
 </app-container>
+<router-outlet></router-outlet>
