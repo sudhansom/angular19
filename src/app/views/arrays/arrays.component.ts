@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { NgIf } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-arrays',
-  imports: [ContainerComponent, NgIf],
+  imports: [ContainerComponent, NgIf, RouterModule],
   templateUrl: './arrays.component.html',
   styleUrl: './arrays.component.scss'
 })
