@@ -55,6 +55,10 @@ export class AppComponent {
     {
       name: '/js-practice',
       label: 'js-practice'
+    },
+    {
+      name: '/observables',
+      label: 'Observables'
     }
 ]
 }

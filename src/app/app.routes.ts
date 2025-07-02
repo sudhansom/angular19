@@ -12,6 +12,7 @@ import { CssBeforeComponent } from './views/css-before/css-before.component';
 import { ReactiveAssignmentComponent } from './components/reactive-assignment/reactive-assignment.component';
 import { JsPractiveComponent } from './views/js-practive/js-practive.component';
 import { ArraysComponent } from './views/arrays/arrays.component';
+import { ObservablesComponent } from './views/observables/observables.component';
 
 export const routes: Routes = [
   {path: '', component: TasksManageComponent},
@@ -36,4 +37,7 @@ export const routes: Routes = [
       { path: 'arrays', component: ArraysComponent}
     ]
   },
+  {
+    path: 'observables', component: ObservablesComponent
+  }
 ];
