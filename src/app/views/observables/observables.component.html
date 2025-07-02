@@ -1,3 +1,6 @@
 <app-container [style.--container-width]="'500px'">
-  <button (click)="createObservable()">Create Observable</button>
+  <div class="my-box">
+    <button (click)="createObservable()">Create Observable</button>
+    <p>subscribes name :  {{ name$ | async }}</p>
+  </div>
 </app-container>
