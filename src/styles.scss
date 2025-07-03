@@ -18,7 +18,15 @@ main {
   margin: 3rem 10%;
 }
 
+.my-box {
+  button {
+    background-color: #123456;
+  }
+  button:hover {
+    background-color: #224d79;
 
+  }
+}
 
 #dashboard {
   display: flex;
