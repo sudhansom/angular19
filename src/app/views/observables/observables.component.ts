@@ -11,6 +11,8 @@ import { AsyncPipe } from '@angular/common';
 })
 export class ObservablesComponent {
   name$ = new Subject();
+  counter$ = new Subject();
+
   createObservable(){
     const observable$ = new Observable(observer => {
       observer.next('sudhan');
@@ -24,5 +26,22 @@ export class ObservablesComponent {
     observable$.subscribe(value => {
       this.name$.next(value);
     });
+  }
+
+  tearDown(){
+    const observable$ = new Observable(subscriber => {
+      let counter = 0;
+      setInterval(()=>{
+        console.log('Counting: '+counter)
+        this.counter$.next(counter);
+        subscriber.next(counter++);
+      }, 1000)
+    })
+
+    const subs = observable$.subscribe(value => console.log(value));
+
+    setTimeout(() => {
+      subs.unsubscribe();
+    }, 10000);
   }
 }

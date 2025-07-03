@@ -3,4 +3,8 @@
     <button (click)="createObservable()">Create Observable</button>
     <p>subscribes name :  {{ name$ | async }}</p>
   </div>
+  <div class="my-box">
+    <button (click)="tearDown()">Tear Down</button>
+    <p>Counter :  {{ counter$ | async }}</p>
+  </div>
 </app-container>
