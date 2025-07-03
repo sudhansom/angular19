@@ -31,14 +31,19 @@ export class ObservablesComponent {
   tearDown(){
     const observable$ = new Observable(subscriber => {
       let counter = 0;
-      setInterval(()=>{
+      const interval = setInterval(()=>{
         console.log('Counting: '+counter)
-        this.counter$.next(counter);
         subscriber.next(counter++);
       }, 1000)
+
+      return () => {
+        clearInterval(interval);
+      }
     })
 
-    const subs = observable$.subscribe(value => console.log(value));
+    const subs = observable$.subscribe(value => {
+      this.counter$.next(value);
+    });
 
     setTimeout(() => {
       subs.unsubscribe();
