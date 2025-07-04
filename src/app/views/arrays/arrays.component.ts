@@ -13,6 +13,7 @@ export class ArraysComponent {
   myArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   randomItem: number = null;
   closureResult = null;
+  joinArr = "";
 
   slicedArray = [];
   sArray = [];
@@ -36,4 +37,8 @@ export class ArraysComponent {
     }
   }
   myClosure = this.closure();
+
+  joinArray(){
+    this.joinArr = this.myArray.join("");
+  }
 }
