@@ -49,4 +49,10 @@ export class ObservablesComponent {
       subs.unsubscribe();
     }, 10000);
   }
+  createObservable1(){
+    const data = new Promise((resolve, reject)=>
+        {
+          fetch('http://localhost:3000/courses').then(response => response.json()).then(data => resolve(data))
+        }  )
+  }
 }
