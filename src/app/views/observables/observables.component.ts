@@ -50,9 +50,20 @@ export class ObservablesComponent {
     }, 10000);
   }
   createObservable1(){
-    const data = new Promise((resolve, reject)=>
-        {
-          fetch('http://localhost:3000/courses').then(response => response.json()).then(data => resolve(data))
-        }  )
+    const http$ = new Observable(observer => {
+      fetch('http://localhost:3000/courses')
+        .then(response => response.json())
+        .then(data => {
+          observer.next(data);
+          observer.complete();
+        }).catch(err => observer.error())
+    })
+
+    http$.subscribe({
+      next: (data)=>{console.log(data)},
+      error: (err) => console.log(err),
+      complete: ()=> console.log('completed....')
+    }
+      )
   }
 }
