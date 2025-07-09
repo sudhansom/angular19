@@ -18,3 +18,15 @@ export function createHttpObservable(url: string){
     })
   })
 }
+
+
+export function createHttpsObservable(url: string){
+  return new Observable(observer => {
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        observer.next(data);
+        observer.complete();
+      }).catch(err => observer.error())
+  })
+}

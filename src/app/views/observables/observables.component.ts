@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, map } from 'rxjs';
 import { ContainerComponent } from '../../components/container/container.component';
 import { AsyncPipe } from '@angular/common';
+
+import { createHttpsObservable } from '../../utils/utils';
 
 @Component({
   selector: 'app-observables',
@@ -50,20 +52,9 @@ export class ObservablesComponent {
     }, 10000);
   }
   createObservable1(){
-    const http$ = new Observable(observer => {
-      fetch('http://localhost:3000/courses')
-        .then(response => response.json())
-        .then(data => {
-          observer.next(data);
-          observer.complete();
-        }).catch(err => observer.error())
-    })
+    const http$ = createHttpsObservable('http://localhost:3000/courses');
+    http$.subscribe(console.log);
 
-    http$.subscribe({
-      next: (data)=>{console.log(data)},
-      error: (err) => console.log(err),
-      complete: ()=> console.log('completed....')
-    }
-      )
-  }
+}
+
 }
