@@ -1,0 +1,17 @@
+:host app-container {
+  display: block;
+  border: 1px solid gray;
+  margin: 24px;
+  padding: 12px;
+  border-radius: 12px;
+}
+:host h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+:host .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 24px;
+}/*# sourceMappingURL=sitemule.component.css.map */

@@ -1,0 +1,29 @@
+:host form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 12px;
+  box-sizing: border-box;
+  gap: 12px;
+}
+:host form label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+:host form label input {
+  padding: 6px;
+  border-radius: 6px;
+}
+:host form label input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+:host form button {
+  background-color: #123456;
+  font-weight: bold;
+  font-size: 18px;
+}
+:host form .errors {
+  color: red;
+}/*# sourceMappingURL=reactive-assignment.component.css.map */

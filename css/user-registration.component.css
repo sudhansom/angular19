@@ -1,0 +1,47 @@
+:host .form {
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 12px;
+  overflow: hidden;
+  margin: 12px;
+}
+:host .form input.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+:host h2 {
+  text-align: center;
+  margin-bottom: 0;
+}
+:host p {
+  margin-top: 6px;
+  text-align: center;
+}
+:host form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+:host form .full-width {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+:host form .gender, :host form .hobbies {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+:host form .btn {
+  background-color: #123456;
+  color: #fff;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+:host form .btn.invalid {
+  cursor: not-allowed;
+}/*# sourceMappingURL=user-registration.component.css.map */

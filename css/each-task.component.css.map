@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/app/components/tasks/each-task/each-task.component.scss","each-task.component.css"],"names":[],"mappings":"AAAA;EACE,SAAA;ACCF;;ADEA;EACE,aAAA;EACA,eAAA;ACCF;;ADEA;EACE,aAAA;EACA,yBAAA;EACA,gBAAA;ACCF;ADCE;EACE,yBAAA;EACA,kBAAA;EACA,iBAAA;EACA,WAAA;EACA,eAAA;EACA,YAAA;ACCJ;ADAI;EACE,yBAAA;ACEN","file":"each-task.component.css"}

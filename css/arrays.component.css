@@ -1,0 +1,12 @@
+:host .title {
+  font-size: 24px;
+  font-weight: bold;
+}
+:host .my-box {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+:host .my-box p {
+  margin: 0;
+}/*# sourceMappingURL=arrays.component.css.map */

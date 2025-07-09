@@ -23,7 +23,13 @@ export function createHttpObservable(url: string){
 export function createHttpsObservable(url: string){
   return new Observable(observer => {
     fetch(url)
-      .then(response => response.json())
+      .then(response => {
+        if(response.ok){
+          return response.json();
+        }else {
+          return throwError(() => new Error("Error with status code "+ response.status))
+        }
+      })
       .then(data => {
         observer.next(data);
         observer.complete();

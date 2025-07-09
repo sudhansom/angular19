@@ -1,0 +1,17 @@
+:host .container {
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+:host img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}/*# sourceMappingURL=grid.component.css.map */

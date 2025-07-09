@@ -1,0 +1,25 @@
+h2 {
+  margin: 0;
+}
+
+.date {
+  margin: 6px 0;
+  font-size: 12px;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+.btn button {
+  background-color: #243f5b;
+  border-radius: 6px;
+  padding: 9px 15px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+.btn button:hover {
+  background-color: #445f7d;
+}/*# sourceMappingURL=each-task.component.css.map */

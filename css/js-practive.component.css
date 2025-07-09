@@ -1,0 +1,10 @@
+:host .container {
+  margin: auto;
+}
+:host .container h4 {
+  font-size: 30px;
+}
+:host .container a {
+  font-size: 24px;
+  text-decoration: none;
+}/*# sourceMappingURL=js-practive.component.css.map */

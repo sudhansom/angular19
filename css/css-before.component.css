@@ -1,0 +1,57 @@
+:host app-container {
+  width: 500px;
+  display: block;
+  margin: auto;
+}
+:host p {
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  margin: 24px auto;
+  font-size: 24px;
+  font-weight: bold;
+}
+:host p::before {
+  content: open-quote;
+  font-size: 33px;
+  color: red;
+  left: -20px;
+  top: -12px;
+  position: absolute;
+}
+:host p::after {
+  content: close-quote;
+  font-size: 33px;
+  color: red;
+  right: -20px;
+  top: -12px;
+  position: absolute;
+}
+:host ul {
+  counter-reset: my-list;
+  list-style-type: none;
+}
+:host li {
+  position: relative;
+  margin-bottom: 36px;
+  padding: 6px;
+  border: 1px solid gray;
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+:host li::before {
+  counter-increment: my-list;
+  content: counter(my-list);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: -54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=css-before.component.css.map */

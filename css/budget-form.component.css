@@ -1,0 +1,33 @@
+:host .budget-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+:host .budget-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+:host .budget-form label span {
+  font-weight: bold;
+}
+:host .budget-form input {
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+}
+:host button {
+  padding: 9px;
+  border-radius: 6px;
+  border: none;
+  background-color: gray;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+  width: 100%;
+  margin-top: 24px;
+}
+:host button:hover {
+  background-color: rgb(183, 180, 180);
+}/*# sourceMappingURL=budget-form.component.css.map */
