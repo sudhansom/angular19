@@ -53,7 +53,8 @@ export class ObservablesComponent {
   }
   createObservable1(){
     const http$ = createHttpsObservable('http://localhost:3000/courses');
-    http$.subscribe(console.log);
+    const courses$ = http$.pipe(map(response => response['payload']));
+    courses$.subscribe(console.log);
 
 }
 
