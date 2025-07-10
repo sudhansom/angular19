@@ -1,19 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable, Subject, map } from 'rxjs';
 import { ContainerComponent } from '../../components/container/container.component';
 import { AsyncPipe } from '@angular/common';
 
 import { createHttpsObservable } from '../../utils/utils';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-observables',
-  imports: [ContainerComponent, AsyncPipe],
+  imports: [ContainerComponent, AsyncPipe, ReactiveFormsModule],
   templateUrl: './observables.component.html',
   styleUrl: './observables.component.scss'
 })
-export class ObservablesComponent {
+export class ObservablesComponent implements OnInit {
+  form: FormGroup;
   name$ = new Subject();
   counter$ = new Subject();
+
+  ngOnInit(){
+      this.form = new FormGroup({
+        title: new FormControl(''),
+        level: new FormControl('')
+      })
+  }
+
+  onFormSubmit(){
+    console.log('form submitted   ' + this.form.value)
+  }
 
   createObservable(){
     const observable$ = new Observable(observer => {
