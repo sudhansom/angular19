@@ -25,7 +25,7 @@ export class ObservablesComponent implements OnInit {
   }
 
   onFormSubmit(){
-    console.log('form submitted   ' + this.form.value)
+    console.log('form submitted   ', this.form.value)
   }
 
   createObservable(){
