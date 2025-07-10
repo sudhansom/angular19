@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subject, map } from 'rxjs';
+import { Observable, Subject, concatMap, filter, map } from 'rxjs';
 import { ContainerComponent } from '../../components/container/container.component';
 import { AsyncPipe } from '@angular/common';
 
 import { createHttpsObservable } from '../../utils/utils';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { fromPromise } from 'rxjs/internal/observable/innerFrom';
 
 @Component({
   selector: 'app-observables',
@@ -22,11 +23,29 @@ export class ObservablesComponent implements OnInit {
         title: new FormControl(''),
         level: new FormControl('')
       })
+
+      this.form.valueChanges.pipe(
+        filter(()=>this.form.valid),
+        concatMap(changes => this.saveChanges(changes))).subscribe(response => {
+          console.log('saved....', response)
+
+      });
+  }
+
+  saveChanges(changes){
+    return fromPromise(fetch('http://localhost:3000/course/1', {
+      method: 'PUT',
+      body: JSON.stringify(changes),
+      headers: {
+        'content-type': 'application/json'
+      }
+    }));
   }
 
   onFormSubmit(){
     console.log('form submitted   ', this.form.value)
   }
+
 
   createObservable(){
     const observable$ = new Observable(observer => {
