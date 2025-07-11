@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subject, concatMap, filter, map } from 'rxjs';
+import { Observable, Subject, concatMap, debounceTime, filter, map } from 'rxjs';
 import { ContainerComponent } from '../../components/container/container.component';
 import { AsyncPipe } from '@angular/common';
 
@@ -26,6 +26,7 @@ export class ObservablesComponent implements OnInit {
 
       this.form.valueChanges.pipe(
         filter(()=>this.form.valid),
+        debounceTime(400),
         concatMap(changes => this.saveChanges(changes))).subscribe(response => {
           console.log('saved....', response)
 
