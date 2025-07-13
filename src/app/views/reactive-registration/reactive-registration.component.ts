@@ -39,7 +39,7 @@ export class ReactiveRegistrationComponent implements OnInit {
 
 submitForm(){
   console.log('form submitted')
-  console.log('form value' + this.reactiveForm.value.firstName);
+  console.log('form value', this.reactiveForm.value);
 }
 addSkill(){
   const controls = <FormArray>this.reactiveForm.get('skills');
