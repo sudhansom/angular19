@@ -5,10 +5,11 @@
     <form (ngSubmit)="submitForm()" [formGroup]="reactiveForm">
       <label>First Name:
         <input class="full-width meee" type="text" name="firstName" formControlName="firstName" placeholder="Your first name...">
-        <small *ngIf="!reactiveForm.get('firstName') && reactiveForm.get('firstName').touched">*First Name is a required field</small>
-        <small *ngIf="reactiveForm.get('firstName').invalid && reactiveForm.get('firstName').touched">*no Space allowed...</small>
-
       </label>
+      <div class="error">
+        <small class="error" *ngIf="!reactiveForm.get('firstName') && reactiveForm.get('firstName').touched">*First Name is a required field</small>
+        <small class="error" *ngIf="reactiveForm.get('firstName').invalid && reactiveForm.get('firstName').touched">*no Space allowed...</small>
+      </div>
 
       <label>Last Name:
         <input class="full-width" type="text" name="lastName" formControlName="lastName"  placeholder="Your last name...">
