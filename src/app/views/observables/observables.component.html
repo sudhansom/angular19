@@ -12,6 +12,7 @@
     <button (click)="createObservable1()">Create Observable</button>
     <p>See the results in console.</p>
   </div>
+  <small [style]="{'margin-bottom': '3px', 'display':'block'}">change the input and see the network response</small>
   <form [formGroup]="form" (ngSubmit)="onFormSubmit()" class="my-box form">
     <label>Title:
       <input class="form" name="title" formControlName="title" type="text">
