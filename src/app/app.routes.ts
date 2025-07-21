@@ -13,6 +13,7 @@ import { ReactiveAssignmentComponent } from './components/reactive-assignment/re
 import { JsPractiveComponent } from './views/js-practive/js-practive.component';
 import { ArraysComponent } from './views/arrays/arrays.component';
 import { ObservablesComponent } from './views/observables/observables.component';
+import { ObjectsComponent } from './views/objects/objects.component';
 
 export const routes: Routes = [
   {path: '', component: TasksManageComponent},
@@ -34,7 +35,8 @@ export const routes: Routes = [
   { path: 'sitemule', component: SitemuleComponent, canActivate: [() => true]},
   { path: 'js-practice', component: JsPractiveComponent,
     children: [
-      { path: 'arrays', component: ArraysComponent}
+      { path: 'arrays', component: ArraysComponent},
+      { path: 'objects', component: ObjectsComponent}
     ]
   },
   {
