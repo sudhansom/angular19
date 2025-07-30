@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 
 @Component({
@@ -7,6 +7,14 @@ import { ContainerComponent } from '../../components/container/container.compone
   templateUrl: './prototype.component.html',
   styleUrl: './prototype.component.scss'
 })
-export class PrototypeComponent {
+export class PrototypeComponent implements OnInit {
+
+  ngOnInit() {
+    Function.prototype.toString = ()=>{
+      return 'abc'
+    }
+  }
+
+  myFun = 'abc';
 
 }
