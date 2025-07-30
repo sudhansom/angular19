@@ -14,6 +14,7 @@ import { JsPractiveComponent } from './views/js-practive/js-practive.component';
 import { ArraysComponent } from './views/arrays/arrays.component';
 import { ObservablesComponent } from './views/observables/observables.component';
 import { ObjectsComponent } from './views/objects/objects.component';
+import { PrototypeComponent } from './views/prototype/prototype.component';
 
 export const routes: Routes = [
   {path: '', component: TasksManageComponent},
@@ -36,7 +37,9 @@ export const routes: Routes = [
   { path: 'js-practice', component: JsPractiveComponent,
     children: [
       { path: 'arrays', component: ArraysComponent},
-      { path: 'objects', component: ObjectsComponent}
+      { path: 'objects', component: ObjectsComponent},
+      { path: 'prototype', component: PrototypeComponent}
+
     ]
   },
   {
