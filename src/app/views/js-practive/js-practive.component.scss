@@ -14,5 +14,13 @@
       font-weight: bold;
       cursor:auto;
     }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .sub-route {
+      flex-grow: 1;
+    }
   }
 }

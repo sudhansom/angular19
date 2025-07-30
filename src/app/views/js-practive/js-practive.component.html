@@ -1,10 +1,16 @@
 
 <app-container class="container" [style.--container-width]="'500px'">
   <h4 class="title">Practice JS advanced Concepts:</h4>
-  <a [routerLink]="['arrays']" routerLinkActive="active">Arrays</a>
-  <hr>
-  <a [routerLink]="['objects']" routerLinkActive="active">Objects</a>
-  <hr>
-  <a [routerLink]="['prototype']" routerLinkActive="active">Prototype</a>
+  <div class="content">
+    <div>
+      <a [routerLink]="['arrays']" routerLinkActive="active">Arrays</a>
+      <hr>
+      <a [routerLink]="['objects']" routerLinkActive="active">Objects</a>
+      <hr>
+      <a [routerLink]="['prototype']" routerLinkActive="active">Prototype</a>
+    </div>
+    <div class="sub-route">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </app-container>
-<router-outlet></router-outlet>
