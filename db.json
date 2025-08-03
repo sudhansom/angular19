@@ -12,7 +12,9 @@
       { "id": 4, "title": "c-programming", "level": "beginner" },
       { "id": 5, "title": "CI-CD", "level": "advanced" },
       { "id": 6, "title": "Docker", "level": "advanced" },
-      { "id": 7, "title": "Backend", "level": "advanced" }
+      { "id": 7, "title": "Backend", "level": "advanced" },
+      { "id": 8, "title": "TerraForm", "level": "beginner" },
+      { "id": 9, "title": "Ansible", "level": "advanced" }
 
     ]
   },
