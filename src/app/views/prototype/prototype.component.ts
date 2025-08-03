@@ -8,6 +8,7 @@ import { ContainerComponent } from '../../components/container/container.compone
   styleUrl: './prototype.component.scss'
 })
 export class PrototypeComponent implements OnInit {
+  myFun = 'prototype definition';
 
   ngOnInit() {
     Function.prototype.toString = ()=>{
@@ -15,6 +16,5 @@ export class PrototypeComponent implements OnInit {
     }
   }
 
-  myFun = 'abc';
 
 }
