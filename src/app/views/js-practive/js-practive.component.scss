@@ -9,6 +9,18 @@
       font-size: 24px;
       text-decoration: none;
     }
+    .header {
+      padding: 12px;
+      text-align: center;
+      background-color: gray;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      p {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
     .active {
       color: green;
       font-weight: bold;
