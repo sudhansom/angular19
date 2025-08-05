@@ -18,9 +18,9 @@ export class CounterComponent {
   }
 
   decrement(){
-    this.store.dispatch(decrement())
+    this.store.dispatch(decrement({value:3}))
   }
   increment(){
-    this.store.dispatch(increment())
+    this.store.dispatch(increment({value: 3}))
   }
 }
