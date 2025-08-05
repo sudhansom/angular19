@@ -2,7 +2,7 @@ import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { increment, decrement } from '../../store/app.actions';
+import { IncrementAction, DecrementAction } from '../../store/app.actions';
 
 @Component({
   selector: 'app-counter',
@@ -18,9 +18,9 @@ export class CounterComponent {
   }
 
   decrement(){
-    this.store.dispatch(decrement({value:3}))
+    this.store.dispatch(new DecrementAction(3))
   }
   increment(){
-    this.store.dispatch(increment({value: 3}))
+    this.store.dispatch(new IncrementAction(3))
   }
 }
