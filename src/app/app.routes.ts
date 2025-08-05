@@ -15,6 +15,7 @@ import { ArraysComponent } from './views/arrays/arrays.component';
 import { ObservablesComponent } from './views/observables/observables.component';
 import { ObjectsComponent } from './views/objects/objects.component';
 import { PrototypeComponent } from './views/prototype/prototype.component';
+import { NgrxComponent } from './views/ngrx/ngrx.component';
 
 export const routes: Routes = [
   {path: '', component: TasksManageComponent},
@@ -44,5 +45,7 @@ export const routes: Routes = [
   },
   {
     path: 'observables', component: ObservablesComponent
-  }
+  },
+  { path: 'ngrx', component: NgrxComponent},
+
 ];

@@ -57,8 +57,13 @@ export class AppComponent {
       label: 'js-practice'
     },
     {
+      name: '/ngrx',
+      label: 'Ngrx'
+    },
+    {
       name: '/observables',
       label: 'Observables'
-    }
+    },
+
 ]
 }
