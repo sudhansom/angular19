@@ -8,5 +8,5 @@ import { provideEffects } from '@ngrx/effects';
 import { CounterEffects } from './store/app.effects';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideStore({counter: counterReducer}), provideEffects([CounterEffects])]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideStore({counter: counterReducer}), provideEffects([])]
 };
