@@ -3,7 +3,9 @@
   <p class="count">{{ count$ | async }}</p>
   <div class="buttons">
     <button (click)="decrement()">Decrement</button>
-    <p>Double is: {{ doubleCount$ | async }}</p>
+    @if (count$ | async) {
+      <p>Double is: {{ doubleCount$ | async }}</p>
+    }
     <button (click)="increment()">Increment</button>
   </div>
 </div>
