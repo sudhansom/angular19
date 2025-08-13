@@ -61,6 +61,10 @@ export class AppComponent {
       label: 'Ngrx'
     },
     {
+      name: '/c-flow',
+      label: 'C-Flow'
+    },
+    {
       name: '/observables',
       label: 'Observables'
     },
