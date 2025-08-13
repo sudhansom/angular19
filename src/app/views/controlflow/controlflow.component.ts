@@ -8,5 +8,5 @@ import { ContainerComponent } from '../../components/container/container.compone
   styleUrl: './controlflow.component.scss'
 })
 export class ControlflowComponent {
-
+  color = 'green'
 }
