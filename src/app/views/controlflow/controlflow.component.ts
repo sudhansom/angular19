@@ -9,6 +9,7 @@ import { ContainerComponent } from '../../components/container/container.compone
 })
 export class ControlflowComponent {
   color = 'green'
+  value = 1;
 
   changeColor(color: string){
     this.color = color;

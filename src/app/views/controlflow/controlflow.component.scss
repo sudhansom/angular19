@@ -14,5 +14,17 @@
       border-radius: 12px;
       background-color: var(--border-color);
     }
+    .if-else {
+      margin: auto;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      color: white;
+      background-color: #123456;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 12px;
+    }
   }
 }
