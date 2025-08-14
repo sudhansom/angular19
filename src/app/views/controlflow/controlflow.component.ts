@@ -14,4 +14,7 @@ export class ControlflowComponent {
   changeColor(color: string){
     this.color = color;
   }
+  changeNumber(value: number){
+    this.value = value;
+  }
 }

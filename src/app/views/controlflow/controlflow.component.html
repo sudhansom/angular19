@@ -8,8 +8,35 @@
       <button [style.backgroundColor]="'blue'" (click)="changeColor('blue')">Blue</button>
     </div>
     <div class="box"></div>
+    <div class="btn-container">
+      <button (click)="changeNumber(1)">1</button>
+      <button (click)="changeNumber(2)">2</button>
+      <button (click)="changeNumber(3)">3</button>
+      <button (click)="changeNumber(4)">4</button>
+      <button (click)="changeNumber(5)">5</button>
+      <button (click)="changeNumber(6)">6</button>
+      <button (click)="changeNumber(7)">7</button>
+      <button (click)="changeNumber(8)">8</button>
+    </div>
     @if(value==1){
       <div class="if-else">1</div>
+    }@else if(value==2){
+      <div class="if-else">2</div>
+    }@else if(value==3){
+      <div class="if-else">3</div>
+    }@else if(value==4){
+      <div class="if-else">4</div>
+    }@else if(value==5){
+      <div class="if-else">5</div>
+    }@else if(value==6){
+      <div class="if-else">6</div>
+    }@else if(value==7){
+      <div class="if-else">7</div>
+    }@else if(value==8){
+      <div class="if-else">8</div>
+    }
+    @else {
+      <div class="if-else">0</div>
     }
   </div>
 </app-container>
