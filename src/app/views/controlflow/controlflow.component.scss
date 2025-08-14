@@ -15,6 +15,9 @@
       background-color: var(--border-color);
       margin-bottom: 12px;
     }
+    h3 {
+      text-align: center;
+    }
     .if-else {
       margin: auto;
       height: 100px;
@@ -26,6 +29,12 @@
       justify-content: center;
       align-items: center;
       margin-top: 12px;
+    }
+    .case {
+      border-radius: 12px;
+      padding: 12px;
+      background-color: #044587;
+
     }
   }
 }

@@ -18,6 +18,7 @@
       <button (click)="changeNumber(7)">7</button>
       <button (click)="changeNumber(8)">8</button>
     </div>
+    <h3>If - Else :</h3>
     @if(value==1){
       <div class="if-else">1</div>
     }@else if(value==2){
@@ -38,5 +39,26 @@
     @else {
       <div class="if-else">0</div>
     }
+    <h3>Switch Case:</h3>
+    <div class="switch">
+      @switch(value){
+        @case(1){
+          <div class="if-else case">1</div>
+        }
+        @case(2){
+          <div class="if-else case">2</div>
+        }
+        @case(3){
+          <div class="if-else case">3</div>
+        }
+        @case(4){
+          <div class="if-else case">4</div>
+        }
+        @default(){
+          <div class="if-else case">0</div>
+        }
+      }
+    </div>
   </div>
+
 </app-container>
