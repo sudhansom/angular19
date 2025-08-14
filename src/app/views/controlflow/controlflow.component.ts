@@ -9,4 +9,8 @@ import { ContainerComponent } from '../../components/container/container.compone
 })
 export class ControlflowComponent {
   color = 'green'
+
+  changeColor(color: string){
+    this.color = color;
+  }
 }

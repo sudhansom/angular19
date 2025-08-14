@@ -1,5 +1,18 @@
 :host {
   .container {
-  border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      color: white;
+    }
+    .box {
+      height: 100px;
+      border-radius: 12px;
+      background-color: var(--border-color);
+    }
   }
 }

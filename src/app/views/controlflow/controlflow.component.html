@@ -1,5 +1,13 @@
 <app-container [style.--container-width]="'500px'">
   <div class="container" [style.--border-color]="color">
-    <p>controlflow works!</p>
+    <div class="btn-container">
+      <button [style.backgroundColor]="'red'" (click)="changeColor('red')">Red</button>
+      <button [style.backgroundColor]="'green'" (click)="changeColor('green')">Green</button>
+      <button [style.backgroundColor]="'yellow'" (click)="changeColor('yellow')">Yellow</button>
+      <button [style.backgroundColor]="'purple'" (click)="changeColor('purple')">Purple</button>
+      <button [style.backgroundColor]="'blue'" (click)="changeColor('blue')">Blue</button>
+    </div>
+    <div class="box"></div>
+
   </div>
 </app-container>
