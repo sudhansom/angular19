@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-controlflow',
-  imports: [ContainerComponent, NgIf],
+  imports: [ContainerComponent, NgIf, NgFor],
   templateUrl: './controlflow.component.html',
   styleUrl: './controlflow.component.scss'
 })
@@ -12,6 +12,7 @@ export class ControlflowComponent {
   color = 'green'
   value = 1;
   show = false;
+  names = ['Bal', 'Sudhan', 'Resham', 'Biren'];
 
   changeColor(color: string){
     this.color = color;
