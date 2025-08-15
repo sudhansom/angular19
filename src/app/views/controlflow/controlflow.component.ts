@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 
 @Component({
   selector: 'app-controlflow',
-  imports: [ContainerComponent, NgIf, NgFor],
+  imports: [ContainerComponent, NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
   templateUrl: './controlflow.component.html',
   styleUrl: './controlflow.component.scss'
 })

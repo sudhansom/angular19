@@ -62,6 +62,12 @@
         }
       }
     </div>
+    <h3>Modern NgSwitch</h3>
+    <div class="switch" [ngSwitch]="value">
+      <div *ngSwitchCase="1" class="if-else case">1</div>
+      <div *ngSwitchDefault class="if-else case">9</div>
+
+    </div>
   </div>
 
   <div>
