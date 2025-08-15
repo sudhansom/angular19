@@ -65,9 +65,18 @@
   </div>
 
   <div>
-    <h1>For Loop</h1>
+    <h1>For Loop in old days:</h1>
+    <span>(*ngFor="let name of names")</span>
     <ul>
       <li *ngFor="let name of names">{{ name }}</li>
+    </ul>
+
+    <h1>For Loop these days:</h1>
+    <span>for(name of names; track name)</span>
+    <ul>
+      @for(name of names; track name){
+        <li>{{ name }}</li>
+      }
     </ul>
   </div>
 
