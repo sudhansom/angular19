@@ -11,7 +11,7 @@ import { NgIf } from '@angular/common';
 export class ControlflowComponent {
   color = 'green'
   value = 1;
-  show = true;
+  show = false;
 
   changeColor(color: string){
     this.color = color;

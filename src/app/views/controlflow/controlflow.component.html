@@ -18,7 +18,10 @@
       <button (click)="changeNumber(7)">7</button>
       <button (click)="changeNumber(8)">8</button>
     </div>
-    <h3 *ngIf="show">If - Else :</h3>
+    <h3 *ngIf="show; else showThis">If - Else :</h3>
+    <ng-template #showThis>
+      <h3>If condition: </h3>
+    </ng-template>
     @if(value==1){
       <div class="if-else">1</div>
     }@else if(value==2){
