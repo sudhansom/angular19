@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
-import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
+import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-controlflow',
-  imports: [ContainerComponent, NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
+  imports: [ContainerComponent, NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle],
   templateUrl: './controlflow.component.html',
   styleUrl: './controlflow.component.scss'
 })
@@ -14,6 +14,7 @@ export class ControlflowComponent {
   show = false;
   names = ['Bal', 'Sudhan', 'Resham', 'Biren'];
   switch = false;
+  switch1 = false;
 
   changeColor(color: string){
     this.color = color;
@@ -24,6 +25,9 @@ export class ControlflowComponent {
   toogleFlow(val: string){
     if(val === 'switch'){
       this.switch = !this.switch;
+    }
+    else{
+      this.switch1 = !this.switch1;
     }
   }
 }
