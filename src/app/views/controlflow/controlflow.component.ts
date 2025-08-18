@@ -13,11 +13,17 @@ export class ControlflowComponent {
   value = 1;
   show = false;
   names = ['Bal', 'Sudhan', 'Resham', 'Biren'];
+  switch = false;
 
   changeColor(color: string){
     this.color = color;
   }
   changeNumber(value: number){
     this.value = value;
+  }
+  toogleFlow(val: string){
+    if(val === 'switch'){
+      this.switch = !this.switch;
+    }
   }
 }
