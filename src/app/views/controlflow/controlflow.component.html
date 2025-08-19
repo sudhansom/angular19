@@ -42,7 +42,7 @@
     @else {
       <div class="if-else">0</div>
     }
-    <h3 [ngStyle]="{'cursor': 'pointer'}" (click)="toogleFlow('switch')">Switch Case:</h3>
+    <h3 title="click to see the effect." [ngStyle]="{'cursor': 'pointer'}" (click)="toogleFlow('switch')">Switch Case:</h3>
     <div *ngIf="switch" class="switch">
       @switch(value){
         @case(1){
@@ -62,7 +62,7 @@
         }
       }
     </div>
-    <h3 [ngStyle]="{'cursor': 'pointer'}" (click)="toogleFlow('modern')">Modern NgSwitch</h3>
+    <h3 title="click to see the effect." [ngStyle]="{'cursor': 'pointer'}" (click)="toogleFlow('modern')">Modern NgSwitch</h3>
     <div *ngIf="switch1" class="switch" [ngSwitch]="value">
       <div *ngSwitchCase="1" class="if-else case">1</div>
       <div *ngSwitchDefault class="if-else case">9</div>
