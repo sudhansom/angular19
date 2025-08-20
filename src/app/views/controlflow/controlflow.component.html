@@ -83,15 +83,18 @@
         <li>{{ name }}</li>
       }
     </ul>
-  </div>
-  <div class="drop-down">
-    <select [(ngModel)]="dropdown">
-      <option value="">Select one</option>
-      <option value="sudhan">Sudhan</option>
-      <option value="resham">resham</option>
-      <option value="biren">biren</option>
-    </select>
-  </div>
+    <hr>
+    <h1>Drop down example:</h1>
+      <select class="drop-down" [(ngModel)]="dropdown">
+        <option value="">Select one</option>
+        <option value="sudhan">Sudhan</option>
+        <option value="resham">resham</option>
+        <option value="biren">biren</option>
+      </select>
+      <hr>
   <p *ngIf="dropdown"> You selected : {{dropdown}}</p>
+
+
+  </div>
 
 </app-container>
