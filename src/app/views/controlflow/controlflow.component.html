@@ -84,5 +84,14 @@
       }
     </ul>
   </div>
+  <div class="drop-down">
+    <select [(ngModel)]="dropdown">
+      <option value="">Select one</option>
+      <option value="sudhan">Sudhan</option>
+      <option value="resham">resham</option>
+      <option value="biren">biren</option>
+    </select>
+  </div>
+  <p *ngIf="dropdown"> You selected : {{dropdown}}</p>
 
 </app-container>

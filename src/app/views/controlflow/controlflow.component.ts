@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-controlflow',
-  imports: [ContainerComponent, NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle],
+  imports: [ContainerComponent, NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle,FormsModule],
   templateUrl: './controlflow.component.html',
   styleUrl: './controlflow.component.scss'
 })
@@ -15,6 +16,7 @@ export class ControlflowComponent {
   names = ['Bal', 'Sudhan', 'Resham', 'Biren'];
   switch = false;
   switch1 = false;
+  dropdown = "";
 
   changeColor(color: string){
     this.color = color;
