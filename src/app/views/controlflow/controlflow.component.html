@@ -95,9 +95,12 @@
       <hr>
   <p *ngIf="selectedValue.value"> You selected : {{selectedValue.value}}</p>
   <!-- <p *ngIf="dropdown"> You selected : {{dropdown}}</p> -->
-
-
-
   </div>
+  <hr>
+  <div class="range">
+    <input type="range" min="0" max="100" name="range" [(ngModel)]="range">
+  </div>
+  <p>value: {{range}}</p>
+  <hr>
 
 </app-container>

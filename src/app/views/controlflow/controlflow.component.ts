@@ -17,6 +17,7 @@ export class ControlflowComponent {
   switch = false;
   switch1 = false;
   dropdown = "";
+  range=0;
 
   changeColor(color: string){
     this.color = color;
