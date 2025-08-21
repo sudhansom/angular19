@@ -85,14 +85,17 @@
     </ul>
     <hr>
     <h1>Drop down example:</h1>
-      <select class="drop-down" [(ngModel)]="dropdown">
+      <!-- <select class="drop-down" [(ngModel)]="dropdown"> -->
+      <select class="drop-down" #selectedValue ngModel>
         <option value="">Select one</option>
         <option value="sudhan">Sudhan</option>
         <option value="resham">resham</option>
         <option value="biren">biren</option>
       </select>
       <hr>
-  <p *ngIf="dropdown"> You selected : {{dropdown}}</p>
+  <p *ngIf="selectedValue.value"> You selected : {{selectedValue.value}}</p>
+  <!-- <p *ngIf="dropdown"> You selected : {{dropdown}}</p> -->
+
 
 
   </div>
