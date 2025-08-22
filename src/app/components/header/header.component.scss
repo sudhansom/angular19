@@ -10,10 +10,11 @@
     background-color: #123456;
 
     img {
-      height: 30px;
-      width: 30px;
+      height: 60px;
+      width: 60px;
       margin: 12px auto 0;
       border-radius: 50%;
+      object-fit:fill;
     }
     .title {
       font-style: bold;
