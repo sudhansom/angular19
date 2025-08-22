@@ -47,7 +47,7 @@ export const routes: Routes = [
   {
     path: 'observables', component: ObservablesComponent
   },
-  { path: 'ngrx', component: NgrxComponent},
-  { path: 'c-flow', component: ControlflowComponent},
+  { path: 'ngrx', loadChildren: ()=>import('./views/ngrx/ngrx.component').then(c=>c.NgrxComponent)},
+  { path: 'c-flow', loadComponent: ()=>import('./views/controlflow/controlflow.component').then(c=>c.ControlflowComponent)},
 
 ];
