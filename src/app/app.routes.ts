@@ -25,7 +25,7 @@ export const routes: Routes = [
       }
     ],
     canDeactivate: [(comp: ReactiveRegistrationComponent)=>{return comp.canExit();}]},
-  {path: 'budget', component: BudgetComponent},
+  { path: 'budget', loadComponent: ()=> import('./views/budget/budget.component').then(c=>c.BudgetComponent)},
   { path: 'separation', component: SeparationComponent },
   { path: 'rxjs', component: PracticeComponent},
   { path: 'grid', component: GridComponent},
