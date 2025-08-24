@@ -1,5 +1,7 @@
 <app-container [style.--container-width]="'500px'">
   <h1>Practice Observables:</h1>
+  <a routerLink="/observables1">Practice 1</a>
+  <hr>
   <div class="my-box">
     <button (click)="createObservable()">Create Observable</button>
     <p>subscribes name :  {{ name$ | async }}</p>

@@ -46,6 +46,7 @@ export const routes: Routes = [
   },
   { path: 'ngrx', loadComponent: ()=>import('./views/ngrx/ngrx.component').then(c=>c.NgrxComponent)},
   { path: 'c-flow', loadComponent: ()=>import('./views/controlflow/controlflow.component').then(c=>c.ControlflowComponent)},
-  { path: 'each-grid', loadComponent: () => import('./views/each-grid/each-grid.component').then(c=>c.EachGridComponent)}
+  { path: 'each-grid', loadComponent: () => import('./views/each-grid/each-grid.component').then(c=>c.EachGridComponent)},
+  { path: 'observables1', loadComponent: ()=>import("./views/observables1/observables1.component").then(c=>c.Observables1Component)}
 
 ];
