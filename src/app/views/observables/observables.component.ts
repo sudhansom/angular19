@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subject, concatMap, debounceTime, filter, from, fromEvent, map } from 'rxjs';
+import { Observable, Subject, concatMap, debounceTime, filter, forkJoin, from, fromEvent, map } from 'rxjs';
 import { ContainerComponent } from '../../components/container/container.component';
 import { AsyncPipe } from '@angular/common';
 
@@ -95,6 +95,18 @@ export class ObservablesComponent implements OnInit {
 createObsfrom(){
   from([1,2,3,4,5]).subscribe(value => console.log(value));
   fromEvent<MouseEvent>(document, 'click').subscribe(event => console.log(event.type, event.x, event.y));
+  const obs1$ = new Observable((subscriber)=> {
+    subscriber.next(1);
+    subscriber.next(2);
+    subscriber.complete();
+  })
+
+  const obs2$ = new Observable((subscriber)=> {
+    subscriber.next(3);
+    subscriber.next(2);
+    subscriber.complete();
+  })
+  forkJoin([obs1$, obs2$]).subscribe(obs=> console.log('obs::', obs[0], obs[1]))
 }
 
 }
