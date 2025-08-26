@@ -106,7 +106,7 @@ createObsfrom(){
     subscriber.next(2);
     subscriber.complete();
   })
-  forkJoin([obs1$, obs2$]).subscribe(obs=> console.log('obs::', obs[0], obs[1]))
+  forkJoin([obs1$, obs2$]).subscribe(([obs1, obs2])=> console.log('obs::', obs1, obs2))
 }
 
 }
