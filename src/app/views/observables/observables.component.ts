@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subject, concatMap, debounceTime, filter, from, map } from 'rxjs';
+import { Observable, Subject, concatMap, debounceTime, filter, from, fromEvent, map } from 'rxjs';
 import { ContainerComponent } from '../../components/container/container.component';
 import { AsyncPipe } from '@angular/common';
 
@@ -94,6 +94,7 @@ export class ObservablesComponent implements OnInit {
 
 createObsfrom(){
   from([1,2,3,4,5]).subscribe(value => console.log(value));
+  fromEvent<MouseEvent>(document, 'click').subscribe(event => console.log(event.type, event.x, event.y));
 }
 
 }
