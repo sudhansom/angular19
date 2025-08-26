@@ -12,7 +12,19 @@ export class Observables1Component {
  observable(){
   const observable$ = new Observable(subscriber => {
     subscriber.next(1);
+    let count = 1;
+    const interval = setInterval(()=>{
+      console.log('first');
+
+      subscriber.next(count++);
+    }, 200)
+    return(()=>{
+      clearInterval(interval);
+      console.log("Cleaned up everything...");
+    })
   })
-  observable$.subscribe(console.log)
+  const subs = observable$.subscribe(console.log)
+
+  subs.unsubscribe();
  }
 }
