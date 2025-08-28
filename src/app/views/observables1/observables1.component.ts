@@ -28,9 +28,21 @@ export class Observables1Component {
   subs.unsubscribe();
  }
 
- conbineLatest(){
-  const obs1$ = fromEvent(document, 'click');
-  const obs2$ = fromEvent(document, 'click');
-  combineLatest([obs1$, obs2$]).subscribe(console.log);
+ combineLatest(){
+  const obs1$ = new Observable(subscriber => {
+    subscriber.next(0);
+    setTimeout(()=>{
+      subscriber.next(4);
+    }, 2000)
+  })
+  const obs2$ = new Observable(subscriber => {
+    subscriber.next(1);
+    setTimeout(()=>{
+      subscriber.next(9);
+    }, 3000)
+  })
+  combineLatest([obs1$, obs2$]).subscribe(([val1, val2])=>{
+    console.log(val1, val2)
+  });
  }
 }
