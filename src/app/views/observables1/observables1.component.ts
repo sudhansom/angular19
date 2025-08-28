@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
-import { Observable } from 'rxjs';
+import { Observable, combineLatest, fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-observables1',
@@ -26,5 +26,11 @@ export class Observables1Component {
   const subs = observable$.subscribe(console.log)
 
   subs.unsubscribe();
+ }
+
+ conbineLatest(){
+  const obs1$ = fromEvent(document, 'click');
+  const obs2$ = fromEvent(document, 'click');
+  combineLatest([obs1$, obs2$]).subscribe(console.log);
  }
 }
