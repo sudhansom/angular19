@@ -9,6 +9,7 @@ import { Observable, combineLatest, fromEvent } from 'rxjs';
   styleUrl: './observables1.component.scss'
 })
 export class Observables1Component {
+  combined = "";
  observable(){
   const observable$ = new Observable(subscriber => {
     subscriber.next(1);
@@ -41,8 +42,10 @@ export class Observables1Component {
       subscriber.next(9);
     }, 3000)
   })
+
   combineLatest([obs1$, obs2$]).subscribe(([val1, val2])=>{
     console.log(val1, val2)
+    this.combined = `value1: ${val1} value2: ${val2}.`
   });
  }
 }
