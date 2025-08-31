@@ -14,6 +14,7 @@
   }
   .container {
     display: grid;
+    border: 1px solid myattr;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 24px;
 
