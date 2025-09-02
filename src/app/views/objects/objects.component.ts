@@ -31,9 +31,9 @@ export class ObjectsComponent {
   }
 
   copyObject(){
-    this.anotherPerson = this.person;
+    // this.anotherPerson = this.person;
 
-    // this.anotherPerson = {...this.person};
+    this.anotherPerson = {...this.person};
     this.anotherPerson.name = "resham";
     console.log("copied value:: ", this.anotherPerson);
 
