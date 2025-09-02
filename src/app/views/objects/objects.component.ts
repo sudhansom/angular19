@@ -17,7 +17,7 @@ export class ObjectsComponent {
       village: "Lalim"
     }
   }
-  anotherPerson = {};
+  anotherPerson:any = {};
   name='';
   age = 0;
   country = ""
@@ -32,7 +32,13 @@ export class ObjectsComponent {
 
   copyObject(){
     this.anotherPerson = this.person;
+
+    // this.anotherPerson = {...this.person};
+    this.anotherPerson.name = "resham";
     console.log("copied value:: ", this.anotherPerson);
+
+    console.log("Original value:: ", this.person);
+
   }
 
 }
