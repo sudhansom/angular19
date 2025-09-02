@@ -11,8 +11,13 @@ export class ObjectsComponent {
   person = {
     name: 'Sudhan',
     age: 43,
-    country: 'Nepal'
+    country: 'Nepal',
+    address: {
+      city: "Tanahun",
+      village: "Lalim"
+    }
   }
+  anotherPerson = {};
   name='';
   age = 0;
   country = ""
@@ -23,6 +28,11 @@ export class ObjectsComponent {
     }else {
       this.name = "";
     }
+  }
+
+  copyObject(){
+    this.anotherPerson = {...this.person};
+    console.log("copied value:: ", this.anotherPerson);
   }
 
 }
