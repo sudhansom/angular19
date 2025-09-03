@@ -2,12 +2,15 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptorsService } from './services/auth-interceptors.service';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorsService, multi: true}]
 })
 export class AppComponent {
   title = 'task-management';
