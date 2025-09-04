@@ -1,6 +1,7 @@
 <div class="whole-body">
-  <app-navbar [links]="lists.slice(0,10)"></app-navbar>
+  <app-navbar [links]="lists.slice(0,10)" [style.--position]="'fixed'" [style.--position-top]="'0'"></app-navbar>
   <hr *ngIf="lists.length > 10" [style]="{margin:0}">
-  <app-navbar *ngIf="lists.length > 10" [links]="lists.slice(10,lists.length)"></app-navbar>
+  <app-navbar *ngIf="lists.length > 10" [links]="lists.slice(10,lists.length)" [style.--position]="'fixed'" [style.--position-top]="'50px'"></app-navbar>
+  <hr *ngIf="lists.length > 10" [style]="{margin:'50px'}">
   <router-outlet></router-outlet>
 </div>
