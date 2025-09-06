@@ -7,7 +7,7 @@
     border: 1px solid lightblue;
     border-radius: 12px;
     height: 200px;
-    margin-top: 200px;
+    margin-top: 100px;
     width: 200px;
     animation: animateMe 5s linear 0s infinite ;
   }
@@ -36,5 +36,41 @@
       color: white;
     }
 
+  }
+
+  .loader-box {
+    background-color: lightblue;
+    height: 200px;
+    width: 200px;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loader {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      border: 2px solid rgb(236, 234, 234);
+      animation: loaderSymbol 5s linear infinite;
+    }
+
+    @keyframes loaderSymbol {
+      0% {
+        border-top-color:red;
+      }
+      25% {
+        border: 2px solid rgb(236, 234, 234);
+        border-right-color:red;
+      }
+      50% {
+        border: 2px solid rgb(236, 234, 234);
+        border-bottom-color:red;
+      }
+      100% {
+        border: 2px solid rgb(236, 234, 234);
+        border-left-color:red;
+      }
+    }
   }
 }
