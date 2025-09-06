@@ -60,6 +60,10 @@ export class AppComponent {
       label: 'js-practice'
     },
     {
+      name: '/css-only',
+      label: 'CSS'
+    },
+    {
       name: '/ngrx',
       label: 'Ngrx'
     },
