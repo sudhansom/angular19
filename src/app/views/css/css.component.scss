@@ -1,0 +1,13 @@
+:host {
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    border-radius: 12px;
+    height: 200px;
+    margin-top: 200px;
+    width: 200px;
+  }
+}
