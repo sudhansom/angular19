@@ -9,5 +9,32 @@
     height: 200px;
     margin-top: 200px;
     width: 200px;
+    animation: animateMe 5s linear 0s infinite ;
+  }
+
+  @keyframes animateMe {
+    0% {
+      rotate :10deg;
+      background-color: lightblue;
+    }
+    10% {
+      background-color: rgb(129, 200, 223);
+
+    }
+    40% {
+      background-color: rgb(46, 172, 214);
+      color: white;
+
+    }
+    80% {
+      background-color: rgb(20, 102, 130);
+      color: white;
+    }
+    100% {
+      rotate :100deg;
+      background-color: rgb(3, 98, 129);
+      color: white;
+    }
+
   }
 }
