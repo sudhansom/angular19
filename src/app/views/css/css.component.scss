@@ -52,24 +52,22 @@
       width: 50px;
       border-radius: 50%;
       border: 2px solid rgb(236, 234, 234);
+      border-top-color: red;
       animation: loaderSymbol 5s linear infinite;
     }
 
     @keyframes loaderSymbol {
       0% {
-        border-top-color:red;
+        transform: rotate(10deg)
       }
       25% {
-        border: 2px solid rgb(236, 234, 234);
-        border-right-color:red;
+        transform: rotate(100deg)
       }
       50% {
-        border: 2px solid rgb(236, 234, 234);
-        border-bottom-color:red;
+        transform: rotate(200deg)
       }
       100% {
-        border: 2px solid rgb(236, 234, 234);
-        border-left-color:red;
+        transform: rotate(360deg)
       }
     }
   }
