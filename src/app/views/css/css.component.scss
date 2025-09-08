@@ -79,6 +79,11 @@
       animation: loaderSymbol 5s linear infinite;
     }
   }
+  @media(max-width: 200px){
+    p {
+      color: rgb(243, 243, 245);
+    }
+  }
   @media(min-width: 200px){
     p {
       color: rgb(30, 28, 207);
