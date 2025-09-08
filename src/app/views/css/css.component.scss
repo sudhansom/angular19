@@ -78,6 +78,20 @@
       border-top-color: red;
       animation: loaderSymbol 5s linear infinite;
     }
+    @keyframes loaderSymbol {
+      0% {
+        transform: rotate(10deg)
+      }
+      25% {
+        transform: rotate(100deg)
+      }
+      50% {
+        transform: rotate(200deg)
+      }
+      100% {
+        transform: rotate(360deg)
+      }
+    }
   }
   @media(max-width: 200px){
     p {
