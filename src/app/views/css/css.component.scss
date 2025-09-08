@@ -11,7 +11,7 @@
     width: 200px;
     animation: animateMe 5s linear 0s infinite ;
     p {
-      color: inherit;
+      // color: inherit;
       animation: animateMeToo 5s linear 0s infinite ;
     }
   }
@@ -78,20 +78,21 @@
       border-top-color: red;
       animation: loaderSymbol 5s linear infinite;
     }
+  }
+  @media(min-width: 200px){
+    p {
+      color: rgb(30, 28, 207);
+    }
+  }
+  @media(min-width: 400px){
+    p {
+      color: rgb(98, 11, 55);
+    }
+  }
 
-    @keyframes loaderSymbol {
-      0% {
-        transform: rotate(10deg)
-      }
-      25% {
-        transform: rotate(100deg)
-      }
-      50% {
-        transform: rotate(200deg)
-      }
-      100% {
-        transform: rotate(360deg)
-      }
+  @media(min-width: 600px){
+    p {
+      color: rgb(238, 7, 15);
     }
   }
 }
