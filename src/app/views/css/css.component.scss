@@ -120,7 +120,7 @@
   .show1 {
     position: relative;
   }
-  .show1::before {
+  .show1:hover::before {
     content: "";
     position: absolute;
     inset: -12px;
