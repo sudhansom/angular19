@@ -117,4 +117,13 @@
   .do-not-show {
     display: none;
   }
+  .show1 {
+    position: relative;
+  }
+  .show1::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    background-color: rgba(220, 220, 220, .5);
+  }
 }
