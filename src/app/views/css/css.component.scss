@@ -120,10 +120,14 @@
   .show1 {
     position: relative;
   }
+  .show1::hover {
+    transition: all .5s ease-in-out;
+  }
   .show1:hover::before {
     content: "";
     position: absolute;
     inset: -12px;
+    border-radius: 12px;
     background-color: rgba(220, 220, 220, .5);
   }
 }
