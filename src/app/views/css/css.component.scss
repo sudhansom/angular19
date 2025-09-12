@@ -80,16 +80,16 @@
     }
     @keyframes loaderSymbol {
       0% {
-        transform: rotate(10deg)
+        transform: rotate(-10deg)
       }
       25% {
-        transform: rotate(100deg)
+        transform: rotate(-100deg)
       }
       50% {
-        transform: rotate(200deg)
+        transform: rotate(-200deg)
       }
       100% {
-        transform: rotate(360deg)
+        transform: rotate(-360deg)
       }
     }
   }
