@@ -16,14 +16,16 @@
     <p>See the results in console.</p>
   </div>
   <small [style]="{'margin-bottom': '3px', 'display':'block'}">change the input and see the network response</small>
-  <form [formGroup]="form" (ngSubmit)="onFormSubmit()" class="my-box form">
-    <label>Title:
-      <input class="form" name="title" formControlName="title" type="text">
-    </label>
-    <label style="margin-left:6px;">Label:
-      <input class="form" name="level" formControlName="level" type="text">
-    </label>
-    <button style="margin:16px 0 0 6px;"> Submit </button>
+  <form [formGroup]="form" (ngSubmit)="onFormSubmit()" class="form">
+    <div class="inputs">
+      <label>Title:
+        <input class="form border" name="title" formControlName="title" type="text">
+      </label>
+      <label style="margin-left:6px;">Label:
+        <input class="form border" name="level" formControlName="level" type="text">
+      </label>
+    </div>
+    <button class="form-btn" style="margin-top:16px; width:100%;"> Submit </button>
   </form>
   <div class="my-box">
     <button (click)="createObsfrom()">Create Obs</button>
