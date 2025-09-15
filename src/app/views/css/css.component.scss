@@ -15,6 +15,27 @@
       animation: animateMeToo 5s linear 0s infinite ;
     }
   }
+  .flex-container {
+    background-color: rgb(240, 238, 238);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 24px;
+    height: 200px;
+    overflow: auto;
+    scroll-behavior: auto;
+    .each-box {
+      width: 23%;
+      border: 1px solid gray;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      background-color: white;
+    }
+  }
 
   @keyframes animateMe {
     0% {

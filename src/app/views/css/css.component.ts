@@ -9,5 +9,6 @@ import { ShowMeDirective } from '../../directives/show-me.directive';
   styleUrl: './css.component.scss'
 })
 export class CssComponent {
+  myList = [1,2,3,4,5,6,7,8,9,10,11,12];
 
 }
