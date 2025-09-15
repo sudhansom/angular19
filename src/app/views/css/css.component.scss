@@ -29,16 +29,19 @@
     scroll-behavior: auto;
     .each-box {
       width: 23%;
+      height: 150px;
       border: 1px solid gray;
       padding: 12px;
       margin-bottom: 12px;
       border-radius: 12px;
       background-color: white;
+      overflow: hidden;
       .image {
-        margin: 10px;
+        width:100%;
+        height: 100%;
+        overflow: hidden;
         img {
-          width:100%;
-          height: 100%;
+
           background-size: cover;
         }
       }
