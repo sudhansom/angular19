@@ -1,13 +1,4 @@
 <app-container [style.--container-width]="'500px'">
-  <div class="box">
-    <p>just a box</p>
-  </div>
-  <div class="loader-box">
-    <div class="loader"></div>
-  </div>
-  <div [showMe]="true"  class="loader-box show1" style="height: 50px; width: 50px;">
-    <i class="loader fa-solid fa-heart" style="color:red; border:none;"></i>
-  </div>
   <div class="flex-container">
     @for(item of myList; track item){
       <div class="each-box">
@@ -20,5 +11,14 @@
         <p>See more</p>
       </div>
     }
+  </div>
+  <div class="box">
+    <p>just a box</p>
+  </div>
+  <div class="loader-box">
+    <div class="loader"></div>
+  </div>
+  <div [showMe]="true"  class="loader-box show1" style="height: 50px; width: 50px;">
+    <i class="loader fa-solid fa-heart" style="color:red; border:none;"></i>
   </div>
 </app-container>
