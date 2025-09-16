@@ -13,11 +13,11 @@
       <div class="each-box">
         <div class="box-content">
           <h2>Heading 1</h2>
-          <div class="image">
-            <img [src]="item" alt="">
+          <div class="image" [style.background-image]="'url(' + item + ')'">
+            <!-- <img [src]="item" alt=""> -->
           </div>
-          <p>See more</p>
         </div>
+        <p>See more</p>
       </div>
     }
   </div>
