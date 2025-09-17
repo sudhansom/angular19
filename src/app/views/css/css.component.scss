@@ -18,6 +18,7 @@
   .flex-container {
     background-color: rgb(240, 238, 238);
     display: flex;
+    gap: 6px;
     justify-content: space-evenly;
     flex-wrap: wrap;
     border: 1px solid red;
@@ -36,6 +37,7 @@
       border-radius: 12px;
       background-color: white;
       overflow: hidden;
+      flex-grow: 1;
       .box-content {
         height: 80%;
         width: 100%;
