@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './show-tasks.component.scss'
 })
 export class ShowTasksComponent {
-
+  tasks: string[] = ['Task 1', 'Task 2', 'Task 3'];
 }

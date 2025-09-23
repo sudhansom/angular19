@@ -1,0 +1,24 @@
+:host {
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+  .tasks-container {
+    margin-top: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .tasks {
+    li {
+      padding: 6px;
+      background-color: gray;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}

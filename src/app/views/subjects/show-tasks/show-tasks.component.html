@@ -1,1 +1,7 @@
-<p>show-tasks works!</p>
+<div class="tasks-container">
+  <ul class="tasks">
+    @for(task of tasks; track task){
+      <li>{{ task }}</li>
+    }
+  </ul>
+</div>
