@@ -49,5 +49,6 @@ export const routes: Routes = [
   { path: 'each-grid', loadComponent: () => import('./views/each-grid/each-grid.component').then(c=>c.EachGridComponent)},
   { path: 'observables1', loadComponent: ()=>import("./views/observables1/observables1.component").then(c=>c.Observables1Component)},
   {path: 'css-only', loadComponent: ()=>import("./views/css/css.component").then(c => c.CssComponent)},
+  {path: 'subjects', loadComponent: ()=>import("./views/subjects/subjects.component").then(c=>c.SubjectsComponent)},
 
 ];

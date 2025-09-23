@@ -75,6 +75,10 @@ export class AppComponent {
       name: '/observables',
       label: 'Observables'
     },
+    {
+      name: '/subjects',
+      label: 'Subjects'
+    },
 
 ]
 }
