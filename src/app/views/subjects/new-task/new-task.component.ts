@@ -16,5 +16,9 @@ export class NewTaskComponent {
   onCreate(){
     console.log(this.newTask);
     this.taskService.onCreate(this.newTask);
+    this.newTask = "Task added....";
+    setTimeout(()=>{
+      this.newTask = "";
+    }, 1500)
   }
 }
