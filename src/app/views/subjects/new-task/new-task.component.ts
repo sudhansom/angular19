@@ -14,11 +14,13 @@ export class NewTaskComponent {
   taskService = inject(TaskService);
 
   onCreate(){
-    console.log(this.newTask);
-    this.taskService.onCreate(this.newTask);
-    this.newTask = "Task added....";
-    setTimeout(()=>{
-      this.newTask = "";
-    }, 1500)
+    if(this.newTask && this.newTask !== "Task added...."){
+      console.log(this.newTask);
+      this.taskService.onCreate(this.newTask);
+      this.newTask = "Task added....";
+      setTimeout(()=>{
+        this.newTask = "";
+      }, 1500)
+    }
   }
 }
