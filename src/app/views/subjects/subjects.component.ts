@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { ShowTasksComponent } from './show-tasks/show-tasks.component';

@@ -1,4 +1,4 @@
 <div class="task-container">
-  <input type="text">
-  <button>Create Task</button>
+  <input type="text" [(ngModel)]="newTask">
+  <button (click)="onCreate()">Create Task</button>
 </div>

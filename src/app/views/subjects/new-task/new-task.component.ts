@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { TaskService } from '../../../services/task.service';
 
 @Component({
   selector: 'app-new-task',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './new-task.component.html',
   styleUrl: './new-task.component.scss'
 })
 export class NewTaskComponent {
+  newTask: string = '';
 
+  taskService = inject(TaskService);
+
+  onCreate(){
+    console.log(this.newTask);
+    this.taskService.onCreate(this.newTask);
+  }
 }
