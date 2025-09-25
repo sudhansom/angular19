@@ -8,6 +8,13 @@
     border: 1px solid gray;
     border-radius: 12px;
     background-color: #123456;
+    .header-image {
+      margin-top: 12px;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      background-image: var(--background-image);
+    }
 
     img {
       height: 60px;
