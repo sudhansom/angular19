@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { Observable, combineLatest, fromEvent } from 'rxjs';
 
@@ -8,7 +8,7 @@ import { Observable, combineLatest, fromEvent } from 'rxjs';
   templateUrl: './observables1.component.html',
   styleUrl: './observables1.component.scss'
 })
-export class Observables1Component {
+export class Observables1Component implements OnInit {
   combined = "";
  observable(){
   const observable$ = new Observable(subscriber => {
@@ -47,5 +47,12 @@ export class Observables1Component {
     console.log(val1, val2)
     this.combined = `value1: ${val1} value2: ${val2}.`
   });
+ }
+ ngOnInit(){
+  const clickEvent = fromEvent(document, 'click');
+
+  clickEvent.subscribe(abc => {
+    console.log('abc', abc);
+  })
  }
 }
