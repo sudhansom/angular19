@@ -49,10 +49,28 @@ export class Observables1Component implements OnInit {
   });
  }
  ngOnInit(){
-  const clickEvent = fromEvent(document, 'click');
+  // const clickEvent = fromEvent(document, 'click');
 
-  clickEvent.subscribe(abc => {
-    console.log('abc', abc);
-  })
+  // clickEvent.subscribe(abc => {
+  //   console.log('abc', abc.isTrusted);
+  // })
+
  }
+
+ createObservable(){
+  const http$ = new Observable(observer => {
+    fetch('http://localhost:3000/posts').then(response => response.json()).then(data => {
+      observer.next(data);
+      observer.complete();
+    }).catch(err => {
+      observer.next(err);
+    })
+  })
+
+  http$.subscribe({
+    next: (data)=>{
+      console.log(data);
+    }
+  });
+}
 }
