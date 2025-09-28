@@ -63,7 +63,7 @@ export class Observables1Component implements OnInit {
   const http$ = createHttpObservable('http://localhost:3000/courses');
 
   const courses$ = http$.pipe(
-    map(response => response['payload'])
+    map(response => Object.values(response['payload']))
     );
 
   courses$.subscribe({
