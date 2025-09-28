@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { Observable, combineLatest, fromEvent } from 'rxjs';
 
+import { createHttpObservable } from './util'
+
 @Component({
   selector: 'app-observables1',
   imports: [ContainerComponent],
@@ -58,19 +60,12 @@ export class Observables1Component implements OnInit {
  }
 
  createObservable(){
-  const http$ = new Observable(observer => {
-    fetch('http://localhost:3000/posts').then(response => response.json()).then(data => {
-      observer.next(data);
-      observer.complete();
-    }).catch(err => {
-      observer.next(err);
-    })
-  })
+  const http$ = createHttpObservable('http://localhost:3000/posts');
 
-  http$.subscribe({
-    next: (data)=>{
-      console.log(data);
-    }
-  });
-}
+    http$.subscribe({
+      next: (data)=>{
+        console.log(data);
+      }
+    });
+  }
 }
