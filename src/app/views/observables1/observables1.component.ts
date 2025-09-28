@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
-import { Observable, combineLatest, fromEvent } from 'rxjs';
+import { Observable, combineLatest, fromEvent, map } from 'rxjs';
 
 import { createHttpObservable } from './util'
 
@@ -60,11 +60,15 @@ export class Observables1Component implements OnInit {
  }
 
  createObservable(){
-  const http$ = createHttpObservable('http://localhost:3000/posts');
+  const http$ = createHttpObservable('http://localhost:3000/courses');
 
-    http$.subscribe({
-      next: (data)=>{
-        console.log(data);
+  const courses$ = http$.pipe(
+    map(response => response['payload'])
+    );
+
+  courses$.subscribe({
+    next: (data)=>{
+      console.log(data);
       }
     });
   }
