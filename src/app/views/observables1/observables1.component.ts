@@ -1,8 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
-import { Observable, combineLatest, fromEvent, map } from 'rxjs';
+import { Observable, combineLatest, concat, fromEvent, map, of, shareReplay } from 'rxjs';
 
 import { createHttpObservable } from './util'
+
+type Course = {
+  id: number,
+  title: string,
+  level: string
+}
 
 @Component({
   selector: 'app-observables1',
@@ -63,13 +69,38 @@ export class Observables1Component implements OnInit {
   const http$ = createHttpObservable('http://localhost:3000/courses');
 
   const courses$ = http$.pipe(
-    map(response => Object.values(response['payload']))
+    map(response => Object.values(response['payload'])),
+    shareReplay(),
     );
 
-  courses$.subscribe({
+  const beginner$ = courses$.pipe(
+    map((course: Course[] )=> course.filter(course => course.level === 'beginner'))
+    );
+
+  const advanced$ = courses$.pipe(
+    map((course: Course[] )=> course.filter(course => course.level === 'advanced'))
+    );
+
+    advanced$.subscribe(data => console.log(data));
+
+
+  beginner$.subscribe({
     next: (data)=>{
       console.log(data);
-      }
+      },
+    error: ()=>{},
+      complete: () => console.log('completed...'),
     });
   }
+
+  concatObservable(){
+    const obs1$ = of(1,2,3);
+    const obs2$ = of(4,5,6);
+    const obs3$ = of(7,8,9);
+
+    const allObs$ = concat(obs1$, obs2$, obs3$);
+
+    allObs$.subscribe(data => console.log(data));
+  }
+
 }
