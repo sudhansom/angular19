@@ -23,12 +23,12 @@
     <hr>
     <div class="form">
       <h2>Course form: </h2>
-      <form action="">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <label>Title:
-          <input type="text">
+          <input formControlName="title" type="text">
         </label>
         <label>Level:
-          <input type="text">
+          <input formControlName="level" type="text">
         </label>
         <button>Submit</button>
       </form>

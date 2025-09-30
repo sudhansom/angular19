@@ -3,6 +3,7 @@ import { ContainerComponent } from '../../components/container/container.compone
 import { Observable, combineLatest, concat, fromEvent, map, of, shareReplay } from 'rxjs';
 
 import { createHttpObservable } from './util'
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 type Course = {
   id: number,
@@ -12,13 +13,14 @@ type Course = {
 
 @Component({
   selector: 'app-observables1',
-  imports: [ContainerComponent],
+  imports: [ContainerComponent, ReactiveFormsModule],
   templateUrl: './observables1.component.html',
   styleUrl: './observables1.component.scss'
 })
 export class Observables1Component implements OnInit {
   combined = "";
   toggle = false;
+  form: FormGroup;
  observable(){
   const observable$ = new Observable(subscriber => {
     subscriber.next(1);
@@ -63,6 +65,10 @@ export class Observables1Component implements OnInit {
   // clickEvent.subscribe(abc => {
   //   console.log('abc', abc.isTrusted);
   // })
+  this.form = new FormGroup({
+    'title': new FormControl(null),
+    'level': new FormControl(null)
+  })
 
  }
 
@@ -106,6 +112,9 @@ export class Observables1Component implements OnInit {
 
   toogleForm(){
     this.toggle = !this.toggle;
+  }
+  onSubmit(){
+    console.log(this.form.value);
   }
 
 }
