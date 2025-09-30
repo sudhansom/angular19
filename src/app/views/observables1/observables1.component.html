@@ -15,4 +15,16 @@
   <div class="content">
     <button (click)="concatObservable()">Concat</button>
   </div>
+  <hr>
+  <div class="content">
+    <button (click)="toogleForm()">{{ toggle? 'Hide Form': 'Show Form' }}</button>
+  </div>
+  @if(toggle){
+    <div class="form">
+      <h2>Course form: </h2>
+      <form action="">
+
+      </form>
+    </div>
+  }
 </app-container>

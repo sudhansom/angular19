@@ -18,6 +18,7 @@ type Course = {
 })
 export class Observables1Component implements OnInit {
   combined = "";
+  toggle = false;
  observable(){
   const observable$ = new Observable(subscriber => {
     subscriber.next(1);
@@ -101,6 +102,10 @@ export class Observables1Component implements OnInit {
     const allObs$ = concat(obs1$, obs2$, obs3$);
 
     allObs$.subscribe(data => console.log(data));
+  }
+
+  toogleForm(){
+    this.toggle = !this.toggle;
   }
 
 }
