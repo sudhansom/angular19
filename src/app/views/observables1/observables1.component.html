@@ -20,10 +20,17 @@
     <button (click)="toogleForm()">{{ toggle? 'Hide Form': 'Show Form' }}</button>
   </div>
   @if(toggle){
+    <hr>
     <div class="form">
       <h2>Course form: </h2>
       <form action="">
-
+        <label>Title:
+          <input type="text">
+        </label>
+        <label>Level:
+          <input type="text">
+        </label>
+        <button>Submit</button>
       </form>
     </div>
   }

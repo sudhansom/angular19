@@ -1,0 +1,25 @@
+:host {
+  .form {
+    h2 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    border: 1px solid gray;
+    border-radius: 12px;
+    padding: 12px;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      label {
+        font-weight: bold;
+      }
+      input {
+        width: 100%;
+        border-radius: 6px;
+        padding: 3px 6px;
+      }
+    }
+  }
+}
