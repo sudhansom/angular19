@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
-import { Observable, combineLatest, concat, fromEvent, map, of, shareReplay } from 'rxjs';
+import { Observable, combineLatest, concat, concatMap, filter, fromEvent, map, of, shareReplay } from 'rxjs';
 
 import { createHttpObservable } from './util'
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
@@ -71,6 +71,13 @@ export class Observables1Component implements OnInit {
     'level': new FormControl(null)
   })
 
+  const saveChanges$ = this.form.valueChanges;
+  saveChanges$.pipe(
+    filter(()=> this.form.valid),
+    concatMap(changes => this.saveChanges(changes))).subscribe(data => console.log(data)
+    );
+
+
   // this.form.valueChanges.subscribe(data => {
   //   console.log(data);
   // })
@@ -119,15 +126,15 @@ export class Observables1Component implements OnInit {
     this.toggle = !this.toggle;
   }
   onSubmit(){
-    const saveChanges = this.saveChanges();
-    saveChanges.subscribe(data => console.log(data));
+    const saveChanges$ = this.saveChanges(this.form.value);
+    saveChanges$.pipe().subscribe(data => console.log(data));
 
   }
 
-  saveChanges(){
+  saveChanges(change){
     return fromPromise(fetch('http://localhost:3000/courses/11', {
       method: 'PUT',
-      body: JSON.stringify(this.form.value),
+      body: JSON.stringify(change),
       headers: {
         'Content-Type': 'application/json'
       }
