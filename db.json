@@ -1,25 +1,73 @@
 {
   "posts": {
     "payload": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
+      {
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+      }
     ]
   },
-  "courses": {
-    "payload": [
-      { "id": 1, "title": "Javascript", "level": "beginner" },
-      { "id": 2, "title": "Angular", "level": "beginner" },
-      { "id": 3, "title": "Python", "level": "beginner" },
-      { "id": 4, "title": "c-programming", "level": "beginner" },
-      { "id": 5, "title": "CI-CD", "level": "advanced" },
-      { "id": 6, "title": "Docker", "level": "advanced" },
-      { "id": 7, "title": "Backend", "level": "advanced" },
-      { "id": 8, "title": "TerraForm", "level": "beginner" },
-      { "id": 9, "title": "Ansible", "level": "advanced" }
-
-    ]
-  },
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+  "courses": [
+    {
+      "id": "1",
+      "title": "Javascript",
+      "level": "beginner"
+    },
+    {
+      "id": "2",
+      "title": "Angular",
+      "level": "beginner"
+    },
+    {
+      "id": "3",
+      "title": "Python",
+      "level": "beginner"
+    },
+    {
+      "id": "4",
+      "title": "c-programming",
+      "level": "beginner"
+    },
+    {
+      "id": "5",
+      "title": "CI-CD",
+      "level": "advanced"
+    },
+    {
+      "id": "6",
+      "title": "Docker",
+      "level": "advanced"
+    },
+    {
+      "id": "7",
+      "title": "Backend",
+      "level": "advanced"
+    },
+    {
+      "id": "8",
+      "title": "TerraForm",
+      "level": "beginner"
+    },
+    {
+      "id": "9",
+      "title": "Ansible",
+      "level": "advanced"
+    },
+    {
+      "title": "resham1",
+      "level": "som1",
+      "id": "11"
+    }
   ],
-  "profile": { "name": "typicode" }
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

@@ -4,6 +4,7 @@ import { Observable, combineLatest, concat, fromEvent, map, of, shareReplay } fr
 
 import { createHttpObservable } from './util'
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { fromPromise } from 'rxjs/internal/observable/innerFrom';
 
 type Course = {
   id: number,
@@ -70,6 +71,10 @@ export class Observables1Component implements OnInit {
     'level': new FormControl(null)
   })
 
+  // this.form.valueChanges.subscribe(data => {
+  //   console.log(data);
+  // })
+
  }
 
  createObservable(){
@@ -114,7 +119,20 @@ export class Observables1Component implements OnInit {
     this.toggle = !this.toggle;
   }
   onSubmit(){
-    console.log(this.form.value);
+    const saveChanges = this.saveChanges();
+    saveChanges.subscribe(data => console.log(data));
+
+  }
+
+  saveChanges(){
+    return fromPromise(fetch('http://localhost:3000/courses/11', {
+      method: 'PUT',
+      body: JSON.stringify(this.form.value),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+  )
   }
 
 }
