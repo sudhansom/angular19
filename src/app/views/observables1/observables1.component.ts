@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
-import { Observable, combineLatest, concat, concatMap, filter, fromEvent, map, mergeMap, of, shareReplay } from 'rxjs';
+import { Observable, combineLatest, concat, concatMap, exhaustMap, filter, fromEvent, map, mergeMap, of, shareReplay } from 'rxjs';
 
 import { createHttpObservable } from './util'
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
@@ -75,7 +75,9 @@ export class Observables1Component implements OnInit {
   saveChanges$.pipe(
     filter(()=> this.form.valid),
     // concatMap(changes => this.saveChanges(changes))).subscribe(data => console.log(data)
-    mergeMap(changes => this.saveChanges(changes))).subscribe(data => console.log(data)
+    // mergeMap(changes => this.saveChanges(changes))).subscribe(data => console.log(data)
+    exhaustMap(changes => this.saveChanges(changes))).subscribe(data => console.log(data)
+
 
     );
 
