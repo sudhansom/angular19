@@ -5,6 +5,7 @@ import { Observable, combineLatest, concat, concatMap, exhaustMap, filter, fromE
 import { createHttpObservable } from './util'
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { fromPromise } from 'rxjs/internal/observable/innerFrom';
+import { JsonPipe } from '@angular/common';
 
 type Course = {
   id: number,
@@ -14,7 +15,7 @@ type Course = {
 
 @Component({
   selector: 'app-observables1',
-  imports: [ContainerComponent, ReactiveFormsModule],
+  imports: [ContainerComponent, ReactiveFormsModule, JsonPipe],
   templateUrl: './observables1.component.html',
   styleUrl: './observables1.component.scss'
 })
