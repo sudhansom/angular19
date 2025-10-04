@@ -22,6 +22,16 @@ export class Observables1Component implements OnInit {
   combined = "";
   toggle = false;
   form: FormGroup;
+  myLists = [
+    {
+      name: "sudhan",
+      age: 43,
+    },
+    {
+      name: "Resham",
+      age: 41,
+    },
+  ]
  observable(){
   const observable$ = new Observable(subscriber => {
     subscriber.next(1);
