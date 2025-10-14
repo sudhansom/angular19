@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { FormsModule, NgForm } from '@angular/forms';
+import { RouterLink } from "@angular/router";
 @Component({
   selector: 'app-user-registration',
-  imports: [ContainerComponent, FormsModule],
+  imports: [ContainerComponent, FormsModule, RouterLink],
   templateUrl: './user-registration.component.html',
   styleUrl: './user-registration.component.scss'
 })
