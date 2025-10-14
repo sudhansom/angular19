@@ -13,6 +13,8 @@ export class TemplateComponent {
 
     formSubmit(){
       console.log(this.form.value);
+      console.log(this.form.value.firstName);
+      console.log(this.form.controls['email'].value);
       console.log(this.form.valid);
 
     }
