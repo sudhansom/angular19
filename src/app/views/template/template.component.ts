@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { FormsModule, NgForm } from '@angular/forms';
 
@@ -9,9 +9,11 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './template.component.scss'
 })
 export class TemplateComponent {
-    formSubmit(form: NgForm){
-      console.log(form.value);
-      console.log(form.valid);
+    @ViewChild('form') form: NgForm;
+
+    formSubmit(){
+      console.log(this.form.value);
+      console.log(this.form.valid);
 
     }
 

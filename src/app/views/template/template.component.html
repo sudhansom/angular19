@@ -1,6 +1,6 @@
 <app-container [style.--container-width]="'500px'">
   <h2>Template driven Form</h2>
-  <form class="form" (ngSubmit)="formSubmit(form)" #form="ngForm">
+  <form class="form" (ngSubmit)="formSubmit()" #form="ngForm">
     <div>
       <input type="text" name="firstName" required ngModel placeholder="First name">
       <input type="text" name="lastName" ngModel placeholder="Last name">
