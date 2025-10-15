@@ -1,0 +1,23 @@
+:host {
+  .form {
+    border: 1px solid gray;
+    border-radius: 12px;
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    div {
+      display: flex;
+      gap: 12px;
+    }
+
+    input {
+      border: 2px solid rgb(203, 201, 201);
+      border-radius: 6px;
+      width: 100%;
+      padding: 3px 6px;
+    }
+
+  }
+}

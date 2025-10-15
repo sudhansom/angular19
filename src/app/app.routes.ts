@@ -51,5 +51,6 @@ export const routes: Routes = [
   {path: 'css-only', loadComponent: ()=>import("./views/css/css.component").then(c => c.CssComponent)},
   {path: 'subjects', loadComponent: ()=>import("./views/subjects/subjects.component").then(c=>c.SubjectsComponent)},
   { path: 'td-form', loadComponent: () => import('./views/template/template.component').then(c=>c.TemplateComponent)},
+  { path: 'rt-form', loadComponent: () => import('./views/reactive-form/reactive-form.component').then(c => c.ReactiveFormComponent)},
 
 ];
