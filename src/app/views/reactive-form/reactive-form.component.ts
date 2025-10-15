@@ -1,12 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
-  imports: [ContainerComponent],
+  imports: [ContainerComponent, ReactiveFormsModule],
   templateUrl: './reactive-form.component.html',
   styleUrl: './reactive-form.component.scss'
 })
-export class ReactiveFormComponent {
+export class ReactiveFormComponent implements OnInit {
+  form: FormGroup;
 
+  ngOnInit(): void {
+      this.form = new FormGroup({
+        firstName: new FormControl(null),
+        lastName: new FormControl(null),
+        email: new FormControl(null),
+      });
+  }
+
+  onFormSubmit(){
+    console.log(this.form.value);
+  }
 }
