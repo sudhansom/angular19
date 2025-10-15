@@ -9,7 +9,7 @@
       <input type="text" formControlName="email"  placeholder="Email">
     </div>
     <div class="button">
-      <input type="submit" >
+      <input type="submit" [disabled]="!form.valid">
     </div>
   </form>
 </app-container>
