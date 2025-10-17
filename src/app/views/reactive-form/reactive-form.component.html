@@ -2,7 +2,12 @@
   <h2>Reactive Form</h2>
   <form class="form" [formGroup]="form" (ngSubmit)="onFormSubmit()">
     <div>
-      <input type="text" formControlName="firstName"   placeholder="First name">
+      <div class="input">
+        <input type="text" formControlName="firstName"   placeholder="First name">
+      @if (!form.get('firstName').valid && form.get('firstName').touched) {
+        <span>You need to enter first name.</span>
+      }
+      </div>
       <input type="text" formControlName="lastName"   placeholder="Last name">
     </div>
     <div class="email">

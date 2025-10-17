@@ -20,6 +20,10 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   onFormSubmit(){
-    console.log(this.form.value);
+    if(this.form.valid){
+      console.log(this.form.value);
+    }else {
+      alert('Form not valid')
+    }
   }
 }

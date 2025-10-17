@@ -19,5 +19,14 @@
       padding: 3px 6px;
     }
 
+    .input {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 8px;
+        color: red;
+      }
+    }
+
   }
 }
