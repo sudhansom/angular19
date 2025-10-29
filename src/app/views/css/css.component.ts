@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { ShowMeDirective } from '../../directives/show-me.directive';
-import { Highlight } from './highlight.directive';
+import { HighlightDirective } from './highlight.directive';
 
 @Component({
   selector: 'app-css',
-  imports: [ContainerComponent, ShowMeDirective, Highlight],
+  imports: [ContainerComponent, ShowMeDirective, HighlightDirective],
   templateUrl: './css.component.html',
   styleUrl: './css.component.scss'
 })
