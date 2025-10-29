@@ -1,7 +1,7 @@
 <app-container [style.--container-width]="'500px'">
   <div class="flex-container">
     @for(item of myList; track item){
-      <div class="each-box">
+      <div class="each-box" appHighlight>
         <div class="box-content">
           <h2>Heading 1</h2>
           <div class="image" [style.--background-image]="'url(' + item + ')'">
