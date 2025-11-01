@@ -14,6 +14,7 @@ import { ArraysComponent } from './views/arrays/arrays.component';
 import { ObservablesComponent } from './views/observables/observables.component';
 import { ObjectsComponent } from './views/objects/objects.component';
 import { PrototypeComponent } from './views/prototype/prototype.component';
+import { Prototype1Component } from './components/prototype/prototype.component';
 
 export const routes: Routes = [
   {path: '', component: TasksManageComponent},
@@ -37,7 +38,8 @@ export const routes: Routes = [
     children: [
       { path: 'arrays', component: ArraysComponent},
       { path: 'objects', component: ObjectsComponent},
-      { path: 'prototype', component: PrototypeComponent}
+      { path: 'prototype', component: PrototypeComponent},
+      {path: 'prototype1', component: Prototype1Component},
 
     ]
   },
