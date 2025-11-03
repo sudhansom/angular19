@@ -15,6 +15,7 @@ export class Prototype1Component implements OnInit {
       console.log(this.person);
       console.log(this.employee);
 
+      console.log(Employee.officeLocation());
   }
 
 }

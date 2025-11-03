@@ -33,6 +33,10 @@ export class Employee extends Person {
     this.salary = salary;
   }
 
+  static officeLocation(){
+    return 'Gives the address of the office and is same for all the employee.'
+  }
+
   employeeDetails(){
     return 'this function will show the details of the employee.'
   }
