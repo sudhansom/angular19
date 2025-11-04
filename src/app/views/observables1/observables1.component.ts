@@ -143,7 +143,10 @@ export class Observables1Component implements OnInit {
   }
   onSubmit(){
     const saveChanges$ = this.saveChanges(this.form.value);
-    saveChanges$.pipe().subscribe(data => console.log(data));
+    saveChanges$.pipe(
+      filter(()=> this.form.valid),
+      concatMap(changes => this.saveChanges(changes))
+    ).subscribe();
 
   }
 
