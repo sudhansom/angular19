@@ -4,4 +4,12 @@
         border-radius: 12px;
         padding: 12px;
     }
+
+    .contents {
+        border: 1px solid green;
+        padding: 12px;
+        margin: 12px;
+        display: flex;
+        justify-content: space-around;
+    }
 }

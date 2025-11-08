@@ -2,5 +2,10 @@
     <div class="slot-container">
         <h2>Slot Example:</h2>
         <ng-content></ng-content>
+
+        <div class="contents">
+            <ng-content select=".content1"></ng-content>
+            <ng-content select=".content2"></ng-content>
+        </div>
     </div>
 </app-container>
