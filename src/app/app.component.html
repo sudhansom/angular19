@@ -1,7 +1,17 @@
-<div class="whole-body">
+<!-- <div class="whole-body">
   <app-navbar [links]="lists.slice(0,10)" [style.--position]="'fixed'"></app-navbar>
   <hr *ngIf="lists.length > 10" [style]="{margin:0}">
   <app-navbar *ngIf="lists.length > 10" [links]="lists.slice(10,lists.length)" [style.--position]="'fixed'" [style.--position-top]="'50px'"></app-navbar>
   <hr *ngIf="lists.length > 10" [style]="{margin:'50px'}">
+  <router-outlet></router-outlet>
+</div> -->
+
+<div class="whole-body">
+  <div class="navbar-container">
+    <app-navbar [links]="lists.slice(0,10)"></app-navbar>
+    <hr *ngIf="lists.length > 10" [style]="{margin:0}">
+    <app-navbar *ngIf="lists.length > 10" [links]="lists.slice(10,lists.length)"></app-navbar>
+    <hr *ngIf="lists.length > 10" [style]="{margin:'50px'}">
+  </div>
   <router-outlet></router-outlet>
 </div>
