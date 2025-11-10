@@ -34,8 +34,22 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  .navbar-container {
+    position: fixed;
+    inset: 0;
+
+    hr {
+      border-color:#fff;
+      opacity: 1;
+    }
+  }
+
+  .main {
+    margin-top: 150px;
+  }
+
   .whole-body {
-    background-color: #eef0f1;
+    // background-color:#fff;
     min-height: 100vh;
   }
 
