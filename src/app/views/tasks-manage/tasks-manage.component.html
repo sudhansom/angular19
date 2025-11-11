@@ -13,7 +13,7 @@
     <app-tasks (complete)="onCompleteTask($event)" [id]="id()"></app-tasks>
   </div>
   <ng-template #ngTemplate let-myName="name">
-    <p>this is from ng-template {{ myName }}</p>
+    <p class="ngTemplate">this is from ng-template {{ myName }}</p>
   </ng-template>
   <app-slots [ngTempl]="ngTemplate">
     <p>some content....</p>
