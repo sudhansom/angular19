@@ -8,5 +8,11 @@
             <ng-content select=".content2"></ng-content>
             <ng-content select="[content3]"></ng-content>
         </div>
+        <div *ngIf="showTemplate; else showTmpl">
+            <p>Do not show this.</p>
+        </div>
     </div>
+    <ng-template #showTmpl>
+        <ng-container *ngTemplateOutlet="ngTempl; context: {name:'sudhan'}"></ng-container>
+    </ng-template>
 </app-container>

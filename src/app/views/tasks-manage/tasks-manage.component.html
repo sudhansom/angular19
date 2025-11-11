@@ -12,7 +12,10 @@
     <app-user (clickUser)="onClickUser($event)"></app-user>
     <app-tasks (complete)="onCompleteTask($event)" [id]="id()"></app-tasks>
   </div>
-  <app-slots>
+  <ng-template #ngTemplate let-myName="name">
+    <p>this is from ng-template {{ myName }}</p>
+  </ng-template>
+  <app-slots [ngTempl]="ngTemplate">
     <p>some content....</p>
     <div class="content1">
       content 1
