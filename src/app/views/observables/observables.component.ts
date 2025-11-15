@@ -6,11 +6,11 @@ import { AsyncPipe } from '@angular/common';
 import { createHttpsObservable } from '../../utils/utils';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { fromPromise } from 'rxjs/internal/observable/innerFrom';
-import { RouterLink, RouterOutlet } from "@angular/router";
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-observables',
-  imports: [ContainerComponent, AsyncPipe, ReactiveFormsModule, RouterLink, RouterOutlet],
+  imports: [ContainerComponent, AsyncPipe, ReactiveFormsModule, RouterLink],
   templateUrl: './observables.component.html',
   styleUrl: './observables.component.scss'
 })
