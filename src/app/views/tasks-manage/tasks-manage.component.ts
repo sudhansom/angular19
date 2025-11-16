@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { ContainerComponent } from '../..//components/container/container.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { UserComponent } from '../../components/user/user.component';
@@ -10,7 +10,8 @@ import { SlotsComponent } from '../../components/slots/slots.component';
   selector: 'app-tasks-manage',
   imports: [ContainerComponent, HeaderComponent, UserComponent, TasksComponent, NewTaskComponent, SlotsComponent],
   templateUrl: './tasks-manage.component.html',
-  styleUrl: './tasks-manage.component.scss'
+  styleUrl: './tasks-manage.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TasksManageComponent {
   id = signal('u1');
