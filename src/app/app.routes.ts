@@ -53,5 +53,5 @@ export const routes: Routes = [
   {path: 'subjects', loadComponent: ()=>import("./views/subjects/subjects.component").then(c=>c.SubjectsComponent)},
   { path: 'td-form', loadComponent: () => import('./views/template/template.component').then(c=>c.TemplateComponent)},
   { path: 'rt-form', loadComponent: () => import('./views/reactive-form/reactive-form.component').then(c => c.ReactiveFormComponent)},
-
+  { path: 'signals', loadComponent: () => import('./views/signals/signals.component').then(c => c.SignalsComponent)},
 ];

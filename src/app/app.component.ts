@@ -76,9 +76,12 @@ export class AppComponent {
       label: 'Observables'
     },
     {
+      name: '/signals',
+      label: 'Signals'
+    },
+    {
       name: '/subjects',
       label: 'Subjects'
     },
-
 ]
 }
