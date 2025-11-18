@@ -2,5 +2,12 @@
     app-container {
         display: block;
         margin: auto;
+        .counter {
+            display: flex;
+            align-items: center;
+            margin: 24px;
+            gap: 24px;
+        }
     }
+
 }
