@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 
 @Component({
@@ -9,6 +9,11 @@ import { ContainerComponent } from '../../components/container/container.compone
 })
 export class SignalsComponent {
   counter = signal(0);
+
+  derivedCounter = computed(()=>{
+    let cnt = this.counter() * 10;
+    return cnt;
+  })
 
   handleCounter(action: string){
     if(action === 'increase'){
