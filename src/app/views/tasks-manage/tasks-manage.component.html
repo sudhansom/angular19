@@ -9,8 +9,10 @@
     @if(showAddTask()){
       <app-new-task (hideForm)="toogleAddTask()"></app-new-task>
     }
-    <app-user (clickUser)="onClickUser($event)"></app-user>
-    <app-tasks (complete)="onCompleteTask($event)" [id]="id()"></app-tasks>
+    @if(!showAddTask()){
+      <app-user (clickUser)="onClickUser($event)"></app-user>
+      <app-tasks (complete)="onCompleteTask($event)" [id]="id()"></app-tasks>
+    }
   </div>
   <ng-template #ngTemplate let-myName="name">
     <p class="ngTemplate">this is from ng-template {{ myName }}</p>
