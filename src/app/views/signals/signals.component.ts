@@ -1,11 +1,20 @@
 import { Component } from '@angular/core';
+import { ContainerComponent } from '../../components/container/container.component';
 
 @Component({
   selector: 'app-signals',
-  imports: [],
+  imports: [ContainerComponent],
   templateUrl: './signals.component.html',
   styleUrl: './signals.component.scss'
 })
 export class SignalsComponent {
+  counter = 0;
 
+  handleCounter(action: string){
+    if(action === 'increase'){
+      this.counter = this.counter + 1;
+    }else {
+      this.counter = this.counter - 1;
+    }
+  }
 }

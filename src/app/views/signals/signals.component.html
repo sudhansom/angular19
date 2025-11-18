@@ -1,1 +1,10 @@
-<p>signals works!</p>
+<app-container  [style.--container-width]="'500px'">
+    <div>
+        <h1>Counter</h1>
+        <button (click)="handleCounter('increase')">Increment</button>
+        <p>{{counter}}</p>
+        <button (click)="handleCounter('decrease')">Decrement</button>
+    </div>
+
+
+</app-container>
