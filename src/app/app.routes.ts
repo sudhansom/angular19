@@ -49,9 +49,10 @@ export const routes: Routes = [
   { path: 'c-flow', loadComponent: ()=>import('./views/controlflow/controlflow.component').then(c=>c.ControlflowComponent)},
   { path: 'each-grid', loadComponent: () => import('./views/each-grid/each-grid.component').then(c=>c.EachGridComponent)},
   { path: 'observables1', loadComponent: ()=>import("./views/observables1/observables1.component").then(c=>c.Observables1Component)},
-  {path: 'css-only', loadComponent: ()=>import("./views/css/css.component").then(c => c.CssComponent)},
-  {path: 'subjects', loadComponent: ()=>import("./views/subjects/subjects.component").then(c=>c.SubjectsComponent)},
+  { path: 'css-only', loadComponent: ()=>import("./views/css/css.component").then(c => c.CssComponent)},
+  { path: 'subjects', loadComponent: ()=>import("./views/subjects/subjects.component").then(c=>c.SubjectsComponent)},
   { path: 'td-form', loadComponent: () => import('./views/template/template.component').then(c=>c.TemplateComponent)},
   { path: 'rt-form', loadComponent: () => import('./views/reactive-form/reactive-form.component').then(c => c.ReactiveFormComponent)},
   { path: 'signals', loadComponent: () => import('./views/signals/signals.component').then(c => c.SignalsComponent)},
+  { path: 'hooks', loadComponent: () => import('./views/hooks/hooks.component').then(c => c.HooksComponent)},
 ];

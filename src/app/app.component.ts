@@ -83,5 +83,9 @@ export class AppComponent {
       name: '/subjects',
       label: 'Subjects'
     },
+    {
+      name: '/hooks',
+      label: 'Hooks'
+    },
 ]
 }
