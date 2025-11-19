@@ -1,3 +1,6 @@
 <app-container [style.--container-width]="'500px'">
     <p>hooks works!</p>
+    <input type="text" #inputEl> |
+    <button (click)="onSubmit(inputEl)">Submit</button>
+    <app-example [message]="inputValue"></app-example>
 </app-container>
