@@ -2,5 +2,6 @@
     <p>hooks works!</p>
     <input type="text" #inputEl> |
     <button (click)="onSubmit(inputEl)">Submit</button>
-    <app-example [message]="inputValue"></app-example>
+    <app-example [message]="inputValue"  *ngIf="toBeDestroyed"></app-example>
+    <button (click)="onDestroy()">Destroy</button>
 </app-container>
