@@ -18,30 +18,30 @@ export class ExampleComponent implements OnChanges,
  @Input()message: string;
 
  ngOnChanges(changes: SimpleChanges): void {
-   console.log("onChanges called...");
-   console.log('Changes: ', changes);
+   console.log("Child onChanges called...");
+   console.log('ngONChanges: ', changes);
  }
 
  ngAfterContentChecked(): void {
-   console.log('AfterContentChecked');
+   console.log('Child AfterContentChecked');
  }
  ngAfterViewChecked(): void {
-   console.log('AfterViewChecked....')
+   console.log('Child AfterViewChecked....')
  }
  ngDoCheck(): void {
-   console.log('DoCheck...')
+   console.log('Child DoCheck...')
  }
  ngOnInit(): void {
-   console.log('OnInit...')
+   console.log('Child OnInit...')
  }
  ngAfterViewInit(): void {
-   console.log('AfterViewInit')
+   console.log('Child AfterViewInit')
  }
  ngAfterContentInit(): void {
-   console.log('AfterContentInit...')
+   console.log('Child AfterContentInit...')
  }
  
  ngOnDestroy(): void {
-  console.log('Destroyed....')
+  console.log('Child Destroyed....')
 }
 }
