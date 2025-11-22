@@ -1,5 +1,5 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit, signal } from '@angular/core';
+import { RouterOutlet, TitleStrategy } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -12,8 +12,9 @@ import { AuthInterceptorsService } from './services/auth-interceptors.service';
   styleUrl: './app.component.scss',
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorsService, multi: true}]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'task-management';
+
   lists = [
     {
       name: '/',
@@ -88,4 +89,10 @@ export class AppComponent {
       label: 'Hooks'
     },
 ]
+
+ngOnInit(): void {
+  setTimeout(() => {
+    this.title = 'task-management-push';
+  }, 3000);
+}
 }
