@@ -92,8 +92,13 @@ export class AppComponent implements OnInit {
 ]
 
 ngOnInit(): void {
-  setTimeout(() => {
-    this.title = 'task-management-push';
-  }, 3000);
+  // setTimeout(() => {
+  // this.title = 'task-management-push';
+  // }, 3000);
+}
+
+changeTitle(){
+  this.title = 'task-management-push';
+
 }
 }
