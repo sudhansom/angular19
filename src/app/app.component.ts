@@ -1,20 +1,24 @@
-import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject, signal } from '@angular/core';
 import { RouterOutlet, TitleStrategy } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorsService } from './services/auth-interceptors.service';
+import { ContainerComponent } from './components/container/container.component';
+import { UserService } from './services/user-service.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, CommonModule],
+  imports: [RouterOutlet, NavbarComponent, CommonModule, ContainerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorsService, multi: true}],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
+  userService: UserService = inject(UserService);
   title = 'task-management';
+  users: any = [];
 
   lists = [
     {
@@ -95,6 +99,10 @@ ngOnInit(): void {
   // setTimeout(() => {
   // this.title = 'task-management-push';
   // }, 3000);
+
+  this.userService.getAllUsers().subscribe(data => {
+    this.users = data;
+  })
 }
 
 changeTitle(){
