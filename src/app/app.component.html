@@ -4,15 +4,14 @@
   <app-navbar *ngIf="lists.length > 10" [links]="lists.slice(10,lists.length)" [style.--position]="'fixed'" [style.--position-top]="'50px'"></app-navbar>
   <hr *ngIf="lists.length > 10" [style]="{margin:'50px'}">
   <router-outlet></router-outlet>
+</div>
 
+<app-container [style.--container-width]="'500px'">
   <div>
     <button (click)="changeTitle()">Change title</button>
     <p>{{title}}</p>
   </div>
-</div>
-
-<app-container [style.--container-width]="'500px'">
-
+<hr>
   <pre>
     {{ users | json }}
   </pre>
