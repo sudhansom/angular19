@@ -12,7 +12,7 @@
       <hr>
       <a [routerLink]="['prototype']" routerLinkActive="active" title="opens a new sub page in right side">Prototype</a>
       <hr>
-      <a [routerLink]="['prototype1']" routerLinkActive="active" title="opens a new sub page in right side">Prototype1</a>
+      <a [routerLink]="['prototype1']" [state]="{name: 'sudhan'}" routerLinkActive="active" title="opens a new sub page in right side">Prototype1</a>
     </div>
     <div class="sub-route">
       <router-outlet></router-outlet>
