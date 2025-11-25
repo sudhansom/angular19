@@ -38,7 +38,7 @@ export const routes: Routes = [
     children: [
       { path: 'arrays', component: ArraysComponent},
       { path: 'objects', component: ObjectsComponent},
-      { path: 'prototype', component: PrototypeComponent},
+      { path: 'prototype', component: PrototypeComponent, data: {name: 'sudhan'}},
       {path: 'prototype1', component: Prototype1Component, canActivate: [allowMe]},
 
     ]
