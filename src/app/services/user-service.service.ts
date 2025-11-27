@@ -1,19 +1,18 @@
 import { Injectable } from "@angular/core";
 import { User } from "../models/user";
 import { Observable } from "rxjs";
-import * as uuid from 'uuid';
+import * as uuid from "uuid";
 
-const myId = uuid.v4();
 
 @Injectable({
     providedIn: 'root'
 })
 export class UserService {
     users = [
-        new User(myId, 'sudhan', 'Poudel', 'Lalim'),
-        new User(myId, 'resham', 'Poudel', 'Lalim'),
-        new User(myId, 'som', 'Poudel', 'Lalim'),
-        new User(myId, 'biren', 'Poudel', 'Lalim'),
+        new User(uuid.v4(), 'sudhan', 'Poudel', 'Lalim'),
+        new User(uuid.v4(), 'resham', 'Poudel', 'Lalim'),
+        new User(uuid.v4(), 'som', 'Poudel', 'Lalim'),
+        new User(uuid.v4(), 'biren', 'Poudel', 'Lalim'),
     ];
 
     getAllUsers(){
