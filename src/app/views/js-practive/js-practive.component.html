@@ -14,6 +14,7 @@
       <hr>
       <a [routerLink]="['prototype1']" [state]="{name: 'sudhan'}" routerLinkActive="active" title="opens a new sub page in right side">Prototype1</a>
     </div>
+    <button (click)="dateConversion(['20 18p ', '2345p0', '11-11-2022'])">Convert Dates</button>
     <div class="sub-route">
       <router-outlet></router-outlet>
     </div>
