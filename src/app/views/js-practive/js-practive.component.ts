@@ -40,6 +40,23 @@ export class JsPractiveComponent {
 
     console.log(result);
 }
-}
+  }
+
+  findIndexes(arr: number[], target: number){
+    let result = null;
+    if(!arr || arr.length < 2){
+      console.log(arr);
+      return [];
+    }
+    for(let i=0; i<arr.length - 1; i++){
+      console.log('here ind', i, arr[i], arr[i] + arr[i + 1]);
+
+      if(arr[i] + arr[i+1] === target){
+        result = [i, i+1];
+      }
+    }
+    console.log(result);
+    return result;
+  }
 
 }
