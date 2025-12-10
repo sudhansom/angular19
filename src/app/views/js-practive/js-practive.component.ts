@@ -43,6 +43,7 @@ export class JsPractiveComponent {
   }
 
   findIndexes(arr: number[], target: number){
+    console.log('Given array: ', arr, 'Target: ', target);
     let result = null;
     if(!arr || arr.length < 2){
       console.log(arr);
@@ -55,7 +56,7 @@ export class JsPractiveComponent {
         result = [i, i+1];
       }
     }
-    console.log(result);
+    console.log('Result is: ',result);
     return result;
   }
 
