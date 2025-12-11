@@ -16,6 +16,7 @@
     </div>
     <button (click)="dateConversion(['20 18p ', '2345p0', '11-11-2022'])">Convert Dates</button>
     <button (click)="findIndexes([1,2,8,4,5,6,7,3], 15)">Array1</button>
+    <input type="text" (keyup)="callDebounce()">
     <div class="sub-route">
       <router-outlet></router-outlet>
     </div>

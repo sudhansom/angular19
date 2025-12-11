@@ -60,4 +60,26 @@ export class JsPractiveComponent {
     return result;
   }
 
+  callDebounce(){
+
+    this.debounce(this.getData, 300);
+
+  }
+
+  debounce = function(getData, delay){
+    let timeout;
+   return function(){
+    let args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      getData.apply(this, args);
+    }, delay )
+   }
+  }
+
+  counter = 0;
+  getData = function(){
+      console.log(`Counter Value: `, this.counter++);
+    }
+
 }
