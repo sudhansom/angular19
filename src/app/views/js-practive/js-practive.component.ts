@@ -61,12 +61,12 @@ export class JsPractiveComponent {
   }
 
   callDebounce(){
-
-    this.debounce(this.getData, 300);
+    this.debounce(this.getData, 300)();
 
   }
 
   debounce = function(getData, delay){
+
     let timeout;
    return function(){
     let args = arguments;
@@ -79,7 +79,8 @@ export class JsPractiveComponent {
 
   counter = 0;
   getData = function(){
-      console.log(`Counter Value: `, this.counter++);
+      this.counter += 1;
+      console.log(`Counter Value: `, this.counter);
     }
 
 }
