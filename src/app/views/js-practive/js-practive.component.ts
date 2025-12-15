@@ -9,7 +9,7 @@ import { ContainerComponent } from '../../components/container/container.compone
   styleUrl: './js-practive.component.scss'
 })
 export class JsPractiveComponent {
-
+  counter = 0;
   dateConversion(dates: string[]){
     let result = [];
 
@@ -67,7 +67,7 @@ export class JsPractiveComponent {
 
   debounce = function(getData, delay){
 
-    let timeout;
+  let timeout;
    return function(){
     let args = arguments;
     clearTimeout(timeout);
@@ -77,7 +77,6 @@ export class JsPractiveComponent {
    }
   }
 
-  counter = 0;
   getData = function(){
       this.counter += 1;
       console.log(`Counter Value: `, this.counter);
