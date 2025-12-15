@@ -2,10 +2,11 @@ import { Component, Input, input, output } from '@angular/core';
 import { ContainerComponent } from '../../container/container.component';
 import { CardComponent } from '../../shared/card/card.component';
 import { DatePipe } from '@angular/common';
+import { HighlightDirective } from '../../../directives/highlight.directive';
 
 @Component({
   selector: 'app-each-task',
-  imports: [ContainerComponent, DatePipe, CardComponent],
+  imports: [ContainerComponent, DatePipe, CardComponent, HighlightDirective],
   templateUrl: './each-task.component.html',
   styleUrl: './each-task.component.scss'
 })
