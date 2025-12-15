@@ -15,12 +15,14 @@ export class JsPractiveComponent {
 
     for(let date of dates){
         let ccc = date.split('-');
-        let dayMonthYear = false;
 
         if(ccc.length === 3){
           if( ccc[2].length === 4){
-            dayMonthYear = true
+            let temp = ccc[2];
+            ccc[2] = ccc[0];
+            ccc[0] = temp;
           }
+          date = `${ccc[0]}-${ccc[1]}-${ccc[2]}`;
         }
       
 
@@ -29,17 +31,12 @@ export class JsPractiveComponent {
             let year = convertedDate.slice(0,4);
             let month = convertedDate.slice(4,6);
             let day = convertedDate.slice(6, 8);
-        if(dayMonthYear){
-             day = convertedDate.slice(0,2);
-             month = convertedDate.slice(2,4);
-             year = convertedDate.slice(4, 8);
-        }
 
         let res = `${year}/${month}/${day}`;
         result.push(res);
 
+    }
     console.log(result);
-}
   }
 
   findIndexes(arr: number[], target: number){
