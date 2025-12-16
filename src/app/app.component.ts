@@ -6,10 +6,11 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorsService } from './services/auth-interceptors.service';
 import { ContainerComponent } from './components/container/container.component';
 import { UserService } from './services/user-service.service';
+import { HoverDirective } from './directives/hover.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, CommonModule, ContainerComponent],
+  imports: [RouterOutlet, NavbarComponent, CommonModule, ContainerComponent, HoverDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorsService, multi: true}],
