@@ -7,7 +7,7 @@ export class IfDirective {
 
   constructor(private element: TemplateRef<any>, private view: ViewContainerRef) { }
 
-  @Input() set display(value: boolean){
+  @Input() set appIf(value: boolean){
     if(value){
       this.view.createEmbeddedView(this.element);
     }else {

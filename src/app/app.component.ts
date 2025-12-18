@@ -8,10 +8,12 @@ import { ContainerComponent } from './components/container/container.component';
 import { UserService } from './services/user-service.service';
 import { HoverDirective } from './directives/hover.directive';
 import { DisableMeDirective } from "./directives/disable-me.directive";
+import { IfDirective } from './directives/if.directive';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, CommonModule, ContainerComponent, HoverDirective, DisableMeDirective],
+  imports: [RouterOutlet, NavbarComponent, CommonModule, ContainerComponent, HoverDirective, DisableMeDirective, IfDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorsService, multi: true}],

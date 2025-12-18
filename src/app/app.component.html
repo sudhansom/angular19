@@ -9,7 +9,7 @@
 <app-container [style.--container-width]="'500px'">
   <div>
     <button (click)="changeTitle()">Change title</button>
-    <p appHover [appDisableMe]="false">{{title}}</p>
+    <p appHover [appDisableMe]="false" *appIf="true">{{title}}</p>
   </div>
 <hr>
   <pre>
