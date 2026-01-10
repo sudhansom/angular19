@@ -1,5 +1,8 @@
 <app-container class="container" [style.--container-width]="'500px'">
   <app-header></app-header>
+
+  <p>{{ myName }}</p>
+
   <div class="tasks">
     <h2>All the tasks</h2>
     <button (click)="toogleAddTask()">{{ showAddTask()? 'Cancel':'Add New Task' }}</button>
@@ -7,7 +10,7 @@
 
   <div class="body-part">
     @if(showAddTask()){
-      <app-new-task (hideForm)="toogleAddTask()"></app-new-task>
+      <app-new-task #appNewTask (hideForm)="toogleAddTask()"></app-new-task>
     }
     @if(!showAddTask()){
       <app-user (clickUser)="onClickUser($event)"></app-user>

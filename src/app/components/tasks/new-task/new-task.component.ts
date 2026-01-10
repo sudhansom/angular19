@@ -18,6 +18,8 @@ desc = '';
 user = '';
 hideForm = output();
 
+myName = "sudhan by component reference";
+
 
 dataService = inject(DataServiceService)
 
