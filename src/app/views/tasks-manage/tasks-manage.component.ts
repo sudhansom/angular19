@@ -17,13 +17,14 @@ export class TasksManageComponent implements OnInit{
   id = signal('u1');
   showAddTask = signal(false);
   myName: string;
-  myComponent: NewTaskComponent;
+  
+  @ViewChild('appNewTask') newTask: NewTaskComponent;
+
 
   ngOnInit(): void {
-    this.myName = this.myComponent.myName;
+    this.myName = this.newTask.myName;
   }
 
-  @ViewChild('appNewTask') newTask: NewTaskComponent;
 
   onClickUser(id: string){
     this.id.set(id);
