@@ -13,17 +13,10 @@ import { SlotsComponent } from '../../components/slots/slots.component';
   styleUrl: './tasks-manage.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TasksManageComponent implements AfterViewInit{
+export class TasksManageComponent {
   id = signal('u1');
   showAddTask = signal(false);
-  myName: string;
   
-  @ViewChild('appNewTask') newTask: NewTaskComponent;
-
-
-  ngAfterViewInit(): void {
-    this.myName = this.newTask.myName;
-  }
 
 
   onClickUser(id: string){
