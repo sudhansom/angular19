@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, signal, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, OnInit, signal, ViewChild } from '@angular/core';
 import { ContainerComponent } from '../..//components/container/container.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { UserComponent } from '../../components/user/user.component';
@@ -13,7 +13,7 @@ import { SlotsComponent } from '../../components/slots/slots.component';
   styleUrl: './tasks-manage.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TasksManageComponent implements OnInit{
+export class TasksManageComponent implements AfterViewInit{
   id = signal('u1');
   showAddTask = signal(false);
   myName: string;
@@ -21,7 +21,7 @@ export class TasksManageComponent implements OnInit{
   @ViewChild('appNewTask') newTask: NewTaskComponent;
 
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.myName = this.newTask.myName;
   }
 

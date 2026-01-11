@@ -9,9 +9,9 @@
   </div>
 
   <div class="body-part">
-    @if(showAddTask()){
+    <!-- @if(showAddTask()){ -->
       <app-new-task #appNewTask (hideForm)="toogleAddTask()"></app-new-task>
-    }
+    <!-- } -->
     @if(!showAddTask()){
       <app-user (clickUser)="onClickUser($event)"></app-user>
       <app-tasks (complete)="onCompleteTask($event)" [id]="id()"></app-tasks>
