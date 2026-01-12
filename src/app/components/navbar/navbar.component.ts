@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 
@@ -13,10 +13,14 @@ interface Links {
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnChanges {
   @Input() links : Links[];
 
   constructor(){
-    console.log("Display Linkes(does not display in constructor): ", this.links)
+    console.log("constructor call: Display Linkes(does not display here): ", this.links)
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('Onchanges: Gets here the Inputs:', this.links);
   }
 }
