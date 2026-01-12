@@ -15,4 +15,8 @@ interface Links {
 })
 export class NavbarComponent {
   @Input() links : Links[];
+
+  constructor(){
+    console.log("Display Linkes(does not display in constructor): ", this.links)
+  }
 }
