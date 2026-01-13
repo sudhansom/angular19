@@ -97,6 +97,10 @@ export class AppComponent implements OnInit {
       name: '/hooks',
       label: 'Hooks'
     },
+    {
+      name: '/life-cycle-hooks',
+      label: 'lf-hooks'
+    },
 ]
 
 ngOnInit(): void {

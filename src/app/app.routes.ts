@@ -56,4 +56,5 @@ export const routes: Routes = [
   { path: 'rt-form', loadComponent: () => import('./views/reactive-form/reactive-form.component').then(c => c.ReactiveFormComponent)},
   { path: 'signals', loadComponent: () => import('./views/signals/signals.component').then(c => c.SignalsComponent)},
   { path: 'hooks', loadComponent: () => import('./views/hooks/hooks.component').then(c => c.HooksComponent)},
+  { path: 'life-cycle-hooks', loadComponent: () => import('./views/life-cycle-hooks/life-cycle-hooks.component').then(c => c.LifeCycleHooksComponent)},
 ];
