@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnChanges, OnInit } from "@angular/core";
 
 @Component({
     selector: 'app-demo',
@@ -6,7 +6,7 @@ import { Component, Input } from "@angular/core";
 
 })
 
-export class DemoComponent {
+export class DemoComponent implements OnChanges, OnInit {
 @Input() message: string;
 
 ngOnChanges(){
