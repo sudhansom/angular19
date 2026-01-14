@@ -12,4 +12,8 @@ export class DemoComponent {
 ngOnChanges(){
     console.log('OnChanges called....');
 }
+
+ngOnInit(){
+    console.log('OnInit executed after Onchanges but only once...')
+}
 }
