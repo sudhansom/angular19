@@ -8,5 +8,7 @@ import { ContainerComponent } from '../../components/container/container.compone
   styleUrl: './life-cycle-hooks.component.scss'
 })
 export class LifeCycleHooksComponent {
-
+  constructor(){
+    console.log('Constructor is not a life cycle hook...');
+  }
 }
