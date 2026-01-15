@@ -1,8 +1,11 @@
 import { Component, DoCheck, Input, OnChanges, OnInit } from "@angular/core";
+import { AppClassDirective } from "../../directives/app-class.directive";
 
 @Component({
     selector: 'app-demo',
     templateUrl: './demo.component.html',
+    styleUrl: './demo.component.css',
+    imports: [AppClassDirective]
 
 })
 
