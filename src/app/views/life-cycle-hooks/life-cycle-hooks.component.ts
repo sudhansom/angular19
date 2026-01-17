@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, DoCheck, Input } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { DemoComponent } from './demo.component';
 
@@ -8,7 +8,7 @@ import { DemoComponent } from './demo.component';
   templateUrl: './life-cycle-hooks.component.html',
   styleUrl: './life-cycle-hooks.component.scss'
 })
-export class LifeCycleHooksComponent {
+export class LifeCycleHooksComponent implements DoCheck {
 
   @Input() message: string ;
   constructor(){
@@ -17,5 +17,9 @@ export class LifeCycleHooksComponent {
 
   ngOnChanges(){
     console.log('OnChanges is the first hook to execute....');
+  }
+
+  ngDoCheck(){
+    console.log('DoCheck hook called....')
   }
 }
