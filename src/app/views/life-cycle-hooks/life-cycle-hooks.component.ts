@@ -8,7 +8,7 @@ import { DemoComponent } from './demo.component';
   templateUrl: './life-cycle-hooks.component.html',
   styleUrl: './life-cycle-hooks.component.scss'
 })
-export class LifeCycleHooksComponent implements DoCheck, AfterContentInit {
+export class LifeCycleHooksComponent implements DoCheck, AfterContentInit, AfterContentChecked {
 
   @Input() message: string ;
   constructor(){
@@ -25,5 +25,8 @@ export class LifeCycleHooksComponent implements DoCheck, AfterContentInit {
 
   ngAfterContentInit(): void {
     console.log('AfterContentInit called in parent component....');
+  }
+  ngAfterContentChecked(): void {
+    console.log('AfterContentInit executes once but AfterContentChecked gets called each time change detection happens')
   }
 }
