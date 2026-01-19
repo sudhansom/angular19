@@ -1,4 +1,4 @@
-import { Component, DoCheck, Input } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, Component, DoCheck, Input } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { DemoComponent } from './demo.component';
 
@@ -8,7 +8,7 @@ import { DemoComponent } from './demo.component';
   templateUrl: './life-cycle-hooks.component.html',
   styleUrl: './life-cycle-hooks.component.scss'
 })
-export class LifeCycleHooksComponent implements DoCheck {
+export class LifeCycleHooksComponent implements DoCheck, AfterContentInit {
 
   @Input() message: string ;
   constructor(){
@@ -21,5 +21,9 @@ export class LifeCycleHooksComponent implements DoCheck {
 
   ngDoCheck(){
     console.log('DoCheck hook called....')
+  }
+
+  ngAfterContentInit(): void {
+    console.log('AfterContentInit called in parent component....');
   }
 }
