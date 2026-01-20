@@ -1,15 +1,17 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { DemoComponent } from './demo.component';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-life-cycle-hooks',
-  imports: [ContainerComponent, DemoComponent],
+  imports: [ContainerComponent, DemoComponent, NgIf],
   templateUrl: './life-cycle-hooks.component.html',
   styleUrl: './life-cycle-hooks.component.scss'
 })
 export class LifeCycleHooksComponent implements DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
 
+  showDemo: boolean = true;
   @Input() message: string ;
   constructor(){
     console.log('Constructor is not a life cycle hook...');
@@ -38,5 +40,8 @@ export class LifeCycleHooksComponent implements DoCheck, AfterContentInit, After
     console.log('AfterViewChecked is called after ViewInit and is called everytime when CD is triggered.')
   }
 
+  toggleDemo(){
+    this.showDemo = !this.showDemo;
+  }
 
 }

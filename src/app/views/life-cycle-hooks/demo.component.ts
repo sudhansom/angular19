@@ -1,4 +1,4 @@
-import { Component, DoCheck, Input, OnChanges, OnInit } from "@angular/core";
+import { Component, DoCheck, Input, OnChanges, OnDestroy, OnInit } from "@angular/core";
 import { AppClassDirective } from "../../directives/app-class.directive";
 
 @Component({
@@ -9,7 +9,7 @@ import { AppClassDirective } from "../../directives/app-class.directive";
 
 })
 
-export class DemoComponent implements OnChanges, OnInit, DoCheck {
+export class DemoComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
 @Input() message: string;
 
 ngOnChanges(){
@@ -23,4 +23,9 @@ ngOnInit(){
 ngDoCheck(): void {
     console.log('DoCheck comes after OnInit, but every time when change detection cycle runs.. but onchanges is executed only if the Input proprty changes');
 }
+
+ngOnDestroy(): void {
+    console.log('OnDestroy is called called just before the component is destroyed...')
+}
+
 }
