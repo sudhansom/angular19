@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input } from '@angular/core';
+import { OnChanges, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { DemoComponent } from './demo.component';
 import { NgIf } from '@angular/common';
@@ -9,7 +9,7 @@ import { NgIf } from '@angular/common';
   templateUrl: './life-cycle-hooks.component.html',
   styleUrl: './life-cycle-hooks.component.scss'
 })
-export class LifeCycleHooksComponent implements DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
+export class LifeCycleHooksComponent implements OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
 
   showDemo: boolean = true;
   @Input() message: string ;
