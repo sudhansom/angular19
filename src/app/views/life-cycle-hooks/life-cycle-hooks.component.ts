@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewInit, Component, DoCheck, Input } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
 import { DemoComponent } from './demo.component';
 
@@ -8,7 +8,7 @@ import { DemoComponent } from './demo.component';
   templateUrl: './life-cycle-hooks.component.html',
   styleUrl: './life-cycle-hooks.component.scss'
 })
-export class LifeCycleHooksComponent implements DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit {
+export class LifeCycleHooksComponent implements DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
 
   @Input() message: string ;
   constructor(){
@@ -33,5 +33,10 @@ export class LifeCycleHooksComponent implements DoCheck, AfterContentInit, After
   ngAfterViewInit(): void {
     console.log('AfterViewInit is called after ContentChecked ... but always only once after the view is initialized.')
   }
+
+  ngAfterViewChecked(): void {
+    console.log('AfterViewChecked is called after ViewInit and is called everytime when CD is triggered.')
+  }
+
 
 }
