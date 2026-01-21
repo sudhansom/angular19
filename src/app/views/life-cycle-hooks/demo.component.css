@@ -5,3 +5,8 @@
 .background-gray {
     background-color: gray;
 }
+
+.demo-comp {
+    padding: 5px;
+    border-radius: 5px;
+}
