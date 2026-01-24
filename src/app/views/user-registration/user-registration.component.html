@@ -1,4 +1,9 @@
 <app-container [style.--container-width]="'500px'">
+  @if(showForm){
+    <app-my-form ></app-my-form>
+  }
+  <button (click)="showForm = !showForm;">{{ showForm ? 'Hide' : 'Show' }}</button>
+  <hr>
   <a routerLink="/td-form">new practice</a>
   <hr>
   <div class="form">
