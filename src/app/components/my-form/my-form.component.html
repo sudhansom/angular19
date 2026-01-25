@@ -1,3 +1,18 @@
 <app-container [style.--container-width]="'500px'">
-    <p>my-form works!</p>
+    <form (ngSubmit)="formSubmit()"  #form="ngForm">
+        <label>First Name:
+            <input type="text" name="firstName" ngModel>
+        </label>
+        <label>Last Name:
+            <input type="text" name="lastName" ngModel>
+        </label>
+        <label>Age:
+            <input type="number" name="age" ngModel>
+        </label>
+        <label>Email:
+            <input type="text" name="email" ngModel>
+        </label>
+
+        <button type="submit"></button>
+    </form>
 </app-container>
