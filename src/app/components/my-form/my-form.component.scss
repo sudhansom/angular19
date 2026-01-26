@@ -1,0 +1,21 @@
+:host {
+    form {
+        padding: 12px;
+        border: 1px solid gray;
+        border-radius: 12px;
+    }
+    input {
+        width: 100%;
+        padding: 6px;
+        border: 1px solid gray;
+        border-radius: 6px;
+        margin-top: 3px;
+    }
+    label {
+        margin-bottom: 12px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
