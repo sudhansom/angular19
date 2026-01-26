@@ -12,12 +12,11 @@
         <label>Email:
             <input type="text" name="email" ngModel>
         </label>
-       <label>Gender:
-        <select name="gender" ngModel>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select>
-       </label>
+       <div class="gender">Gender:
+            <input type="radio" name="gender" value="male" [ngModel]="'male'"><label>male</label>
+            <input type="radio" name="gender" value="female" [ngModel]="'male'"><label>female</label>
+            <input type="radio" name="gender" value="others" [ngModel]="'male'"><label>others</label>
+       </div>
 
         <button type="submit">Save</button>
     </form>

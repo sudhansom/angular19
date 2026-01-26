@@ -4,12 +4,26 @@
         border: 1px solid gray;
         border-radius: 12px;
     }
-    input {
+    label input {
         width: 100%;
         padding: 6px;
         border: 1px solid gray;
         border-radius: 6px;
         margin-top: 3px;
+    }
+    .gender {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+        label {
+            margin: 0;
+        }
+    }
+    .gender input {
+        margin-left: 15px;
+    }
+    .gender label {
+        margin-left: 6px;
     }
     label {
         margin-bottom: 12px;
