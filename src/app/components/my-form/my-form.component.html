@@ -17,6 +17,15 @@
             <input type="radio" name="gender" value="female" [ngModel]="'male'"><label>female</label>
             <input type="radio" name="gender" value="others" [ngModel]="'male'"><label>others</label>
        </div>
+       <label >Country:
+            <select name="country" [ngModel]="'nepal'">
+                <option value="nepal">Nepal</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Australia">Australia</option>
+                <option value="Norway">Norway</option>
+                <option value="Finland">Finland</option>
+        </select>
+       </label>
 
         <button type="submit">Save</button>
     </form>
