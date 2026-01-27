@@ -9,10 +9,9 @@ import * as uuid from "uuid";
 })
 export class UserService {
     users = [
-        new User(uuid.v4(), 'sudhan', 'Poudel', 'Lalim'),
-        new User(uuid.v4(), 'resham', 'Poudel', 'Lalim'),
-        new User(uuid.v4(), 'som', 'Poudel', 'Lalim'),
-        new User(uuid.v4(), 'biren', 'Poudel', 'Lalim'),
+        new User(uuid.v4(), 'resham', 'Poudel', 'rkspoudel@gmail.com', 33, "Danmark"),
+        new User(uuid.v4(), 'som', 'Poudel', 'skspoudel@gmail.com', 33, "Danmark"),
+        new User(uuid.v4(), 'biren', 'Poudel', 'bikspoudel@gmail.com', 33, "Danmark"),
     ];
 
     getAllUsers(){

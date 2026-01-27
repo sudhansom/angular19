@@ -4,12 +4,16 @@ export class User {
     id: string;
     firstName: string;
     lastName: string;
-    address: string;
+    country: string;
+    age: number;
+    email: string;
 
-    constructor(id: string, fristName: string, lastName: string, address: string){
+    constructor(id: string, fristName: string, lastName: string, email: string, age: number, country: string){
         this.id = id;
         this.firstName = fristName;
         this.lastName = lastName;
-        this.address = address;
+        this.country = country;
+        this.age = age;
+        this.email = email;
     }
 }
