@@ -67,6 +67,16 @@
       "postId": 1
     }
   ],
+  "user": [
+    {
+      "id": "1",
+      "firstName": "Sudhan",
+      "lastName": "Poudel",
+      "age": 33,
+      "email": "bkspoudel@gmail.com",
+      "country": "Nepal"
+    }
+  ],
   "profile": {
     "name": "typicode"
   }
