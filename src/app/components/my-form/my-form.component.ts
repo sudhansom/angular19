@@ -15,6 +15,9 @@ export class MyFormComponent {
 
   @ViewChild('form') form: NgForm;
   formSubmit(){
-    this.userService.saveData(this.form.value);
+    // this.userService.saveData(this.form.value);
+    this.userService.createUser(this.form.value).subscribe(user => {
+      console.log(user);
+    })
   }
 }

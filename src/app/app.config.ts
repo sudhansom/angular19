@@ -6,7 +6,8 @@ import { provideStore } from '@ngrx/store';
 import { counterReducer } from './store/app.reducer';
 import { provideEffects } from '@ngrx/effects';
 import { CounterEffects } from './store/app.effects';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideStore({counter: counterReducer}), provideEffects([])]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideStore({counter: counterReducer}), provideEffects([]), provideHttpClient()]
 };
