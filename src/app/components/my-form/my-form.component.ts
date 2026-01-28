@@ -1,7 +1,8 @@
-import { Component, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild, inject } from '@angular/core';
 import { ContainerComponent } from '../container/container.component';
 import { NgForm, FormsModule } from '@angular/forms';
 import { UserService } from '../../services/user-service.service';
+import { debounceTime, filter } from 'rxjs';
 
 @Component({
   selector: 'app-my-form',
@@ -9,11 +10,22 @@ import { UserService } from '../../services/user-service.service';
   templateUrl: './my-form.component.html',
   styleUrl: './my-form.component.scss'
 })
-export class MyFormComponent {
+export class MyFormComponent implements AfterViewInit {
 
   userService: UserService = inject(UserService);
 
   @ViewChild('form') form: NgForm;
+
+  ngAfterViewInit(): void {
+    this.form.valueChanges.pipe(
+      filter(() => this.form.valid),
+      debounceTime(1000),
+    ).subscribe(value => {
+      console.log(value);
+      console.log('form is valid:',this.form.valid);
+
+    })
+  }
   formSubmit(){
     // this.userService.saveData(this.form.value);
     this.userService.createUser(this.form.value).subscribe(user => {

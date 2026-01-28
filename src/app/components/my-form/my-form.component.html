@@ -1,7 +1,7 @@
 <app-container [style.--container-width]="'500px'">
     <form (ngSubmit)="formSubmit()"  #form="ngForm">
         <label>First Name:
-            <input type="text" name="firstName" ngModel>
+            <input type="text" name="firstName" required ngModel>
         </label>
         <label>Last Name:
             <input type="text" name="lastName" ngModel>
@@ -10,7 +10,7 @@
             <input type="number" name="age" ngModel>
         </label>
         <label>Email:
-            <input type="text" name="email" ngModel>
+            <input type="email" name="email" ngModel>
         </label>
        <div class="gender">Gender:
             <input type="radio" name="gender" value="male" [ngModel]="'male'"><label>male</label>
