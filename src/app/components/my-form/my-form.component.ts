@@ -2,7 +2,8 @@ import { AfterViewInit, Component, OnInit, ViewChild, inject } from '@angular/co
 import { ContainerComponent } from '../container/container.component';
 import { NgForm, FormsModule } from '@angular/forms';
 import { UserService } from '../../services/user-service.service';
-import { concatMap, debounceTime, filter } from 'rxjs';
+import { concatMap, debounceTime, filter, tap } from 'rxjs';
+import { User } from '../user/user.model';
 
 @Component({
   selector: 'app-my-form',
@@ -10,11 +11,19 @@ import { concatMap, debounceTime, filter } from 'rxjs';
   templateUrl: './my-form.component.html',
   styleUrl: './my-form.component.scss'
 })
-export class MyFormComponent implements AfterViewInit {
+export class MyFormComponent implements OnInit, AfterViewInit {
 
   userService: UserService = inject(UserService);
+  currentUser:User = undefined;
+  allUsers: User[];
 
   @ViewChild('form') form: NgForm;
+
+  ngOnInit(): void {
+    this.userService.getUsers().subscribe(users => {
+      console.log(users);
+    })
+  }
 
   ngAfterViewInit(): void {
     this.form.valueChanges.pipe(
@@ -34,6 +43,12 @@ export class MyFormComponent implements AfterViewInit {
     })
   }
   updateForm(changes){
-    return this.userService.updateUser('d23dea54-f211-4f06-9e41-b2366acdcede', changes);
+    console.log('Saving The User: ',this.currentUser);
+    if(!!this.currentUser){
+      
+      return this.userService.updateUser('d23dea54-f211-4f06-9e41-b2366acdcede', changes);
+    }else {
+      alert('no user selected');
+    }
   }
 }
