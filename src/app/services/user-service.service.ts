@@ -20,4 +20,16 @@ export class UserService {
         })
     }
 
+    saveData(user: User){
+        fetch('http://localhost:3000/user', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({id: uuid.v4(), ...user})
+        })
+        .then(response => response.json())
+        .then(data => console.log(data));
+    }
+
 }

@@ -1,6 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, inject } from '@angular/core';
 import { ContainerComponent } from '../container/container.component';
 import { NgForm, FormsModule } from '@angular/forms';
+import { UserService } from '../../services/user-service.service';
 
 @Component({
   selector: 'app-my-form',
@@ -10,8 +11,10 @@ import { NgForm, FormsModule } from '@angular/forms';
 })
 export class MyFormComponent {
 
+  userService: UserService = inject(UserService);
+
   @ViewChild('form') form: NgForm;
   formSubmit(){
-    console.log(this.form.value);
+    this.userService.saveData(this.form.value);
   }
 }

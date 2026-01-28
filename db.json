@@ -75,6 +75,23 @@
       "age": 33,
       "email": "bkspoudel@gmail.com",
       "country": "Nepal"
+    },
+    {
+      "id": "8a159ab6-24a2-421f-972d-0146f10d1l9a",
+      "firstName": "John",
+      "lastName": "Doe",
+      "age": 25,
+      "email": "john@example.com",
+      "country": "USA"
+    },
+    {
+      "id": "5d69604f-0c22-4068-bd4f-7e550c8c0cb4",
+      "firstName": "Sudhan",
+      "lastName": "Poudel",
+      "age": 22,
+      "email": "spodel@yahoo.com",
+      "gender": "male",
+      "country": "nepal"
     }
   ],
   "profile": {
