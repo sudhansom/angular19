@@ -7,6 +7,7 @@ export class User {
     country: string;
     age: number;
     email: string;
+    // gender: string;
 
     constructor(id: string, fristName: string, lastName: string, email: string, age: number, country: string){
         this.id = id;
@@ -15,5 +16,6 @@ export class User {
         this.country = country;
         this.age = age;
         this.email = email;
+        // this.gender = gender
     }
 }

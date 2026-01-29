@@ -1,0 +1,13 @@
+:host {
+    table {
+        border: 1px solid gray;
+        border-radius: 12px;
+        padding: 12px;
+        margin: 12px;
+
+        tr, td, th {
+            border: 1px solid gray;
+            padding: 6px;
+        }
+    }
+}
