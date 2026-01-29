@@ -25,6 +25,7 @@ export class UserListComponent implements OnInit {
 
   editUser(user: User){
     console.log('User to be edited:: ', user);
+    this.userService.updateSelectedUser(user);
   }
 
 }

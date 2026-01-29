@@ -1,6 +1,6 @@
 import { Injectable, inject } from "@angular/core";
 import { User } from "../models/user";
-import { Observable } from "rxjs";
+import { Observable, Subject } from "rxjs";
 import * as uuid from "uuid";
 import { HttpClient } from "@angular/common/http";
 
@@ -10,6 +10,11 @@ import { HttpClient } from "@angular/common/http";
 })
 export class UserService {
     http: HttpClient = inject(HttpClient);
+    selectedUser = new Subject<User>();
+
+    updateSelectedUser(user: User){
+        this.selectedUser.next(user);
+    }
     users = [
         new User(uuid.v4(), 'resham', 'Poudel', 'rkspoudel@gmail.com', 33, "Danmark"),
         new User(uuid.v4(), 'som', 'Poudel', 'skspoudel@gmail.com', 33, "Danmark"),

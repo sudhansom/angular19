@@ -3,7 +3,7 @@ import { ContainerComponent } from '../container/container.component';
 import { NgForm, FormsModule } from '@angular/forms';
 import { UserService } from '../../services/user-service.service';
 import { concatMap, debounceTime, filter, tap } from 'rxjs';
-import { User } from '../user/user.model';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-my-form',
@@ -20,6 +20,11 @@ export class MyFormComponent implements OnInit, AfterViewInit {
   @ViewChild('form') form: NgForm;
 
   ngOnInit(): void {
+    this.userService.selectedUser.subscribe(user => {
+      this.currentUser = user;
+      console.log("user Selected::::", this.currentUser);
+      this.form.value.firstName = "Hhellosss";
+    })
     this.userService.getUsers().subscribe(users => {
       console.log('All Users: ', users);
     })
@@ -44,7 +49,10 @@ export class MyFormComponent implements OnInit, AfterViewInit {
     })
   }
   updateForm(changes){
-    console.log('Saving The User: ',this.currentUser);
-      return this.userService.updateUser('d23dea54-f211-4f06-9e41-b2366acdcede', changes);
+      if(this.currentUser){
+        return this.userService.updateUser('d23dea54-f211-4f06-9e41-b2366acdcede', changes);
+      }else {
+        return changes
+      }
   }
 }
