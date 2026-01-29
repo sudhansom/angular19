@@ -5,6 +5,11 @@
     }
   </div>
   <button (click)="showForm = !showForm;">{{ showForm ? 'Hide' : 'Show' }}</button>
+  
+  <div class="users">
+    <app-user-list>
+    </app-user-list>
+  </div>
   <hr>
   <a routerLink="/td-form">new practice</a>
   <hr>

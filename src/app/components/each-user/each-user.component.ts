@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-each-user',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './each-user.component.scss'
 })
 export class EachUserComponent {
-
+  @Input() user: User;
 }
