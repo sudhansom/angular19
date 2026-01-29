@@ -4,11 +4,13 @@
         <th>Name</th>
         <th>gender</th>
         <th>Countrys</th>
+        <th>Edit</th>
     </tr>
     <tr *ngFor="let user of allUsers">
         <!-- <app-each-user [user]="user"></app-each-user> -->
         <td>{{user.firstName}}</td>
         <td>{{ user.age }}</td>
         <td>{{ user.country }}</td>
+        <td (click)="editUser(user)">edit</td>
     </tr>
 </table>
