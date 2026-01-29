@@ -21,7 +21,7 @@ export class MyFormComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe(users => {
-      console.log(users);
+      console.log('All Users: ', users);
     })
   }
 
@@ -30,9 +30,10 @@ export class MyFormComponent implements OnInit, AfterViewInit {
       filter(() => this.form.valid),
       debounceTime(10000),
       concatMap(changes => this.updateForm(changes))
-    ).subscribe(value => {
-      console.log(value);
-      console.log('form is valid:',this.form.valid);
+    ).subscribe(
+      value => {
+      // console.log(value);
+      // console.log('form is valid:',this.form.valid);
 
     })
   }
@@ -44,11 +45,6 @@ export class MyFormComponent implements OnInit, AfterViewInit {
   }
   updateForm(changes){
     console.log('Saving The User: ',this.currentUser);
-    if(!!this.currentUser){
-      
       return this.userService.updateUser('d23dea54-f211-4f06-9e41-b2366acdcede', changes);
-    }else {
-      alert('no user selected');
-    }
   }
 }
