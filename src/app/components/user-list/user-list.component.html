@@ -4,9 +4,9 @@
         <th>Name</th>
         <th>gender</th>
         <th>Countrys</th>
-        <th>Edit</th>
+        <th>Edits</th>
     </tr>
-    <tr *ngFor="let user of allUsers">
+    <tr *ngFor="let user of allUsers | async">
         <!-- <app-each-user [user]="user"></app-each-user> -->
         <td>{{user.firstName}}</td>
         <td>{{ user.age }}</td>
