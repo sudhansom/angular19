@@ -1,24 +1,24 @@
 <app-container [style.--container-width]="'500px'">
-    <form (ngSubmit)="formSubmit()"  #form="ngForm">
+    <form (ngSubmit)="formSubmit()"  [formGroup]="form">
         <label>First Name:
-            <input type="text" name="firstName" required ngModel>
+            <input type="text" formControlName="firstName">
         </label>
         <label>Last Name:
-            <input type="text" name="lastName" ngModel>
+            <input type="text" formControlName="lastName">
         </label>
         <label>Age:
-            <input type="number" name="age" ngModel>
+            <input type="number" formControlName="age">
         </label>
         <label>Email:
-            <input type="email" name="email" ngModel>
+            <input type="email" formControlName="email">
         </label>
        <div class="gender">Gender:
-            <input type="radio" name="gender" value="male" [ngModel]="'male'"><label>male</label>
-            <input type="radio" name="gender" value="female" [ngModel]="'male'"><label>female</label>
-            <input type="radio" name="gender" value="others" [ngModel]="'male'"><label>others</label>
+            <input type="radio" value="male"  formControlName="gender"><label>male</label>
+            <input type="radio" value="female"  formControlName="gender"><label>female</label>
+            <input type="radio" value="others"  formControlName="gender"><label>others</label>
        </div>
        <label >Country:
-            <select name="country" [ngModel]="'nepal'">
+            <select name="country" formControlName="country">
                 <option value="nepal">Nepal</option>
                 <option value="Denmark">Denmark</option>
                 <option value="Australia">Australia</option>
