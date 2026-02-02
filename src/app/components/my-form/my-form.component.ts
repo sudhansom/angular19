@@ -11,7 +11,7 @@ import { User } from '../../models/user';
   templateUrl: './my-form.component.html',
   styleUrl: './my-form.component.scss'
 })
-export class MyFormComponent implements OnInit, AfterViewInit {
+export class MyFormComponent implements OnInit {
 
   userService: UserService = inject(UserService);
   currentUser:User = undefined;
@@ -30,16 +30,24 @@ export class MyFormComponent implements OnInit, AfterViewInit {
 
     })
     this.userService.getUsers().subscribe(users => {
-      console.log('All Users: ', users);
+      this.allUsers = users;
     })
 
     this.userService.selectedUser.subscribe(user => {
       this.currentUser = user;
+      this.updateUser(user);
     })
   }
 
-  ngAfterViewInit(): void {
-   
+  updateUser(user: User){
+    this.form.setValue({
+      firstName: user.firstName,
+      lastName: user.lastName,
+      age: user.age,
+      country: user.country,
+      email: user.email,
+      gender: user.gender,
+    })
   }
   formSubmit(){
     // this.userService.saveData(this.form.value);

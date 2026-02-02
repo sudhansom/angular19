@@ -16,9 +16,9 @@ export class UserService {
         this.selectedUser.next(user);
     }
     users = [
-        new User(uuid.v4(), 'resham', 'Poudel', 'rkspoudel@gmail.com', 33, "Danmark"),
-        new User(uuid.v4(), 'som', 'Poudel', 'skspoudel@gmail.com', 33, "Danmark"),
-        new User(uuid.v4(), 'biren', 'Poudel', 'bikspoudel@gmail.com', 33, "Danmark"),
+        new User(uuid.v4(), 'resham', 'Poudel', 'rkspoudel@gmail.com', 33, "Danmark", "male"),
+        new User(uuid.v4(), 'som', 'Poudel', 'skspoudel@gmail.com', 33, "Danmark", "male"),
+        new User(uuid.v4(), 'biren', 'Poudel', 'bikspoudel@gmail.com', 33, "Danmark", "male"),
     ];
 
     getAllUsers(){
