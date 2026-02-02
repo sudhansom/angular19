@@ -112,13 +112,13 @@
       "country": "nepal"
     },
     {
-      "id": "27dc",
-      "firstName": "Advanced",
-      "lastName": "Management",
-      "age": 1,
-      "email": "gyawalisuchitra@gmail.com",
+      "firstName": "Kangipur",
+      "lastName": null,
+      "age": 0,
+      "email": null,
       "gender": "male",
-      "country": "nepal"
+      "country": "Nepal",
+      "id": "27dc"
     },
     {
       "id": "2ddc",
