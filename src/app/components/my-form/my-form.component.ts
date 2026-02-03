@@ -2,13 +2,13 @@ import { Component, OnInit, inject } from '@angular/core';
 import { ContainerComponent } from '../container/container.component';
 import { ReactiveFormsModule, FormGroup, FormControl, FormArray } from '@angular/forms';
 import { UserService } from '../../services/user-service.service';
-import { NgForOf } from "../../../../node_modules/@angular/common/index";
+import { CommonModule } from '@angular/common';
 
 import { User } from '../../models/user';
 
 @Component({
   selector: 'app-my-form',
-  imports: [ContainerComponent, ReactiveFormsModule, NgForOf],
+  imports: [ContainerComponent, ReactiveFormsModule, CommonModule],
   templateUrl: './my-form.component.html',
   styleUrl: './my-form.component.scss'
 })
@@ -32,7 +32,7 @@ export class MyFormComponent implements OnInit {
         city: new FormControl("Lalim")
       }),
       skills: new FormArray([
-        new FormControl(null)
+        new FormControl(null),
       ])
     })
     this.userService.getUsers().subscribe(users => {
