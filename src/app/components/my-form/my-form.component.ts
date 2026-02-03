@@ -26,8 +26,10 @@ export class MyFormComponent implements OnInit {
       age: new FormControl(0),
       email: new FormControl(null),
       gender: new FormControl("male"),
-      country: new FormControl("Nepal")
-
+      address: new FormGroup({
+        country: new FormControl("Nepal"),
+        city: new FormControl("Lalim")
+      })
     })
     this.userService.getUsers().subscribe(users => {
       this.allUsers = users;
@@ -44,7 +46,7 @@ export class MyFormComponent implements OnInit {
       firstName: user.firstName,
       lastName: user.lastName,
       age: user.age,
-      country: user.country,
+      country: user.address.country,
       email: user.email,
       gender: user.gender,
     })

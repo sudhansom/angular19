@@ -17,15 +17,20 @@
             <input type="radio" value="female"  formControlName="gender"><label>female</label>
             <input type="radio" value="others"  formControlName="gender"><label>others</label>
        </div>
-       <label >Country:
-            <select name="country" formControlName="country">
-                <option value="nepal">Nepal</option>
-                <option value="Denmark">Denmark</option>
-                <option value="Australia">Australia</option>
-                <option value="Norway">Norway</option>
-                <option value="Finland">Finland</option>
-            </select>
-       </label>
+       <div formGroupName="address">
+            <label >Country:
+                <select name="country" formControlName="country">
+                    <option value="nepal">Nepal</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Finland">Finland</option>
+                </select>
+            </label>
+            <label>City:
+                    <input type="text" formControlName="city">
+            </label>
+       </div>
 
         <button type="submit">Save</button>
     </form>

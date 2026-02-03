@@ -10,7 +10,8 @@
         <!-- <app-each-user [user]="user"></app-each-user> -->
         <td>{{user.firstName}}</td>
         <td>{{ user.age }}</td>
-        <td>{{ user.country }}</td>
+        <td>{{ user.address.country }}</td>
+        <td>{{ user.address.city }}</td>
         <td (click)="editUser(user)">edit</td>
     </tr>
 </table>

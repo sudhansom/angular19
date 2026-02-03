@@ -69,94 +69,16 @@
   ],
   "user": [
     {
-      "id": "8a159ab6-24a2-421f-972d-0146f10d1f5a",
-      "firstName": "Sudhan",
-      "lastName": "Poudel",
-      "age": 33,
-      "email": "bkspoudel@gmail.com",
+      "id": "8ae88553-4f58-446e-bda9-11610693caf3",
+      "firstName": "Rhythm",
+      "lastName": "Som",
+      "age": 11,
+      "email": "rkspoudel@gmail.com",
       "gender": "male",
-      "country": "Nepal"
-    },
-    {
-      "id": "8a159ab6-24a2-421f-972d-0146f10d1l9a",
-      "firstName": "John",
-      "lastName": "Doe",
-      "age": 25,
-      "email": "john@example.com",
-      "gender": "male",
-      "country": "USA"
-    },
-    {
-      "id": "5d69604f-0c22-4068-bd4f-7e550c8c0cb4",
-      "firstName": "Sudhan",
-      "lastName": "Poudel",
-      "age": 22,
-      "email": "spodel@yahoo.com",
-      "gender": "male",
-      "country": "nepal"
-    },
-    {
-      "id": "9ee1c50d-a49e-4585-87db-048a5f63ca5a",
-      "firstName": "Suchitra",
-      "lastName": "Gyawali Poudel",
-      "age": 33,
-      "email": "gyawalisuchitra@gmail.com",
-      "gender": "male",
-      "country": "nepal"
-    },
-    {
-      "id": "0ada37ea-a191-4026-81c4-7aefa2ac192b",
-      "firstName": "Suchitra",
-      "lastName": "Gyawali Poudel",
-      "age": 33,
-      "email": "gyawalisuchitra@gmail.com",
-      "gender": "male",
-      "country": "nepal"
-    },
-    {
-      "firstName": "Kangipur",
-      "lastName": null,
-      "age": 0,
-      "email": null,
-      "gender": "male",
-      "country": "Nepal",
-      "id": "27dc"
-    },
-    {
-      "id": "2ddc",
-      "firstName": "Advanced",
-      "lastName": "Management",
-      "age": 1,
-      "email": "gyawalisuchitra@gmail.com",
-      "gender": "male",
-      "country": "nepal"
-    },
-    {
-      "id": "614fa8d9-0cf3-4750-80b3-f5a09c23bffa",
-      "firstName": "Advanced",
-      "lastName": "Management",
-      "age": 1,
-      "email": "gyawalisuchitra@gmail.com",
-      "gender": "others",
-      "country": "nepal"
-    },
-    {
-      "id": "8ad522c8-fd15-4949-a9f1-59bc3d8bf980",
-      "firstName": "Bhuwan Krishna",
-      "lastName": "Poudel",
-      "age": 81916893,
-      "email": "bkspoudel@gmail.com",
-      "gender": "male",
-      "country": "Denmark"
-    },
-    {
-      "id": "ef4ea494-a8bc-485c-a01d-ad55b2d6ac60",
-      "firstName": "Rekha",
-      "lastName": "Thapa",
-      "age": 3,
-      "email": "rekhathapa@gmail.com",
-      "gender": "female",
-      "country": "nepal"
+      "address": {
+        "country": "Denmark",
+        "city": "Rødovre"
+      }
     }
   ],
   "profile": {
