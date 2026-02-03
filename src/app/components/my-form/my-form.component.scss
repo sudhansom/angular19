@@ -36,4 +36,16 @@
         padding: 3px;
         border-radius: 6px;
     }
+    .skill {
+        display: flex;
+        margin-block: 6px;
+        input {
+            flex-basis: 90%;
+            border: 1px solid gray;
+            border-radius: 6px;
+        }
+        button {
+            flex-basis: 10%;
+        }
+    }
 }

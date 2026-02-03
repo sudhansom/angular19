@@ -31,11 +31,15 @@
                     <input type="text" formControlName="city">
             </label>
        </div>
-       <div formArrayName="skills"> Skills:
-            <label *ngFor="let skill of form.get('skills')['controls']; let i=index" >
-                <input  type="text" [formControlName]="i">
-            </label>
+       <div formArrayName="skills" class="skills"> Skills:
+            <div *ngFor="let skill of form.get('skills')['controls']; let i=index" >
+                <div class="skill">
+                    <input  type="text" [formControlName]="i"><button type="button" (click)="removeSkill(i)">delete</button>
+                </div>
+            </div>
        </div>
+       <button type="button" (click)="addSkill()">Add Skill</button>
+       <hr>
 
         <button type="submit">Save</button>
     </form>

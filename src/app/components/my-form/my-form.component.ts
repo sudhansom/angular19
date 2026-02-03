@@ -64,4 +64,11 @@ export class MyFormComponent implements OnInit {
       console.log(user);
     })
   }
+  addSkill(){
+    (<FormArray>this.form.controls['skills']).push(new FormControl(null));
+  }
+  removeSkill(index){
+    const controls = (<FormArray>this.form.controls['skills']);
+    controls.removeAt(index);
+  }
 }
