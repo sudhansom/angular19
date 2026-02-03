@@ -31,6 +31,9 @@
                     <input type="text" formControlName="city">
             </label>
        </div>
+       <label> Skills:
+            <input *ngFor="let skill of form.get('skills1')['controls']">
+       </label>
 
         <button type="submit">Save</button>
     </form>

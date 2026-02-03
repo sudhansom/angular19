@@ -1,13 +1,14 @@
-import { AfterViewInit, Component, OnInit, ViewChild, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ContainerComponent } from '../container/container.component';
-import { ReactiveFormsModule, FormsModule, FormGroup, FormControl } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormControl, FormArray } from '@angular/forms';
 import { UserService } from '../../services/user-service.service';
-import { concatMap, debounceTime, filter, tap } from 'rxjs';
+import { NgForOf } from "../../../../node_modules/@angular/common/index";
+
 import { User } from '../../models/user';
 
 @Component({
   selector: 'app-my-form',
-  imports: [ContainerComponent, ReactiveFormsModule],
+  imports: [ContainerComponent, ReactiveFormsModule, NgForOf],
   templateUrl: './my-form.component.html',
   styleUrl: './my-form.component.scss'
 })
@@ -29,7 +30,10 @@ export class MyFormComponent implements OnInit {
       address: new FormGroup({
         country: new FormControl("Nepal"),
         city: new FormControl("Lalim")
-      })
+      }),
+      skills: new FormArray([
+        new FormControl(null)
+      ])
     })
     this.userService.getUsers().subscribe(users => {
       this.allUsers = users;
@@ -46,9 +50,12 @@ export class MyFormComponent implements OnInit {
       firstName: user.firstName,
       lastName: user.lastName,
       age: user.age,
-      country: user.address.country,
       email: user.email,
       gender: user.gender,
+      address: {
+        country: user.address.country,
+        city: user.address.city
+      }
     })
   }
   formSubmit(){
