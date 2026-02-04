@@ -34,13 +34,12 @@
        <div formArrayName="skills" class="skills"> Skills:
             <div *ngFor="let skill of form.get('skills')['controls']; let i=index" >
                 <div class="skill">
-                    <input  type="text" [formControlName]="i"><button type="button" (click)="removeSkill(i)">delete</button>
+                    <input  type="text" [formControlName]="i"><button type="button" (click)="removeSkill(i)">del</button>
                 </div>
             </div>
        </div>
        <button type="button" (click)="addSkill()">Add Skill</button>
        <hr>
-
         <button type="submit">Save</button>
     </form>
 </app-container>
