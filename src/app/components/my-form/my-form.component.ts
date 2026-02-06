@@ -52,8 +52,12 @@ export class MyFormComponent implements OnInit {
     //   console.log("Form Value: ", form);
     // })
 
-    this.form.get('firstName').statusChanges.subscribe(status => {
-      console.log("Status: ", status);
+    // this.form.get('firstName').statusChanges.subscribe(status => {
+    //   console.log("Status: ", status);
+    // })
+
+    this.form.statusChanges.subscribe(status => {
+      console.log("Status of the form:  ", status);
     })
   }
 
