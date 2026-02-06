@@ -43,6 +43,10 @@ export class MyFormComponent implements OnInit {
       this.currentUser = user;
       this.updateUser(user);
     })
+
+    this.form.get('firstName').valueChanges.subscribe(value => {
+      console.log('Value changes to the firstName triggered:', value);
+    })
   }
 
   updateUser(user: User){
@@ -71,4 +75,6 @@ export class MyFormComponent implements OnInit {
     const controls = (<FormArray>this.form.controls['skills']);
     controls.removeAt(index);
   }
+
+
 }
