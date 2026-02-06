@@ -44,8 +44,12 @@ export class MyFormComponent implements OnInit {
       this.updateUser(user);
     })
 
-    this.form.get('firstName').valueChanges.subscribe(value => {
-      console.log('Value changes to the firstName triggered:', value);
+    // this.form.get('firstName').valueChanges.subscribe(value => {
+    //   console.log('Value changes to the firstName triggered:', value);
+    // })
+
+    this.form.valueChanges.subscribe(form => {
+      console.log("Form Value: ", form);
     })
   }
 
