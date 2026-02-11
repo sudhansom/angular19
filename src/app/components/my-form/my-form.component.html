@@ -1,9 +1,9 @@
 <app-container [style.--container-width]="'500px'">
     <form (ngSubmit)="formSubmit()"  [formGroup]="form">
-        <label>First Name:
+        <label class="name">First Name:
             <input type="text" formControlName="firstName">
         </label>
-        <label>Last Name:
+        <label class="name">Last Name:
             <input type="text" formControlName="lastName">
         </label>
        <div class="email-age">
