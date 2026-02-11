@@ -28,6 +28,14 @@
     label {
         margin-bottom: 12px;
     }
+    .email-age {
+        display: flex;
+        gap: 12px;
+
+        .email {
+            flex-basis: 60%;
+        }
+    }
 
     .city {
         margin-left: 12px;
