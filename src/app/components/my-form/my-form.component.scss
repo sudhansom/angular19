@@ -41,14 +41,6 @@
         }
     }
 
-    .city {
-        margin-left: 12px;
-        input {
-            width: 50%;
-            padding-block:2px;
-        }
-    }
-
     button {
         width: 100%;
     }
@@ -82,5 +74,20 @@
             border-bottom-left-radius: 0;
         }
 
+    }
+    .address {
+        display: flex;
+        justify-content:left;
+        gap: 24px;
+        align-items: center;
+        .city {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-basis: 40%;
+            input {
+                padding-block:2px;
+            }
+        }
     }
 }
